@@ -12,11 +12,10 @@ This is a template project with all of the basic files and directory structure f
 
 ## Links
 
-- None yet!
 - [Wiki](../../wiki)?
 - [Contribute](CONTRIBUTING.md)
 - [Notes/Ideas](NOTES.md)
-- Architecture Doc
+- Architecture Doc?
 
 ## Contributors
 
