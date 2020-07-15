@@ -6,7 +6,25 @@ Thanks for helping out!
 
 The best way to [report an issue is through Github](../../issues). The owners of the repo should get an email notification whenever a new issue is created.
 
-## Branching and Pull Requests
+
+## Development 
+
+
+### Environment Setup and Technologies
+
+Cloning this repo requires the use of Git. Although you could also download an archive of the repository contents using the Github "Download" link.
+
+Once you have a framework and development environment chosen for your project you should update this with how to install the tools and dependencies.
+
+### Folder Structure
+
+_This should break down how each folder is used in the repo and where different files are stored (config/view templates/controllers/models)_
+
+### Scripts
+
+_Git hooks or Github actions can be extremely useful for streamlining processes and typical developer actions, or verifying that standards are met. This section should be used to document these and how they should be used in the developer workflow._
+
+### Branching and Pull Requests
 
 I'm going to talk about my own strategy in this document, this way my projects will _hopefully_ all use the same-ish workflow. Feel free to use/modify/change this for your project.
 
@@ -42,12 +60,10 @@ If this is a larger feature (> 1 week of real time) or you think it will be usef
                o`branch-2-HEAD`                                                 o--o`branch-2-HEAD`                                             o--o
 ```
 
-## Environment Setup and Technologies
-
-Cloning this repo requires the use of Git. Although you could also download an archive of the repository contents using the Github "Download" link.
-
-Once you have a framework and development environment chosen for your project you should update this with how to install the tools and dependencies.
-
-## Style Guide
+### Style Guide
 
 Make sure to only include basic configuration and setup files in this Template Repo!
+
+### Code Reviews
+
+Code Reviews are an important part of the software development process . Make sure to ask any questions you can come up with to ensure you understand what the changes are doing. Review the logic of the code to be sure that it is doing what the author says it should, and try to think of any edge cases they may have missed.
