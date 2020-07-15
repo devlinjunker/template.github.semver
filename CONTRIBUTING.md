@@ -66,4 +66,11 @@ Make sure to only include basic configuration and setup files in this Template R
 
 ### Code Reviews
 
-Code Reviews are an important part of the software development process . Make sure to ask any questions you can come up with to ensure you understand what the changes are doing. Review the logic of the code to be sure that it is doing what the author says it should, and try to think of any edge cases they may have missed.
+Code Reviews are an important part of the software development process.
+
+**Tips:**
+
+ - Make sure to ask any questions you can come up with to ensure you understand what the changes are doing. 
+ - Review the logic of the code to be sure that it is doing what the author says it should
+ - Try to think of any edge cases they may have missed.
+ - Ensure formatting and style guide is followed
