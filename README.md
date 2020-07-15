@@ -4,11 +4,15 @@ _Put some badges up here!_
 
 ## Intro
 
-This is a template project with all of the basic files and directory structure for a useful Github Repo :100:%
+_This is a template project with all of the basic files and directory structure for a useful Github Repo :100:%_
 
 ## Dependencies/Frameworks
 
 - None yet, this is just a template!
+
+## Quick Setup
+
+_This section should try to quickly (1-3 paragraphs) explain how to setup the project and start the application/server/demo_
 
 ## Links
 
