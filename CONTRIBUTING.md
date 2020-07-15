@@ -4,7 +4,7 @@ Thanks for helping out!
 
 ## Reporting Issues
 
-The best way to [report an issue is through Github](../../../issues). The owners of the repo should get an email notification whenever a new issue is created.
+The best way to [report an issue is through Github](../../issues). The owners of the repo should get an email notification whenever a new issue is created.
 
 ## Branching and Pull Requests
 
