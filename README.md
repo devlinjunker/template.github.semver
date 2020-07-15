@@ -1,4 +1,4 @@
-# Template.Github
+# Template Github Repo
 
 _Put some badges up here!_
 
