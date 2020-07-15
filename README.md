@@ -16,9 +16,10 @@ _This section should try to quickly (1-3 paragraphs) explain how to setup the pr
 
 ## Links
 
-- [Wiki](../../wiki)?
+- [Code of Conduct](CODE_OF_CONDUCT.md)
 - [Contribute](CONTRIBUTING.md)
 - [Notes/Ideas](NOTES.md)
+- [Wiki](../../wiki)?
 - Architecture Doc?
 
 ## Contributors
