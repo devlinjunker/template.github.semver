@@ -10,7 +10,7 @@ _This is a template project with all of the basic files and directory structure 
 
 - None yet, this is just a template!
 
-## Quick Setup
+## Quick Setup/Run
 
 _This section should try to quickly (1-3 paragraphs) explain how to setup the project and start the application/server/demo_
 
