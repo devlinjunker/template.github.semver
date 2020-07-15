@@ -13,9 +13,9 @@ This is a template project with all of the basic files and directory structure f
 ## Links
 
 - None yet!
-- [Wiki](/devlinjunker/template.github/wiki)?
-- [Contribute](/devlinjunker/template.github/blob/master/CONTRIBUTING.md)
-- [Notes/Ideas](/devlinjunker/template.github/blob/master/NOTES.md)
+- [Wiki](../../wiki)?
+- [Contribute](CONTRIBUTING.md)
+- [Notes/Ideas](NOTES.md)
 - Architecture Doc
 
 ## Contributors
