@@ -74,3 +74,4 @@ Code Reviews are an important part of the software development process.
  - Review the logic of the code to be sure that it is doing what the author says it should
  - Try to think of any edge cases they may have missed.
  - Ensure formatting and style guide is followed
+ - [5 antipractices of Code Reviews](https://blogs.oracle.com/javamagazine/five-code-review-antipatterns)
