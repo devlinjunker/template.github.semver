@@ -33,7 +33,7 @@ _Break down how each folder is used in the repo and how different code file type
 
 ### Scripts
 
-_Git hooks or Github actions can be extremely useful for streamlining processes and typical developer actions, or verifying that standards are met. This section should be used to document these and how they should be used in the developer workflow._
+_Git hooks and Github workflows/actions can be extremely useful for streamlining processes and typical developer actions, or verifying that standards are met. This section should be used to document these and how they should be used in the developer workflow._
 
 ### Branching and Pull Requests
 
