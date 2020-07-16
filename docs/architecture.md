@@ -3,9 +3,10 @@
 | Version | 0.1.0 |
 
 ## Intro
-This document should contain the application design and structure, detailing how the different components work together and how data is stored/retrieved.
+_This document should contain the application design and structure, detailing how the different components work together and how data is stored/retrieved._
 
 ## Dependencies & Project Setup
+_Describe the frameworks and libraries this project uses and how to set them up (Example sections provided)_
 
 ### Client
 #### Initial Setup
@@ -14,6 +15,7 @@ This document should contain the application design and structure, detailing how
 #### Initial Setup
 
 ## Architecture
+_Describe how the components are structured and organized/where they retreive data from and how they display that (Example sections provided)_
 
 ### Client Side Application
 #### Entry Point
@@ -27,7 +29,6 @@ This document should contain the application design and structure, detailing how
 ### Server (REST) API
 #### Entry Point
 #### Endpoints
-
 
 1.  List All Notes
 
@@ -63,6 +64,7 @@ This document should contain the application design and structure, detailing how
 
 
 ### Communication Diagrams
+_Describe the communcation protocol and when the different components talk to each other. You can also link to documents or include images that help to explain this_
 
 ### Database Structure
-
+_Define the structure of the data stored in a each database/datastore. Diagrams are useful here too_
