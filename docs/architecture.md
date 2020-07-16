@@ -32,10 +32,9 @@ _Describe how the components are structured and organized/where they retreive da
 
 1.  List All Notes
 
-    | | |
+    | Method | Endpoint |
     |-|-|
-    | Endpoint         | `/notes/all`   |
-    | HTTP Method      | `GET`            |
+    | `GET` | `/notes/all`  |
 
 
     ##### Headers
