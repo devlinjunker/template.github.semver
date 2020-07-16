@@ -35,6 +35,18 @@ _Break down how each folder is used in the repo and how different code file type
 
 _Git hooks and Github workflows/actions can be extremely useful for streamlining processes and typical developer actions, or verifying that standards are met. This section should be used to document these and how they should be used in the developer workflow._
 
+#### Hooks
+Git Hooks can be added in the `.git/hooks` directory (or you can create a symbolic link to another place in the repo so they can be committed for every developer.
+
+e.g. if you store the hook scripts in `./hooks`, on unix boxes the command would be `ln -s ./hooks/ ./.git/hooks` if you are in the repo's root directory.
+
+To create a hook, you'll need to add a script file to the directory with the name of the hook from [this list](https://git-scm.com/docs/githooks#_hooks).
+
+e.g. to run a script before a commit is saved (to verify the contents of the commit, verify the app builds, etc) you would create `./.git/hooks/pre-commit.sh`
+
+#### Workflows
+[Git Workflows/Actions](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) are added in `.github/workflows`. These are defined by .yaml files that define when the workflow should run and the steps it should take. Github can then enforce that these workflows are successful before Pull Requests are merged via the [Branch Settings Page](../../settings/branches).
+
 ### Branching and Pull Requests
 
 I'm going to talk about my own strategy in this document, this way my projects will _hopefully_ all use the same-ish workflow. Feel free to use/modify/change this for your project.
