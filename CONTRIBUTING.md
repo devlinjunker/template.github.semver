@@ -29,6 +29,9 @@ _Break down how each folder is used in the repo and how different code file type
 |-- workflows/
 |---- (Github workflow .yaml files)
 |-- (other github specific files)
+- docs/
+|-- architecture/
+|---- (Files helping to explain project structure)
 - (project config files and READMEs)
 ```
 
