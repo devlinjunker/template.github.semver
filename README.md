@@ -15,7 +15,7 @@ _This is a template project with all of the basic files and directory structure 
 _This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format_
  - [ ] Review [License](LICENSE) File
  - [ ] Review [Security Policy](SECURITY.md) and Update
- - [ ] Update Links and Files with project specific changes
+ - [ ] Update this README, Links and any documentation files with project specific changes
  - [ ] (Optional) Modify [Issue Templates](.github/ISSUE_TEMPLATE/)
  - [ ] (Optional) Set up Github Workflows
  - [ ] Add Project Build and Configuration Files
