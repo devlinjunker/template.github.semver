@@ -20,7 +20,7 @@ _This section should try to quickly (1-3 paragraphs) explain how to setup the pr
 - [Contribute](CONTRIBUTING.md)
 - [Notes/Ideas](NOTES.md)
 - Wiki?
-- Architecture Doc?
+- Architecture Doc? -- How to understand the application from a developer point of view (webpage-> controllers -> services -> libraries)
 
 ## Contributors
 
