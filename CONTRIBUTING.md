@@ -23,12 +23,11 @@ Once you have a framework and development environment chosen for your project yo
 _Break down how each folder is used in the repo and how different code file types should be organized (config/view templates/controllers/models)_
 
 ```
-
 - .github/
-|-- workflows
+|-- workflows/
+|---- (Github workflow .yaml files)
 |-- (other github specific files)
 - (project config files and READMEs)
-
 ```
 
 ### Scripts
