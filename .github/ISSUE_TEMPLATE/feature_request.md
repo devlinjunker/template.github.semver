@@ -18,3 +18,6 @@ A clear and concise description of any alternative solutions or features you've 
 
 **Links/Additional context**
 Add any other context, links, or screenshots about the feature request here.
+
+**Testing**
+Provide any functional requirements for this new feature to help with testing.
