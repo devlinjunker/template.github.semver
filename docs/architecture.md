@@ -1,6 +1,6 @@
-| | |
-|-|-|
-| Version | 0.1.0 |
+---
+Version: 0.1.0
+---
 
 ## Intro
 _This document should contain the application design and structure, detailing how the different components work together and how data is stored/retrieved._
