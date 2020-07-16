@@ -24,6 +24,8 @@ _Break down how each folder is used in the repo and how different code file type
 
 ```
 - .github/
+|-- ISSUE_TEMPLATE/  
+|---- (Github Issue Template Files)
 |-- workflows/
 |---- (Github workflow .yaml files)
 |-- (other github specific files)
