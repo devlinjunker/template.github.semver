@@ -4,7 +4,7 @@ _Put some badges up here!_
 
 ## Intro
 
-_This is a template project with all of the basic files and directory structure for a useful Github Repo :100:%_
+_This is a template project with all of the basic files and directory structure for a [Github Repo :100:%](https://github.com/devlinjunker/template.github/community)
 
 ## Dependencies/Frameworks
 
