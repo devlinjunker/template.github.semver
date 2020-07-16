@@ -12,13 +12,24 @@ The best way to [report an issue is through Github](../../issues). The owners of
 
 ### Environment Setup and Technologies
 
-Cloning this repo requires the use of Git. Although you could also download an archive of the repository contents using the Github "Download" link.
+_Detail the steps to setup the project for development_
 
-Once you have a framework and development environment chosen for your project you should update this with how to install the tools and dependencies.
+Cloning this repo requires the use of Git, or you can use the template feature provided by Github. You can also download an archive of the repository contents using the Github "Download" link and extract this to access all of the files and create a new Git repository with them.
+
+Once you have a framework and development environment chosen for your project you should update your repo with specifics about how to install the tools and dependencies needed to run/debug/develop the application.
 
 ### Folder Structure
 
-_This should break down how each folder is used in the repo and where different files are stored (config/view templates/controllers/models)_
+_Break down how each folder is used in the repo and how different code file types should be organized (config/view templates/controllers/models)_
+
+```
+
+- .github/
+|-- workflows
+|-- (other github specific files)
+- (project config files and READMEs)
+
+```
 
 ### Scripts
 
@@ -62,11 +73,11 @@ If this is a larger feature (> 1 week of real time) or you think it will be usef
 
 ### Style Guide
 
-Make sure to only include basic configuration and setup files in this Template Repo!
+Make sure to only include basic documentation and Github setup files in this Template!
 
 ### Code Reviews
 
-Code Reviews are an important part of the software development process.
+Code Reviews are an important part of the software development process. They help to maintain quality and inform other developers of changes to the code. Make sure Pull Request descriptions are completely filled out, include thoughts, links, issues you faced or any other details relevant to the changes.
 
 **Tips:**
 
