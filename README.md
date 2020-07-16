@@ -12,7 +12,7 @@ _This is a template project with all of the basic files and directory structure 
 
 ## Quick Setup/Run
 
-_This section should try to quickly (1-3 paragraphs) explain how to setup the project and start the application/server/demo_
+_This section should try to quickly (1-3 paragraphs) explain how to setup the project and start using it (server/app/demo)_
 
 ## Links
 
