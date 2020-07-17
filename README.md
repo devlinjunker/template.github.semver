@@ -7,6 +7,7 @@ _Put some badges up here!_
 _This is a template project with all of the basic files and directory structure for a [Github Repo :100:%](../../community)_
 
 ## Dependencies/Frameworks
+_List the frameworks, libraries, and tools the project uses:_
 
 - GitHub - this template is based on the GitHub completion stats and has a `.github/` directory
 
