@@ -8,7 +8,7 @@ _This is a template project with all of the basic files and directory structure 
 
 ## Dependencies/Frameworks
 
-- None yet, this is just a template!
+- GitHub - this template is based on the GitHub completion stats and has a `.github/` directory
 
 ## Quick Setup/Run
 
