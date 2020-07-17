@@ -30,8 +30,8 @@ _Break down how each folder is used in the repo and how different code file type
 |---- (Github workflow .yaml files)
 |-- (other github specific files)
 - docs/
-|-- architecture/
-|---- (Files helping to explain project structure)
+|-- architecture.md 
+|-- (Files helping to break down different sections of the project)
 - (project config files and READMEs)
 ```
 
