@@ -9,7 +9,6 @@ The best way to [report an issue is through Github](../../issues). The owners of
 
 ## Development 
 
-
 ### Environment Setup and Technologies
 
 _Detail the steps to setup the project for development_
@@ -17,6 +16,7 @@ _Detail the steps to setup the project for development_
 Cloning this repo requires the use of Git, or you can use the template feature provided by Github. You can also download an archive of the repository contents using the Github "Download" link and extract this to access all of the files and create a new Git repository with them.
 
 Once you have a framework and development environment chosen for your project you should update your repo with specifics about how to install the tools and dependencies needed to run/debug/develop the application.
+
 
 ### Folder Structure
 
@@ -31,6 +31,8 @@ _Break down how each folder is used in the repo and how different code file type
 |-- (other github specific files)
 - (project config files and READMEs)
 ```
+
+
 
 ### Scripts
 
@@ -47,6 +49,12 @@ e.g. to run a script before a commit is saved (to verify the contents of the com
 
 #### Workflows
 [Git Workflows/Actions](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) are added in `.github/workflows`. These are defined by .yaml files that define when the workflow should run and the steps it should take. Github can then enforce that these workflows are successful before Pull Requests are merged via the [Branch Settings Page](../../settings/branches).
+
+
+### Style Guide
+
+Make sure to only include basic documentation and Github setup files in this Template!
+
 
 ### Branching and Pull Requests
 
@@ -84,9 +92,6 @@ If this is a larger feature (> 1 week of real time) or you think it will be usef
                o`branch-2-HEAD`                                                 o--o`branch-2-HEAD`                                             o--o
 ```
 
-### Style Guide
-
-Make sure to only include basic documentation and Github setup files in this Template!
 
 ### Code Reviews
 
