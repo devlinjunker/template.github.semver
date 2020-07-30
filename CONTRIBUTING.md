@@ -9,9 +9,9 @@ The best way to [report an issue is through Github](../../issues). The owners of
 
 ## Development 
 
-### Environment Setup and Technologies
+### Environment Setup and Tools
 
-_Detail the steps to setup the project for development_
+_TODO: Detail the steps to setup the project for development_
 
 Cloning this repo requires the use of Git, or you can use the template feature provided by Github. You can also download an archive of the repository contents using the Github "Download" link and extract this to access all of the files and create a new Git repository with them.
 
@@ -20,7 +20,7 @@ Once you have a framework and development environment chosen for your project yo
 
 ### Folder Structure
 
-_Break down how each folder is used in the repo and how different code file types should be organized (config/view templates/controllers/models)_
+_TODO: Break down how each folder is used in the repo and how different code file types should be organized (config/view templates/controllers/models)_
 
 ```
 - .github/
@@ -36,7 +36,9 @@ _Break down how each folder is used in the repo and how different code file type
 
 ### Scripts
 
-_Git hooks and Github workflows/actions can be extremely useful for streamlining processes and typical developer actions, or verifying that standards are met. This section should be used to document these and how they should be used in the developer workflow._
+_TODO_
+
+Git hooks and Github workflows/actions can be extremely useful for streamlining processes and typical developer actions, or verifying that standards are met. This section should be used to document these and how they should be used in the developer workflow.
 
 #### Hooks
 Git Hooks can be added in the `.git/hooks` directory (or you can create a symbolic link to another place in the repo so they can be committed for every developer.
@@ -50,8 +52,12 @@ e.g. to run a script before a commit is saved (to verify the contents of the com
 #### Workflows
 [Git Workflows/Actions](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) are added in `.github/workflows`. These are defined by .yaml files that define when the workflow should run and the steps it should take. Github can then enforce that these workflows are successful before Pull Requests are merged via the [Branch Settings Page](../../settings/branches).
 
+#### Shell scripts
+Shell scripts can be created to help with deployment/installation or running the software.  
 
 ### Style Guide
+
+_TODO_ 
 
 Make sure to only include basic documentation and Github setup files in this Template!
 
