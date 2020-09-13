@@ -1,10 +1,14 @@
 # Template Github Repo
 
-_Put some badges up here!_
+![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github)
+![CII Best Practices Summary](https://img.shields.io/cii/summary/4287?label=core-infrastructure)
+![GitHub last commit](https://img.shields.io/github/last-commit/devlinjunker/template.github)
+
+_[Find More Badges Here](https://shields.io/)_
 
 ## Intro
 
-_This is a template project with all of the basic files and directory structure for a [Github Repo :100:%](../../community)_
+This is a template project with all of the basic files and directory structure for a [Github Repo :100:%](../../community)
 
 ## Dependencies/Frameworks
 _List the frameworks, libraries, and tools the project uses:_
