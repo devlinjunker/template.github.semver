@@ -7,8 +7,8 @@ assignees: ''
 
 ---
 
-**Describe the change**
+**Describe the change:**
 What needs to be updated/is confusing
 
-**Additional context/Links**
+**Additional context/Links:**
 Add any other context to discussion or links that help explain the the problem here.
