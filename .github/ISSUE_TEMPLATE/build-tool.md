@@ -7,14 +7,14 @@ assignees: ''
 
 ---
 
-**Describe the Improvement**
+**Describe the Improvement:**
 Provide overview of the requested improvement
 
-**Benefits**
+**Benefits:**
 Describe how this will improve the development process
 
-**Drawbacks**
+**Drawbacks:**
 Think through any consequences (slower build, harder to debug, etc.)
 
-**How to Compare**
+**How to Compare:**
 Provide a benchmark for how this can be compared to the current process
