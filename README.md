@@ -1,4 +1,4 @@
-# Template Github Repo
+# Template Github :100: Repo
 
 [![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/blob/master/LICENSE)
 [![CII Best Practices Summary](https://img.shields.io/cii/summary/4287?label=core-infrastructure)](https://bestpractices.coreinfrastructure.org/en/projects/4287)
