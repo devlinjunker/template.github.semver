@@ -1,3 +1,4 @@
+![Logo](https://github.com/devlinjunker/template.github/blob/logo/logo-small.png)
 # Template Github :100: Repo
 
 [![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/blob/master/LICENSE)
