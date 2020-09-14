@@ -21,8 +21,12 @@ _List the frameworks, libraries, and tools the project uses:_
 
 _This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format_
  - [ ] Review [License](LICENSE) File
- - [ ] Review [Security Policy](SECURITY.md) and Update
- - [ ] Update this README, Links and any documentation files with project specific changes
+ - [ ] Review and Update [Security Policy](SECURITY.md)
+   - Provide private way of reporting vulnerabilities?
+ - [ ] Remove/Replace Logo files in `img/` directory
+ - [ ] Update this README and Links with project specific details
+   - Update Contributing Info
+   - Update Code of Conduct
  - [ ] (Optional) Modify [Issue Templates](.github/ISSUE_TEMPLATE/)
  - [ ] (Optional) Set up Github Workflows
  - [ ] Add Project Build and Configuration Files
