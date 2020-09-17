@@ -65,18 +65,18 @@
 ## Score (Complexity/Effort)
 
 - name: "(1)"
-  color: "EEEEEEE"
-  description: "minimal complexity - few lines of code"
+  color: "EEEEEEE" # lightest grey
+  description: "minimal complexity - few lines modified"
 - name: "(2)"
-  color: "CCCCCC"
+  color: "CCCCCC" # light grey
   description: "a little more complex - multiple files/refactoring"
 - name: "(3)"
-  color: "999999"
-  description: "small change/bug fix that requires some research"
+  color: "999999" # medium grey
+  description: "small change/bug fix that requires little research"
 - name: "(5)"
-  color: "666666"
+  color: "666666" # dark grey
   description: "medium change/bugfix with planning/investigation"
 - name: "(8)"
-  color: "222222"
+  color: "222222" # darkest grey
   description: "research task or large change with multiple use cases"
  
