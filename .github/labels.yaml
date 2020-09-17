@@ -4,10 +4,10 @@
   color: "d73a4a" # red
   description: "Take a look at this soon!"
 - name: "good first issue"
-  color: "" # pink
+  color: "F4B0F5" # pink
   description: "Good for newcomers/anyone who wants to start contributing"
 - name: "question"
-  color: "" # Fucsia 
+  color: "FF00BE" # Fucsia 
   description: "Further information requested"
   
 ## Types
@@ -16,49 +16,49 @@
   color: "eda15a" # orange
   description: "Something isn't working"
 - name: "qa"
-  color "" # brown
+  color "856512" # brown
   description: "Adding/improving testing capabalities"
 - name: "performance"
-  color: "" # dark purple
+  color: "7F54DD" # dark purple
   description: "Performance Improvements"
-- name: "debt/refactor"
-  color: "" # light purple
-  description: "Technical Debt that we should attempt to clean up"
+- name: "refactor"
+  color: "CDC1EA" # light purple
+  description: "Addresses Technical Debt that we should avoid"
 - name: "feature"
-  color: "" # dark blue
+  color: "0075ca" # dark blue
   description: "New Feature"
 - name: "build"
-  color: "" # basic blue
+  color: "00A0FF" # basic blue
   description: "Improvements to the build process"
 - name: "doc"
-  color: "" # teal blue
+  color: "3DE9F5" # teal blue
   description: "Help improve the Documentation"
 - name: "subtask"
-  color: "" # light blue
+  color: "C5E2FC" # light blue
   description: "A smaller component of a larger feature/bugfix/refactor"
 - name: "poc"
-  color: "" # grey blue
+  color: "bfd4f2" # grey blue
   description: "Proof of Concept of a Feature/Technical Design"
 - name: "example"
-  color: "" # white?
+  color: "FFFFFF" # white?
   description: "Useful Example to be shared"
 - name: "dependencies"
-  color: "" # black?
+  color: "000000" # black?
   description: "Updates the project dependencies"
 
 ## Status
 
 - name: "status: blocked"
-  color: "" # yellow
+  color: "F3FF15" # yellow
   description: "Unable to work - dependent on another task"
 - name: "status: longterm"
-  color: "" # dark green
+  color: "c2e0c6" # light green
   description: "This task will be around a while"
 - name: "status: WIP"
-  color: "" # basic green
+  color: "0e8a16" # basic green
   description: "Work in progress"
 - name: "status: wontfix"
-  color: "" # white green
+  color: "EFF8E3" # pale green/yellow
   description: "This will not be worked on"
   from_name: "wontfix"
 
