@@ -1,48 +1,65 @@
+## Tags
+
 - name: "-priority"
-  color: "d73a4a"
+  color: "d73a4a" # red
   description: "Take a look at this soon!"
+- name: "good first issue"
+  color: "" # pink
+  description: "Good for newcomers/anyone who wants to start contributing"
+- name: "question"
+  color: "" # Fucsia 
+  description: "Further information requested"
   
 ## Types
 
 - name: "bug"
-  color: "eda15a"
+  color: "eda15a" # orange
   description: "Something isn't working"
-- name: "question"
-  color: "dark purple"
-  description: "Further information requested"
+- name: "qa"
+  color "" # brown
+  description: "Adding/improving testing capabalities"
+- name: "performance"
+  color: "" # dark purple
+  description: "Performance Improvements"
 - name: "debt/refactor"
-  color: "light purple"
+  color: "" # light purple
   description: "Technical Debt that we should attempt to clean up"
+- name: "feature"
+  color: "" # dark blue
+  description: "New Feature"
 - name: "build"
-  color: "basic blue"
+  color: "" # basic blue
   description: "Improvements to the build process"
 - name: "doc"
-  color: "teal blue"
+  color: "" # teal blue
   description: "Help improve the Documentation"
-- name: "feature"
-  color: "dark blue"
-  description: "New Feature"
+- name: "subtask"
+  color: "" # light blue
+  description: "A smaller component of a larger feature/bugfix/refactor"
+- name: "poc"
+  color: "" # grey blue
+  description: "Proof of Concept of a Feature/Technical Design"
+- name: "example"
+  color: "" # white?
+  description: "Useful Example to be shared"
 - name: "dependencies"
-  color: "light blue"
+  color: "" # black?
   description: "Updates the project dependencies"
-- name: "example/poc"
-  color: "grey blue"
-  description: "Serves as an Example or Proof of Concept"
-  
+
 ## Status
 
 - name: "status: blocked"
-  color: "yellow"
+  color: "" # yellow
   description: "Unable to work - dependent on another task"
-- name: "status: WIP"
-  color: "light green"
-  description: "Work in progress"
 - name: "status: longterm"
-  color: "dark green"
+  color: "" # dark green
   description: "This task will be around a while"
+- name: "status: WIP"
+  color: "" # basic green
+  description: "Work in progress"
 - name: "status: wontfix"
-  color: "white green"
-  description: "This will not be worked on
+  color: "" # white green
+  description: "This will not be worked on"
   from_name: "wontfix"
 
 ## Score (Complexity/Effort)
@@ -62,10 +79,4 @@
 - name: "(8)"
   color: "222222"
   description: "research task or large change with multiple use cases"
-
-## Tags
-
-- name: "good first issue"
-  color: "pink"
-  description: "Good for newcomers"
  
