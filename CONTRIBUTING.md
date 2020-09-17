@@ -48,6 +48,9 @@ e.g. to run a script before a commit is saved (to verify the contents of the com
 #### Workflows
 [Git Workflows/Actions](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) are added in `.github/workflows`. These are defined by .yaml files that define when the workflow should run and the steps it should take. Github can then enforce that these workflows are successful before Pull Requests are merged via the [Branch Settings Page](../../settings/branches).
 
+**Label Manager**  
+This project defines the Github Labels in a [YAML file](./.github/labels.yaml) that is managed by the [Github Labeler Action](https://github.com/marketplace/actions/github-labeler). Any labels that are not defined in this file will be removed every time this action is run.
+
 ### Branching and Pull Requests
 
 I'm going to talk about my own strategy in this document, this way my projects will _hopefully_ all use the same-ish workflow. Feel free to use/modify/change this for your project.
