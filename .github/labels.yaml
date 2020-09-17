@@ -1,0 +1,71 @@
+- name: "-priority"
+  color: "d73a4a"
+  description: "Take a look at this soon!"
+  
+## Types
+
+- name: "bug"
+  color: "eda15a"
+  description: "Something isn't working"
+- name: "question"
+  color: "dark purple"
+  description: "Further information requested"
+- name: "debt/refactor"
+  color: "light purple"
+  description: "Technical Debt that we should attempt to clean up"
+- name: "build"
+  color: "basic blue"
+  description: "Improvements to the build process"
+- name: "doc"
+  color: "teal blue"
+  description: "Help improve the Documentation"
+- name: "feature"
+  color: "dark blue"
+  description: "New Feature"
+- name: "dependencies"
+  color: "light blue"
+  description: "Updates the project dependencies"
+- name: "example/poc"
+  color: "grey blue"
+  description: "Serves as an Example or Proof of Concept"
+  
+## Status
+
+- name: "status: blocked"
+  color: "yellow"
+  description: "Unable to work - dependent on another task"
+- name: "status: WIP"
+  color: "light green"
+  description: "Work in progress"
+- name: "status: longterm"
+  color: "dark green"
+  description: "This task will be around a while"
+- name: "status: wontfix"
+  color: "white green"
+  description: "This will not be worked on
+  from_name: "wontfix"
+
+## Score (Complexity/Effort)
+
+- name: "(1)"
+  color: "EEEEEEE"
+  description: "minimal complexity - few lines of code"
+- name: "(2)"
+  color: "CCCCCC"
+  description: "a little more complex - multiple files/refactoring"
+- name: "(3)"
+  color: "999999"
+  description: "small change/bug fix that requires some research"
+- name: "(5)"
+  color: "666666"
+  description: "medium change/bugfix with planning/investigation"
+- name: "(8)"
+  color: "222222"
+  description: "research task or large change with multiple use cases"
+
+## Tags
+
+- name: "good first issue"
+  color: "pink"
+  description: "Good for newcomers"
+ 
