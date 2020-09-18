@@ -7,15 +7,15 @@ assignees: ''
 
 ---
 
-**Describe the Improvement**
+**Describe the Improvement:**
 Explain the goal of this refactor or cleanup task
 
-**Steps**
+**Steps:**
 As best you can, detail the steps to make this change:
   1.    
 
-**Additional Context and Links**
+**Additional Context and Links:**
 Provide any discussion or links to documents/webpages that help explain why this change is important
 
-**Testing**
+**Testing:**
 How can we verify that this change doesn't break anything

@@ -1,18 +1,36 @@
-# Template Github Repo
+<img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github/blob/master/img/logo-small.png">
 
-_Put some badges up here!_
+# Template Github :100: Repo
+
+[![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/blob/master/LICENSE)
+[![CII Best Practices Summary](https://img.shields.io/cii/summary/4287?label=core-infrastructure)](https://bestpractices.coreinfrastructure.org/en/projects/4287)
+[![GitHub last commit](https://img.shields.io/github/last-commit/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/commits/master)
+
+_[Find More Badges Here](https://shields.io/)_
 
 ## Intro
 
-_This is a template project with all of the basic files and directory structure for a [Github Repo :100:%](../../community)_
+This is a template project with all of the basic files and directory structure for a [Github Repo :100:%](../../community)
 
 ## Dependencies/Frameworks
+_List the frameworks, libraries, and tools the project uses:_
 
-- None yet, this is just a template!
+- GitHub - this template is based on the GitHub completion stats and has a `.github/` directory
 
 ## Quick Setup/Run
 
-_This section should try to quickly (1-3 paragraphs) explain how to setup the project and start using it (server/app/demo)_
+_This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format_
+ - [ ] Review [License](LICENSE) File
+ - [ ] Review and Update [Security Policy](SECURITY.md)
+   - Provide private way of reporting vulnerabilities?
+ - [ ] Remove/Replace Logo files in `img/` directory
+ - [ ] Update this README and Links with project specific details
+   - Update Contributing Info
+   - Update Code of Conduct
+ - [ ] (Optional) Modify [Issue Templates](.github/ISSUE_TEMPLATE/)
+ - [ ] (Optional) Set up Github Workflows
+ - [ ] Add Project Build and Configuration Files
+ - Start Coding!
 
 ## Links
 
