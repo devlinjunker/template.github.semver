@@ -29,7 +29,7 @@ _This section should try to quickly explain how to setup the project and start u
    - Update Code of Conduct
  - [ ] (Optional) Modify [Issue Templates](.github/ISSUE_TEMPLATE/)
  - [ ] (Optional) Modify [Pull Request Template](.github/pull_request_template.md)
- - [ ] (Optional) Update [Github Workflows[(.github/workflows)
+ - [ ] (Optional) Update [Github Workflows](.github/workflows)
     - [ ] Review and Update [Label Definitions](https://github.com/devlinjunker/template.github/tree/label-manager-action/.github/labels.yaml) for Label Manager
  - [ ] Add Project Build and Configuration Files
  - Start Coding!
