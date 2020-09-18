@@ -7,7 +7,7 @@
   color: "F4B0F5" # pink
   description: "Good for newcomers/anyone who wants to start contributing"
 - name: "question"
-  color: "FF00BE" # Fucsia 
+  color: "FF00BE" # fuschia 
   description: "Further information requested"
   
 ## Types
