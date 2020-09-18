@@ -65,7 +65,7 @@
 ## Score (Complexity/Effort)
 
 - name: "(1)"
-  color: "EEEEEEE" # lightest grey
+  color: "EEEEEE" # lightest grey
   description: "minimal complexity - few lines modified"
 - name: "(2)"
   color: "CCCCCC" # light grey
