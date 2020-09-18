@@ -3,7 +3,6 @@
 Thanks for helping out!
 
 ## Reporting Issues
-
 The best way to [report an issue is through Github](../../issues). The owners of the repo should get an email notification whenever a new issue is created.
 
 
@@ -11,11 +10,9 @@ The best way to [report an issue is through Github](../../issues). The owners of
 This section details the steps to setup the project for development.
 
 ### Environment Setup and Tools
-
 Cloning this repo requires the use of Git, or you can use the template feature provided by Github. You can also download an archive of the repository contents using the Github "Download" link and extract this to access all of the files and create a new Git repository with them.
 
 Once you have a framework and development environment chosen for your project you should update your repo with specifics about how to install the tools and dependencies needed to run/debug/develop the application.
-
 
 ### Folder Structure
 Break down how each folder is used in the repo and how different code file types should be organized.
@@ -30,10 +27,9 @@ Break down how each folder is used in the repo and how different code file types
 - (project config files and READMEs)
 ```
 
-
-
 ### Scripts
 Git hooks and Github workflows/actions are extremely useful for streamlining processes and typical developer actions, or verifying that standards are met. This section documents how they should be used in this project.
+
 
 #### Hooks
 Git Hooks can be added in the `.git/hooks` directory (I prefer to create symbolic link to another place in the repo so they can be committed for every developer. e.g. store the hook scripts in `./hooks`, after git repo set up use `ln -s ./hooks/ ./.git/hooks`)
@@ -49,15 +45,13 @@ Github can then enforce that these workflows are successful before Pull Requests
 This project defines the Github Labels in a [YAML file](./.github/labels.yaml) that is managed by the [Github Labeler Action](https://github.com/marketplace/actions/github-labeler). 
 Any labels that are not defined in this file will be removed every time this action is run. **This does not affect PRs**
 
+
 #### Shell scripts
 Shell scripts can be created to help with deployment/installation or running the software.  
 
+
 ### Style Guide
-
-_TODO_ 
-
 Make sure to only include basic documentation and Github setup files in this Template!
-
 
 ### Branching and Pull Requests
 
@@ -94,7 +88,6 @@ If this is a larger feature (> 1 week of real time) or you think it will be usef
               \                                                                \                                                               \    /
                o`branch-2-HEAD`                                                 o--o`branch-2-HEAD`                                             o--o
 ```
-
 
 ### Code Reviews
 
