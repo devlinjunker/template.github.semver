@@ -16,7 +16,7 @@
   color: "eda15a" # orange
   description: "Something isn't working"
 - name: "qa"
-  color "856512" # brown
+  color: "856512" # brown
   description: "Adding/improving testing capabalities"
 - name: "performance"
   color: "7F54DD" # dark purple
