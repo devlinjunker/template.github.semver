@@ -29,6 +29,7 @@ _This section should try to quickly explain how to setup the project and start u
    - Provide private way of reporting vulnerabilities?
  - [ ] Remove/Replace Logo files in `img/` directory
  - [ ] Update this README and Links with project specific details
+   - Reset Version Information
    - Update/Remove Badges
    - Define Dependencies
    - Update Setup Instructions
