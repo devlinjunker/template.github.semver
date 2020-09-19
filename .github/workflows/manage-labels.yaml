@@ -24,7 +24,8 @@ jobs:
         yaml_file: .github/labels.yaml
         skip_delete: false
         dry_run: false
-#         exclude: |
+        exclude: |
+          :*
 #           help*
 #             *issue
       env:
