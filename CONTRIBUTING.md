@@ -15,17 +15,39 @@ You will need to install Git and create an account on Github to take advantage o
 #### Create your own Project from this Template
 There are multiple ways to use this template as a starting point for your own project. The best way is to use the template feature provided by Github:
 
+<img width="1130" alt="template" src="https://user-images.githubusercontent.com/1504590/95393957-55b31c80-08b0-11eb-9126-55d8105881f4.png">
 
-The other ways to start a new project are to either clone this repo using Git and point at your own remote:
+The other way to start a new project are to either clone this repo using Git and point at your own remote:
 
+```
+git clone https://github.com/devlinjunker/template.hapi.rest.git;
+mv template.hapi.rest <new_server_project_name>;
+cd <new_server_project_name>;
+git remote remove origin;
+git remote add origin <remote_addr>;
+git push --set-upstream origin master;
+```
 
 Or, you can download an archive of the repository contents using the Github "Download" link and extract this to access all of the files and create a new Git project with them:
 
+<img width="946" alt="zip" src="https://user-images.githubusercontent.com/1504590/95393961-56e44980-08b0-11eb-95a3-660860e83c41.png">
+
+After Downloading:
+```
+unzip template.hapi.rest-master.zip;
+mv template.hapi.rest-master <new_server_project_name>;
+cd <new_server_project_name>;
+git init;
+git remote add origin <remote_addr>;
+git add *;
+git commit;
+git push;
+```
 
 Once you have a framework and development environment chosen for your project you should update your repo with specifics about how to install the tools and dependencies needed to run/debug/develop the application.
 
 
-### Update a Project or add to existing Project
+#### Update a Project or add to existing Project
 The steps to update a Project that was created using this template, or to add these features to an existing project are the same. In the projects root directory:
 ```
 git checkout master;
@@ -35,6 +57,9 @@ git checkout template/master ./;
 git reset HEAD * ./;
 git status; # to see new files and changed files
 <compare diff with `origin/master` to see updates>
+git add *;
+git commit;
+git push;
 ```
 
 ### Folder Structure
