@@ -13,7 +13,7 @@ version: 0.9.0-SNAPSHOT
 [![GitHub issues](https://img.shields.io/github/issues/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/issues)
 [![GitHub priority issues](https://img.shields.io/github/issues/devlinjunker/template.github/-priority?color=red&label=priority%20issues)](https://github.com/devlinjunker/template.github/issues?q=is%3Aopen+is%3Aissue+label%3A-priority)
 
-_[Find More Badges Here](https://shields.io/)_
+_[Find More Badges Here!](https://shields.io/)_
 
 ## Intro
 
