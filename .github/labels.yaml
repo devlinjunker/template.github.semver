@@ -60,7 +60,6 @@
 - name: "status: wontfix"
   color: "EFF8E3" # pale green/yellow
   description: "This will not be worked on"
-  from_name: "wontfix"
 
 ## Score (Complexity/Effort)
 
