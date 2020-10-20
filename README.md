@@ -27,8 +27,8 @@ _List the frameworks, libraries, and tools the project uses:_
 ## Quick Setup/Run
 
 _This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format_
- - [ ] Review [License](LICENSE) File
- - [ ] Review and Update [Security Policy](SECURITY.md)
+ - [ ] Review [License] File
+ - [ ] Review and Update [Security Policy]
    - Provide private way of reporting vulnerabilities?
  - [ ] Remove/Replace Logo files in `img/` directory
    - If replacing, change logo location in README
@@ -39,17 +39,17 @@ _This section should try to quickly explain how to setup the project and start u
    - Update Setup Instructions
    - Update Contributing Info
    - Update Code of Conduct
- - [ ] Modify [Issue Templates](.github/ISSUE_TEMPLATE/) and [config](.github/ISSUE_TEMPLATE/config.yml)
- - [ ] (Optional) Modify [Pull Request Template](.github/pull_request_template.md)
- - [ ] (Optional) Update [Github Workflows](.github/workflows)
-    - [ ] Review and Update [Label Definitions](.github/labels.yaml) for Label Manager
+ - [ ] Modify [Issue Templates] and [Template Configuration File]
+ - [ ] (Optional) Modify [Pull Request Template]
+ - [ ] (Optional) Update [Github Workflows]
+    - [ ] Review and Update [Label Definitions] for Label Manager
  - [ ] Add Project Build and Configuration Files
  - Start Coding!
 
 ## Links
 
-- [Code of Conduct](CODE_OF_CONDUCT.md)
-- [Contribute](CONTRIBUTING.md)
+- [Code of Conduct]
+- [Contribute]
 - FAQ?
 - Wiki?
 - Architecture Doc? -- How to understand the application from a developer point of view (webpage-> controllers -> services -> libraries)
@@ -57,3 +57,15 @@ _This section should try to quickly explain how to setup the project and start u
 ## Contributors
 
 - [Devlin Junker (Me!)](mailto:devlinjunker@gmail.com)
+
+
+
+[License]: LICENSE
+[Security Policy]: SECURITY.md
+[Issue Templates]: .github/ISSUE_TEMPLATE/
+[Template Configuration File]: .github/ISSUE_TEMPLATE/config.yml
+[Pull Request Template]: .github/pull_request_template.md
+[Github Workflows]: .github/workflows
+[Label Definitions]: .github/labels.yaml
+[Code of Conduct]: CODE_OF_CONDUCT.md
+[Contribute]: CONTRIBUTING.md
