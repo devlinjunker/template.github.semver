@@ -39,7 +39,7 @@ _This section should try to quickly explain how to setup the project and start u
    - Update Setup Instructions
    - Update Contributing Info
    - Update Code of Conduct
- - [ ] (Optional) Modify [Issue Templates](.github/ISSUE_TEMPLATE/)
+ - [ ] Modify [Issue Templates](.github/ISSUE_TEMPLATE/) and [config](.github/ISSUE_TEMPLATE/config.yml)
  - [ ] (Optional) Modify [Pull Request Template](.github/pull_request_template.md)
  - [ ] (Optional) Update [Github Workflows](.github/workflows)
     - [ ] Review and Update [Label Definitions](.github/labels.yaml) for Label Manager
