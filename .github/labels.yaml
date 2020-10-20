@@ -40,11 +40,14 @@
   color: "bfd4f2" # grey blue
   description: "Proof of Concept of a Feature/Technical Design"
 - name: "example"
-  color: "FFFFFF" # white?
+  color: "FFFFFF" # white
   description: "Useful Example to be shared"
 - name: "dependencies"
-  color: "000000" # black?
+  color: "000000" # black
   description: "Updates the project dependencies"
+- name: "security"
+  color: "871717" # redish-black
+  description: "Security vulnerability addressed"
 
 ## Status
 
