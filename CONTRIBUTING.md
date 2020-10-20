@@ -3,11 +3,12 @@
 Thanks for helping out!
 
 ## Reporting Issues
-The best way to [report an issue is through Github](../../issues). The owners of the repo should get an email notification whenever a new issue is created.
+The best way to [report an issue is through Github](../../issues/choose). The owners of the repo should get an email notification whenever a new issue is created.
 
 
 ## Development 
 This section details the steps to setup the project for development.
+
 
 ### Environment Setup and Tools
 You will need to install Git and create an account on Github to take advantage of all of the features of this template.
@@ -62,6 +63,7 @@ git commit;
 git push;
 ```
 
+
 ### Folder Structure
 Break down how each folder is used in the repo and how different code file types should be organized.
 
@@ -74,6 +76,7 @@ Break down how each folder is used in the repo and how different code file types
 |-- (other github specific files)
 - (project config files and READMEs)
 ```
+
 
 ### Scripts
 Git hooks and Github workflows/actions are extremely useful for streamlining processes and typical developer actions, or verifying that standards are met. This section documents how they should be used in this project.
@@ -98,8 +101,6 @@ Any labels that are not defined in this file will be removed every time this act
 Shell scripts can be created to help with deployment/installation or running the software.  
 
 
-### Style Guide
-Make sure to only include basic documentation and Github setup files in this Template!
 
 ### Branching and Pull Requests
 
@@ -139,6 +140,7 @@ If this is a larger feature (> 1 week of real time) or you think it will be usef
                o`branch-2-HEAD`                                                 o--o`branch-2-HEAD`                                             o--o
 ```
 
+
 ### Code Reviews
 
 Code Reviews are an important part of the software development process. They help to maintain quality and inform other developers of changes to the code. Make sure Pull Request descriptions are completely filled out, include thoughts, links, issues you faced or any other details relevant to the changes.
@@ -150,3 +152,13 @@ Code Reviews are an important part of the software development process. They hel
  - Try to think of any edge cases they may have missed.
  - Ensure formatting and style guide is followed
  - [5 antipractices of Code Reviews](https://blogs.oracle.com/javamagazine/five-code-review-antipatterns)
+
+
+
+### Security
+Review our [Security Policy](SECURITY.md) for how to submit bug reports and design principles to follow when contributing. 
+
+
+### Style Guide
+Make sure to only include basic documentation and Github setup files in this Template!
+
