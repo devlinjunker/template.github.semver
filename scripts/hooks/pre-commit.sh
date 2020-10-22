@@ -1,4 +1,6 @@
 #! /bin/bash
+# Pre-commit githook to run before every commit to validate it locally
+#   1. Check that branch name matches conventions (branch-name.sh)
 
 main() {
   local DIR=`dirname "$0"`
