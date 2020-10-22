@@ -25,6 +25,8 @@ main() {
 
   # Call branch name script
   $DIR/branch-name.sh
+
+  # If failure then print message
   if [ $? -ne 0 ]; then
     echo "$(tput setaf 1)$(tput setab 7)$BRANCH_NAME_ERROR$(tput sgr 0)"
     echo "  <prefix>/<description>"
