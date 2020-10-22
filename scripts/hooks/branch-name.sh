@@ -22,6 +22,7 @@ main() {
   # create regexp for branch names
   local regexp="^($(echo "${PREFIXES[@]}" | sed "s/ /|/g"))\/[A-Za-z0-9._\-]+$"
 
+
   # check that current branch matches regexp
   if [[ ! $branch =~ $regexp ]]; then
     # error if not found in list
