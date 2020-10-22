@@ -1,15 +1,22 @@
 #! /bin/bash
 
+DIR=`dirname $0`
 BRANCH_PREFIXES=( 'feat' 'perf' 'release' )
+
+prefixes() {
+  # get allowed names from labels.yaml
+  local LABEL_PREFIXES=( `less $DIR/../../.github/labels.yaml | sed -n "/name/p" | sed "s/- name: \"//" | sed "s/\"//" | sed -n "/^[a-z]*$/p"` )
+
+  local PREFIXES=( "${LABEL_PREFIXES[@]}" "${BRANCH_PREFIXES[@]}" )
+
+  echo "${PREFIXES[@]}"
+}
 
 main() {
   # get current branch name
   local branch="$(git rev-parse --abbrev-ref HEAD)"
 
-  # get allowed names from labels.yaml
-  local LABEL_PREFIXES=( `less ../../.github/labels.yaml | sed -n "/name/p" | sed "s/- name: \"//" | sed "s/\"//" | sed -n "/^[a-z]*$/p"` )
-
-  local PREFIXES=( "${LABEL_PREFIXES[@]}" "${BRANCH_PREFIXES[@]}" )
+  local PREFIXES=`prefixes`
 
   # create regix for branch names
   local regexp=`echo "${PREFIXES[@]}" | sed "s/ /|/g"`
@@ -27,4 +34,11 @@ main() {
   #  done
 }
 
-main
+case $1 in
+  "-o"):
+    prefixes 
+  ;;
+  *):
+    main
+esac
+

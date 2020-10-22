@@ -16,7 +16,8 @@ main() {
   # If failure then print message
   if [ $? -ne 0 ]; then
     echo "$(tput setaf 1)$(tput setab 7)$BRANCH_ERROR$(tput sgr 0)"
-    echo "conventions"
+    echo "  <prefix>/<description>"
+    echo "prefix options: ($($DIR/branch-name.sh -o))"
     return -1
   fi
 
