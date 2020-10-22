@@ -2,7 +2,7 @@
 # Script to check github branch protections and prevent commits to protected branches
 
 BLOCKED_BRANCH=( master )
-BLOCKED_PREFIC=( release )
+BLOCKED_PREFIX=( release )
 
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 
@@ -21,13 +21,13 @@ github() {
       #echo $OWNER
       #echo $REPO
     else
-      echo "not a github remote"
+      #echo "not a github remote"
+      return
     fi
   else
-    echo "no upstream branch"
+    #echo "no upstream branch"
+    return
   fi
-
-  echo $BRANCH
 
   # Note: Requires github token... so idk...
   #AUTH="token "
@@ -40,9 +40,14 @@ main() {
   github
   
   # compare against branch name/prefixes defined in here
-  # if BLOCKED_BRANCH matches
-  # or if branch starts with BLOCKED_PREFIX
-  # return -1
+  if [[ "${BLOCKED_BRANCH[@]}" =~ $BRANCH ]]; then
+    return -1
+  fi 
+  for PREFIX in "${BLOCKED_PREFIX[@]}"; do
+    if [[ $BRANCH == $PREFIX* ]]; then
+      return -1
+    fi
+  done
    
 }
 main

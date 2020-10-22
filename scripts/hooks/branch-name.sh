@@ -7,7 +7,7 @@
 #  based on https://itnext.io/using-git-hooks-to-enforce-branch-naming-policy-ffd81fa01e5e
 
 DIR=`dirname $0`
-BRANCH_PREFIXES=( 'feat' 'perf' 'release' )
+BRANCH_PREFIXES=( 'feat' 'perf' )
 
 prefixes() {
   # get allowed names from labels.yaml
