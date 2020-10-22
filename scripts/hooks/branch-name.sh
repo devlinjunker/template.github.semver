@@ -3,6 +3,8 @@
 # <prefix>/<description>
 #   Prefix options come from BRANCH_PREFIX definition at top of file
 #   and from .github/labels.yaml name property
+#
+#  based on https://itnext.io/using-git-hooks-to-enforce-branch-naming-policy-ffd81fa01e5e
 
 DIR=`dirname $0`
 BRANCH_PREFIXES=( 'feat' 'perf' 'release' )
