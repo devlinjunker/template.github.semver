@@ -43,6 +43,7 @@ _This section should try to quickly explain how to setup the project and start u
  - [ ] (Optional) Modify [Pull Request Template]
  - [ ] (Optional) Update [Github Workflows]
     - [ ] Review and Update [Label Definitions] for Label Manager
+ - [ ] Set up Git Hooks and Commit Message Template
  - [ ] Add Project Build and Configuration Files
  - Start Coding!
 
