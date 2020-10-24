@@ -18,7 +18,7 @@ main() {
   if [ $? -ne 0 ]; then
     echo "$(tput setaf 1)$(tput setab 7)$BRANCH_NAME_ERROR$(tput sgr 0)"
     echo "  <prefix>/<description>"
-    echo "prefix options: ($($DIR/branch-name.sh -o))"
+    echo "prefix options: ($($DIR/prefix-list.sh))"
     return -1
   fi
 
