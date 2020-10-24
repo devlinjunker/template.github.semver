@@ -25,7 +25,7 @@ main() {
   local PREFIXES=`$DIR/prefix-list.sh`
 
   # create regix for branch names
-  local regexp="^($(echo "${PREFIXES[@]}" | sed "s/ /|/g"))\/[A-Za-z0-9._-]+$"
+  local regexp="^($(echo "${PREFIXES[@]}" | sed "s/ /|/g"))\/[A-Za-z0-9._\-]+$"
 
   # check that current branch matches regexp
   if [[ ! $branch =~ $regexp ]]; then
