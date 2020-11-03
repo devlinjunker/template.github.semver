@@ -2,15 +2,16 @@
 # Pre-commit githook to run before every commit to validate it locally
 #   1. Check that branch name matches conventions (branch-name.sh)
 
+DIR=`dirname "$0"`
+
+# if in hook, then prep PATH to find in repo `scripts/hooks/` dir 
+if [[ $DIR =~ ".git" ]]; then
+  DIR+="/../../scripts/hooks"
+fi
+
+
+
 main() {
-  local DIR=`dirname "$0"`
-
-  # if in hook, then prep PATH to find in repo `scripts/hooks/` dir 
-  if [[ $DIR =~ ".git" ]]; then
-    DIR+="/../../scripts/hooks"
-  fi
-
-
   local BRANCH_NAME_ERROR=" !  Branch name does not match conventions  "
 
   # Call branch name script

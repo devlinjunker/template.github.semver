@@ -6,25 +6,18 @@
 #
 #  based on https://itnext.io/using-git-hooks-to-enforce-branch-naming-policy-ffd81fa01e5e
 
+
+# NOTE: expect this to be called in this directory
 DIR=`dirname $0`
-# BRANCH_PREFIXES=( 'feat' 'fix' 'bugfix' 'perf' 'test' )
-# 
-# prefixes() {
-#   # get allowed names from labels.yaml
-#   local LABEL_PREFIXES=( `less $DIR/../../.github/labels.yaml | sed -n "/name/p" | sed "s/- name: \"//" | sed "s/\"//" | sed -n "/^[a-z]*$/p"` )
-# 
-#   local PREFIXES=( "${LABEL_PREFIXES[@]}" "${BRANCH_PREFIXES[@]}" )
-# 
-#   echo "${PREFIXES[@]}"
-# }
 
 main() {
   # get current branch name
   local branch="$(git rev-parse --abbrev-ref HEAD)"
 
+  # get prefixes from shared list
   local PREFIXES=`$DIR/prefix-list.sh`
 
-  # create regix for branch names
+  # create regexp for branch names
   local regexp="^($(echo "${PREFIXES[@]}" | sed "s/ /|/g"))\/[A-Za-z0-9._\-]+$"
 
   # check that current branch matches regexp
