@@ -21,12 +21,16 @@ if [[ $DIR =~ ".git" ]]; then
   DIR+="/../../scripts/hooks"
 fi
 
+
+# get prefix options from shared prefix list file
 PREFIXES=`$DIR/prefix-list.sh`
 
-# create regix for branch names
+
+# create regexp for first line of commit message:      <prefix>(optional !):<description>
 regexp="^($(echo "${PREFIXES[@]} ${MSG_PREFIXES[@]}" | sed "s/ /|/g"))(\([\w\s]*\))?\!?\:[A-Za-z0-9\._\-\s]*"
 
-# check that message  matches regexp
+
+# check that first line of message matches regexp
 if [[ ! $FIRST_LINE =~ $regexp ]]; then
   exit -1
 fi
