@@ -13,7 +13,7 @@ MSG_PREFIXES=( 'wip' )
 COMMIT_MSG=`cat $1 | sed -n "/^[^#]/p"`
 FIRST_LINE=`echo $COMMIT_MSG | sed -n "/[^\w]*$/p" | sed "s/^ *//" | sed "s/\n//" | head`
 
-COMMIT_MSG_ERROR="Invalid commit message"
+COMMIT_MSG_ERROR=" ! Invalid commit message  "
 
 DIR=`dirname "$0"`
 # if in hook, then prep PATH to find in repo `scripts/hooks/` dir 
@@ -25,7 +25,6 @@ fi
 # get prefix options from shared prefix list file
 PREFIXES=`$DIR/prefix-list.sh`
 
-
 # create regexp for first line of commit message:      <prefix>(optional !):<description>
 regexp="^($(echo "${PREFIXES[@]} ${MSG_PREFIXES[@]}" | sed "s/ /|/g"))(\([\w\s]*\))?\!?\:[A-Za-z0-9\._\-\s]*"
 
@@ -33,6 +32,8 @@ regexp="^($(echo "${PREFIXES[@]} ${MSG_PREFIXES[@]}" | sed "s/ /|/g"))(\([\w\s]*
 # check that first line of message matches regexp
 if [[ ! $FIRST_LINE =~ $regexp ]]; then
   echo "$(tput setaf 1)$(tput setab 7)$COMMIT_MSG_ERROR$(tput sgr 0)"
+  echo "  <prefix>:<description>"
+  echo "prefix options: ($PREFIXES $MSG_PREFIXES)"
   exit -1
 fi
 
