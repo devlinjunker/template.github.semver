@@ -21,7 +21,7 @@ main() {
   FIRST_LINE=`echo $COMMIT_MSG | sed -n "/[^\w]*$/p" | sed "s/^ *//" | sed "s/\n//" | head`
 
   # create regexp for first line of commit message:      <prefix>(optional !):<description>
-  regexp="^($(echo "${MSG_PREFIXES[@]} ${OTHER_PREFIXES[@]}" | sed "s/ /|/g"))(\([\w\s]*\))?\!?\:[A-Za-z0-9\._\-\s]*"
+  regexp="^($(echo "${MSG_PREFIXES[@]} ${OTHER_PREFIXES[@]}" | sed "s/ /|/g"))(\([a-zA-Z0-9 ]*\))?\!?\:[A-Za-z0-9\._\-\s]*"
 
   # check that first line of message matches regexp
   if [[ ! $FIRST_LINE =~ $regexp ]]; then
