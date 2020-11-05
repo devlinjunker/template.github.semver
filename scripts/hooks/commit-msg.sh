@@ -20,7 +20,9 @@ main() {
   COMMIT_MSG=`cat $1 | sed -n "/^[^#]/p"`
   FIRST_LINE=`echo $COMMIT_MSG | sed -n "/[^\w]*$/p" | sed "s/^ *//" | sed "s/\n//" | head`
 
-  # create regexp for first line of commit message:      <prefix>(optional !):<description>
+  # create regexp for first line of commit message -- [square brackets] are optional:      <prefix>[(scope)][!]:<description>
+    # scope provides more details
+    # ! indicates BREAKING CHANGES
   regexp="^($(echo "${MSG_PREFIXES[@]} ${OTHER_PREFIXES[@]}" | sed "s/ /|/g"))(\([a-zA-Z0-9 ]*\))?\!?\:[A-Za-z0-9\._\-\s]*"
 
   # check that first line of message matches regexp
@@ -34,10 +36,4 @@ main() {
 }
 
 main $1
-
-
-
-
-
-
 

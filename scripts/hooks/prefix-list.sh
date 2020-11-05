@@ -7,7 +7,7 @@ OTHER_TYPES=( 'feat' 'fix' 'bugfix' 'perf' 'test' )
 DIR=`dirname $0`
 
 
-all_prefixes() {
+main() {
 
   # get allowed names from labels.yaml
   LABEL_TYPES=( `less $DIR/../../.github/labels.yaml | sed -n "/name/p" | sed "s/- name: \"//" | sed "s/\"//" | sed -n "/^[a-z]*$/p"` )
@@ -19,4 +19,4 @@ all_prefixes() {
 
 }
 
-all_prefixes
+main
