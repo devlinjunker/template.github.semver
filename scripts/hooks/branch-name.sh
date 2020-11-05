@@ -7,10 +7,12 @@
 #  based on https://itnext.io/using-git-hooks-to-enforce-branch-naming-policy-ffd81fa01e5e
 
 
+# set directory for calling other scripts
 # NOTE: expect this to be called in this directory
 DIR=`dirname $0`
 
 main() {
+
   # get current branch name
   local branch="$(git rev-parse --abbrev-ref HEAD)"
 
@@ -26,20 +28,7 @@ main() {
     return -1
   fi
 
-
-  #  for PREFIX in "${PREFIXES[@]}"
-  #  do
-  #    echo $PREFIX
-  #  done
 }
-
-# case $1 in
-#   "-h"):
-#     prefixes 
-#   ;;
-#   *):
-#    main
-# esac
 
 main
 

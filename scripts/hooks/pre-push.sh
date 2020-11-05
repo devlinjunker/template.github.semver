@@ -1,5 +1,6 @@
 #! /bin/bash
 
+# set directory for calling other scripts
 DIR=`dirname "$0"`
 
 # if in hook, then prep PATH to find in repo `scripts/hooks/` dir
@@ -7,8 +8,10 @@ if [[ $DIR =~ ".git" ]]; then
   DIR+="/../../scripts/hooks"
 fi
 
+
+BRANCH_NAME_ERROR=" !  Branch name does not match conventions  "
+
 main() {
-  local BRANCH_NAME_ERROR=" !  Branch name does not match conventions  "
 
   # Call branch name script
   $DIR/branch-name.sh
@@ -18,6 +21,7 @@ main() {
     echo "prefix options: ($($DIR/branch-name.sh -o))"
     return -1
   fi
+
 }
 
 main

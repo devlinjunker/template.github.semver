@@ -29,13 +29,14 @@ github() {
     return
   fi
 
-  # Note: Requires github token... so idk...
+  # TODO: Set github token somewhere so we can get protections and check if we're allowed to push to github
   #AUTH="token "
   # curl -H "Accept: application/vnd.github.v3+json" -H "Authorization: $AUTH" "https://api.github.com/repos/$OWNER/$REPO/branches/$BRANCH/protection"
 
 }
 
 main() {
+
   # check github branch protections
   github
   
@@ -50,6 +51,7 @@ main() {
   done
    
 }
+
 main
 
 

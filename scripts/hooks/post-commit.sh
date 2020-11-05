@@ -20,14 +20,15 @@ else
 fi
 
 
-
 FILE_LIMIT=10
 LINE_LIMIT=1000
 
 FILE_LIMIT_WARNING=" ! warning: more than $FILE_LIMIT files changed since $DIFF_COMMIT "
 LINE_LIMIT_WARNING=" ! warning: more than $LINE_LIMIT files changed since $DIFF_COMMIT "
 NEW_BRANCH_CMDS="Create new branch with 'git checkout -b <branch_name>' then push to remote with 'git push --set-upstream <remote_name> <branch_name>'"
+
 main() {
+
   DIFF_FILES=`git diff HEAD..$DIFF_COMMIT --stat | tail -n1 | tr ' ' '\n' | sed -n "/[[:digit:]]/p" | head -1`
   DIFF_LINES=`git diff HEAD..$DIFF_COMMIT --stat | tail -n1 | tr ' ' '\n' | sed -n "/[[:digit:]]/p" | tail -1`
 
@@ -41,6 +42,7 @@ main() {
     echo "$(tput setaf 3)$LINE_LIMIT_WARNING$(tput sgr 0)"
     WARN=true
   fi
+
   echo "Unmerged Files: $DIFF_FILES    Lines: $DIFF_LINES
 "  
 
