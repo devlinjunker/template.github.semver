@@ -44,7 +44,7 @@ _This section should try to quickly explain how to setup the project and start u
  - [ ] (Optional) Modify [Pull Request Template]
  - [ ] (Optional) Update [Github Workflows]
     - [ ] Review and Update [Label Definitions] for Label Manager
- - [ ] Enable [Git Hooks] and [Commit Message Template]
+ - [ ] (Optional) Enable [Git Hooks] and set [Commit Message Template]
  - [ ] Add Project Build and Configuration Files
  - Start Coding!
 
