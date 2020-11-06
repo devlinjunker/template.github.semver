@@ -14,7 +14,7 @@ This section details the steps to setup the project for development.
 You will need to install Git and create an account on Github to take advantage of all of the features of this template.
 
 #### Create your own Project from this Template
-There are multiple ways to use this template as a starting point for your own project. The best way is to use the template feature provided by Github:
+There are multiple ways to use this template as a starting point for your own project. The **best way to use this is with the template feature provided by Github**:
 
 <img width="1130" alt="template" src="https://user-images.githubusercontent.com/1504590/95393957-55b31c80-08b0-11eb-9126-55d8105881f4.png">
 
@@ -29,7 +29,7 @@ git remote add origin <remote_addr>;
 git push --set-upstream origin master;
 ```
 
-Or, you can download an archive of the repository contents using the Github "Download" link and extract this to access all of the files and create a new Git project with them:
+Or, **you can download an archive of the repository** contents using the Github "Download" link and extract this to access all of the files and create a new Git project with them:
 
 <img width="946" alt="zip" src="https://user-images.githubusercontent.com/1504590/95393961-56e44980-08b0-11eb-95a3-660860e83c41.png">
 
@@ -45,11 +45,11 @@ git commit;
 git push;
 ```
 
-Once you have a framework and development environment chosen for your project you should update your repo with specifics about how to install the tools and dependencies needed to run/debug/develop the application.
+Once you have a framework and development environment chosen for your project, you should update your repo with specifics about how to install the tools and dependencies needed to run/debug/develop the application.
 
 
 #### Update a Project or add to existing Project
-The steps to update a Project that was created using this template, or to add these features to an existing project are the same. In the projects root directory:
+The steps **to update a Project that was created using this template**, or to **add these features to an existing project** are the same. In the projects root directory:
 ```
 git checkout master;
 git remote add template <repo_address>;
@@ -83,14 +83,16 @@ Git hooks and Github workflows/actions are extremely useful for streamlining pro
 
 
 #### Hooks
-Git Hooks can be added in the `.git/hooks` directory (I prefer to create symbolic link to another place in the repo so they can be committed for every developer. e.g. store the hook scripts in `./hooks`, after git repo set up use `ln -s ./hooks/ ./.git/hooks`)
+Git Hooks are scripts that can be run during certain parts of the Git process (after committing, before pushing, etc). Git Hooks can be added in the `.git/hooks` directory (I prefer to create symbolic link to another place in the repo so they can be committed for every developer. e.g. store the hook scripts in `./hooks`, after git repo set up use `ln -s ./hooks/ ./.git/hooks`).
 
-To create a hook, you'll need to add a script file to the directory with the name of the hook from [this list](https://git-scm.com/docs/githooks#_hooks). (e.g. to run a script before a commit is saved -- to verify the contents of the commit, verify the app builds, etc -- you would create `./.git/hooks/pre-commit.sh`)
+To create a hook, you add a script file (or symbolic link to one) in the `.git/hooks/` directory with the name of the hook from [this list](https://git-scm.com/docs/githooks#_hooks). (e.g. to run a script before a commit is saved -- to verify the contents of the commit, verify the app builds, etc -- you would create `./.git/hooks/pre-commit`).
+
+There are a few examples of Git hooks in this project to enforce branch name conventions and commit message style, please review the documentation in the `scripts/hooks/` directory to understand how they work and use them in your project.
 
 #### Workflows
-[Git Workflows/Actions](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) are added in `.github/workflows`. 
-These are created with YAML files that define when the workflow should run and the steps it should take. 
-Github can then enforce that these workflows are successful before Pull Requests are merged via the [Branch Settings Page](../../settings/branches).
+[GitHub Workflows/Actions](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) are commands that can be run on GitHub servers, these are added in `.github/workflows` and defined with YAML files that express when the workflow should run and the steps it should take. 
+
+Github can enforce that these workflows are successful before Pull Requests are merged via the [Branch Settings Page](../../settings/branches), it can also trigger them after users perform certain actions or they can be manually triggered to run.
 
 **[Label Manager](./.github/workflows/manage-labels.yml)**  
 This project defines the Github Labels in a [YAML file](./.github/labels.yaml) that is managed by the [Github Labeler Action](https://github.com/marketplace/actions/github-labeler). 

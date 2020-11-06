@@ -22,6 +22,7 @@ This is a template project with all of the basic files and directory structure f
 ## Dependencies/Frameworks
 _List the frameworks, libraries, and tools the project uses:_
 
+- Git - to clone and use Githooks for process enforcement
 - GitHub - this template is based on the GitHub completion stats and has a `.github/` directory
 
 ## Quick Setup/Run
@@ -43,6 +44,7 @@ _This section should try to quickly explain how to setup the project and start u
  - [ ] (Optional) Modify [Pull Request Template]
  - [ ] (Optional) Update [Github Workflows]
     - [ ] Review and Update [Label Definitions] for Label Manager
+ - [ ] Enable [Git Hooks] and [Commit Message Template]
  - [ ] Add Project Build and Configuration Files
  - Start Coding!
 
@@ -68,6 +70,8 @@ _This section should try to quickly explain how to setup the project and start u
 [Pull Request Template]: .github/pull_request_template.md
 [Github Workflows]: .github/workflows
 [Label Definitions]: .github/labels.yaml
+[Git Hooks]: scripts/hooks/
+[Commit Message Template]: .gitmessage
 [Code of Conduct]: CODE_OF_CONDUCT.md
 [Contribute]: CONTRIBUTING.md
 [Code Analysis Help]: https://github.com/devlinjunker/template.github/wiki/Code-Analysis
