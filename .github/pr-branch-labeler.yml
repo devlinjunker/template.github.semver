@@ -1,0 +1,23 @@
+bug:
+  head: ["bug/*", "bugfix/*", "fix/*"]
+
+build:
+  head: "build/*"
+
+doc:
+  head: "doc/*"
+
+example:
+  head: "example/*"
+
+performance:
+  head: ["performance/*", "perf/*"]
+
+qa:
+  head: ["qa/*", "test/*"]
+
+feature:
+  head: ["feature/*", "feat/*"]
+
+subtask:
+  base: ["feature/*", "feat/*"]
