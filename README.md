@@ -52,10 +52,10 @@ _This section should try to quickly explain how to setup the project and start u
 
 - [Code of Conduct]
 - [Contribute]
-- [Code Analysis Help]
-- FAQ?
-- Wiki?
-- Architecture Doc? -- How to understand the application from a developer point of view (webpage-> controllers -> services -> libraries)
+- Wiki
+  - [Code Analysis Help]
+  - FAQ?
+  - Architecture Doc? -- How to understand the application from a developer point of view (webpage-> controllers -> services -> libraries)
 
 ## Contributors
 
