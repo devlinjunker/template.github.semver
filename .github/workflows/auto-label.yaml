@@ -1,4 +1,5 @@
-name: Auto PR Label
+# Name should reflect when action occurs
+name: Auto Label PR
 
 on: pull_request
 
