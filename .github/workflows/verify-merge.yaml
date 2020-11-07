@@ -1,0 +1,35 @@
+# Name should reflect when action occurs
+name: Check if PR can Merge
+
+on: pull_request
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  auto-labels:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+
+    # TODO:
+    # - Prevent poc branch
+    #    - get branch name, check against regexp, fail action if doesnt match
+    #    - https://stackoverflow.com/questions/58033366/how-to-get-current-branch-within-github-actions
+    # - Prevent labeled:
+    #    - `status: wip`
+    #    - `status: blocked`?
+    #    - https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/webhook-events-and-payloads#pull_request
+    #       - get `number` from action.event and then get labels
+    # - Prevent if merge branch has failing build action? 
+    #    - https://github.com/cirruslabs/gh-submit-queue
+    # - Last commit message has `wip` in it? 
+    #    - https://github.community/t/accessing-commit-message-in-pull-request-event/17158/2
+
+    # - name: Label PR
+    #  if: github.event.action == 'opened' # Only run the action when the PR was first opened
+    #  uses: ffittschen/pr-branch-labeler@v1
+    #  with:
+    #    repo-token: ${{ secrets.GITHUB_TOKEN }}
+
