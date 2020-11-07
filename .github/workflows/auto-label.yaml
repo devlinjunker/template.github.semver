@@ -1,0 +1,16 @@
+name: Auto PR Label
+
+on: pull_request
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  auto-labels:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Label PR
+      if: github.event.action == 'opened' # Only run the action when the PR was first opened
+      uses: ffittschen/pr-branch-labeler@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+
