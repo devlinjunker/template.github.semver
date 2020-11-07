@@ -1,4 +1,4 @@
-# Github Files
+# Github Workflows 
 
 This directory contains files related to Github configurations and actions:
  

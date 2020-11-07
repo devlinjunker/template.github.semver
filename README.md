@@ -68,9 +68,9 @@ _This section should try to quickly explain how to setup the project and start u
 [Issue Templates]: .github/ISSUE_TEMPLATE/
 [Template Configuration File]: .github/ISSUE_TEMPLATE/config.yml
 [Pull Request Template]: .github/pull_request_template.md
-[Github Workflows]: .github/workflows
+[Github Workflows]: .github/workflows#github-workflows
 [Label Definitions]: .github/labels.yaml
-[Git Hooks]: scripts/hooks/
+[Git Hooks]: scripts/hooks#git-hook-scripts
 [Commit Message Template]: .gitmessage
 [Code of Conduct]: CODE_OF_CONDUCT.md
 [Contribute]: CONTRIBUTING.md
