@@ -6,6 +6,7 @@ on:
     types: 
       - opened
       - closed
+      - synchronize
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,14 +20,38 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
+
     - name: Remove Label
       if: github.event.action == 'closed'
       uses: actions-ecosystem/action-remove-labels@v1
       with:
           github_token: ${{ secrets.github_token }}
-          labels: 
-            - "status: wip"
-            - "status: blocked"
+          labels: |
+            "status: wip"
+            "status: blocked"
+
+
+    - uses: actions/checkout@v2 
+      if: github.event.action == 'synchronize'
+
+    - name: Get Commit Message
+      if: github.event.action == 'synchronize'
+      id: commit
+      run: |
+        git fetch
+        git checkout ${{ github.event.pull_request.head.ref }}
+        echo "::set-output name=msg::$(git log -1 --pretty=format:'%s')"
+
+    - name: Display commit message
+      if: github.event.action == 'synchronize'
+      run: echo ${{ steps.commit.outputs.msg }}
+
+    - if: startsWith(steps.commit.outputs.msg, 'wip') && github.event.action == 'synchronize'
+      uses: actions-ecosystem/action-add-labels@v1
+      with:
+        github_token: ${{ secrets.github_token }} 
+        labels: "status: wip"
+
 
     # TODO: check commit message for wip
     # https://github.community/t/accessing-commit-message-in-pull-request-event/17158/2
