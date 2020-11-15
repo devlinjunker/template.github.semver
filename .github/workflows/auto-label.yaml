@@ -24,7 +24,9 @@ jobs:
       uses: actions-ecosystem/action-remove-labels@v1
       with:
           github_token: ${{ secrets.github_token }}
-          labels: "status: wip"
+          labels: 
+            - "status: wip"
+            - "status: blocked"
 
     # TODO: check commit message for wip
     # https://github.community/t/accessing-commit-message-in-pull-request-event/17158/2
