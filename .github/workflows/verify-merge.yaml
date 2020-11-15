@@ -17,7 +17,7 @@ jobs:
         /bin/bash scripts/actions/verify-merge.sh
         exit $?
       env:
-        BRANCH: ${{ github.base_ref }}
+        BRANCH: ${{ github.event.pull_request.head.ref }}
 
     # TODO:
     # - Prevent poc branch
