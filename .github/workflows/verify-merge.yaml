@@ -14,18 +14,8 @@ jobs:
 
     - name: Prevent POC/WIP branches
       run: |
-        echo $PR_NUM
         /bin/bash scripts/workflows/verify-merge.sh
         exit $?
       env:
         BRANCH: ${{ github.event.pull_request.head.ref }}
-        PR_NUM: ${{ toJson(github.event.pull_request.labels.*.name) }}
-
-
-    # TODO:
-    # - Prevent labeled:
-    #    - `status: wip`
-    #    - `status: blocked`?
-    #    - https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/webhook-events-and-payloads#pull_request
-    #       - get `number` from action.event and then get labels
 
