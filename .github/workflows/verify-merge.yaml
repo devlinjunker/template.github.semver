@@ -19,7 +19,7 @@ jobs:
         exit $?
       env:
         BRANCH: ${{ github.event.pull_request.head.ref }}
-        PR_NUM: ${{ toJson(github.event.pull_request) }}
+        PR_NUM: ${{ toJson(github.event.pull_request.labels.*.name) }}
 
 
     # TODO:
