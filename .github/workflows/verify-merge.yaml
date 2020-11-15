@@ -13,7 +13,9 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: No POC
-      run: /bin/bash scripts/actions/verify-merge.sh
+      run: |
+        /bin/bash scripts/actions/verify-merge.sh
+        exit $?
       env:
         BRANCH: ${{ github.base_ref }}
 
