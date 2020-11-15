@@ -14,10 +14,12 @@ jobs:
 
     - name: Prevent POC/WIP branches
       run: |
+        echo $PR_NUM
         /bin/bash scripts/workflows/verify-merge.sh
         exit $?
       env:
         BRANCH: ${{ github.event.pull_request.head.ref }}
+        PR_NUM: ${{ toJson(github.event.pull_request) }}
 
 
     # TODO:
@@ -26,12 +28,4 @@ jobs:
     #    - `status: blocked`?
     #    - https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/webhook-events-and-payloads#pull_request
     #       - get `number` from action.event and then get labels
-    # - Prevent if merge branch has failing build action? 
-    #    - https://github.com/cirruslabs/gh-submit-queue
-
-    # - name: Label PR
-    #  if: github.event.action == 'opened' # Only run the action when the PR was first opened
-    #  uses: ffittschen/pr-branch-labeler@v1
-    #  with:
-    #    repo-token: ${{ secrets.GITHUB_TOKEN }}
 
