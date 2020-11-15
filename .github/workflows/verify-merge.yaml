@@ -12,6 +12,10 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+    - name: No POC
+      run: /bin/bash scripts/actions/verify-merge.sh
+      env:
+        BRANCH: ${{ github.base_ref }}
 
     # TODO:
     # - Prevent poc branch
