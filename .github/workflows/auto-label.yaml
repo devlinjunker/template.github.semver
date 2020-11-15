@@ -13,6 +13,8 @@ jobs:
   auto-labels:
     runs-on: ubuntu-latest
 
+    ## Label PR on PR open based on branch name
+
     steps:
     - name: Label PR
       if: github.event.action == 'opened' # Only run the action when the PR was first opened
@@ -20,6 +22,7 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
+    ## Remove labels on PR close
 
     - name: Remove Label
       if: github.event.action == 'closed'
@@ -30,6 +33,8 @@ jobs:
             "status: wip"
             "status: blocked"
 
+    ## Actions to run when commit added to PR
+    # - Check if commit message has 'wip' and label if so
 
     - uses: actions/checkout@v2 
       if: github.event.action == 'synchronize'
@@ -41,10 +46,6 @@ jobs:
         git fetch
         git checkout ${{ github.event.pull_request.head.ref }}
         echo "::set-output name=msg::$(git log -1 --pretty=format:'%s')"
-
-    - name: Display commit message
-      if: github.event.action == 'synchronize'
-      run: echo ${{ steps.commit.outputs.msg }}
 
     - if: startsWith(steps.commit.outputs.msg, 'wip') && github.event.action == 'synchronize'
       uses: actions-ecosystem/action-add-labels@v1
