@@ -3,7 +3,9 @@ name: Auto Label PR
 
 on: 
   pull_request:
-    types: opened
+    types: 
+      - opened
+      - closed
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -16,6 +18,13 @@ jobs:
       uses: ffittschen/pr-branch-labeler@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Remove Label
+      if: github.event.action == 'closed'
+      uses: actions-ecosystem/action-remove-labels@v1
+      with:
+          github_token: ${{ secrets.github_token }}
+          labels: "status: wip"
 
     # TODO: check commit message for wip
     # https://github.community/t/accessing-commit-message-in-pull-request-event/17158/2
