@@ -74,6 +74,13 @@ Break down how each folder is used in the repo and how different code file types
 |-- workflows/
 |---- (Github workflow .yaml files)
 |-- (other github specific files)
+- img/
+|-- (project image files)
+- scripts/
+|-- hooks/
+|---- (Git Hooks Scripts)
+|-- workflows/
+|---- (Github workflow Scripts)
 - (project config files and READMEs)
 ```
 
