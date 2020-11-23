@@ -21,6 +21,8 @@ Git hooks need to be added to your local repo for each project,
 
   5. `ln -s ../../scripts/hooks/post-commit.sh post-commit`
      - warns when changes are getting large since "last merge"
+        - 25 files
+        - 400 lines
 
 
 ## Ideas for Hooks
