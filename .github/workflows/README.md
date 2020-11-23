@@ -7,17 +7,18 @@ This directory contains files related to Github configurations and actions:
   - Action Files and Configurations
 
 ## Actions
-  **Manage Label Action**
+
+  ### Manage Label Action
 
     - Creates/Deletes any labels not defined in configuration
     - `labels.yaml` and `workflows/manage-labels.yaml`
 
-  **Auto Label Action**
+  ### Auto Label Action
 
     - Adds Labels to PRs based on branch name
     - `pr-branch-labeler.yml` and `workflows/auto-label.yaml`
 
-  **Verify Merge Action**
+  ### Verify Merge Action
 
     - _This is a required action before PRs can be merged_
     - Runs the verify-merge script in `scripts/` directory and fails the action if the script does not complete succesfully
