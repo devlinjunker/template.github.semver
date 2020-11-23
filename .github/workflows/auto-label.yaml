@@ -53,9 +53,3 @@ jobs:
         github_token: ${{ secrets.github_token }} 
         labels: "status: wip"
 
-
-    # TODO: check commit message for wip
-    # https://github.community/t/accessing-commit-message-in-pull-request-event/17158/2
-    # - name: Get Branch Name
-    # 
-

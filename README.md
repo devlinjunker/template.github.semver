@@ -44,6 +44,8 @@ _This section should try to quickly explain how to setup the project and start u
  - [ ] (Optional) Modify [Pull Request Template]
  - [ ] (Optional) Update [Github Workflows]
     - [ ] Review and Update [Label Definitions] for Label Manager
+    - [ ] Review Auto PR Labeler action [Branch-Label Mappings]
+    - [ ] Review [PR Merge Verify] and the [script](scripts/workflows/verify-merge.sh) it calls
  - [ ] (Optional) Enable [Git Hooks] and set [Commit Message Template]
  - [ ] Add Project Build and Configuration Files
  - Start Coding!
@@ -70,6 +72,8 @@ _This section should try to quickly explain how to setup the project and start u
 [Pull Request Template]: .github/pull_request_template.md
 [Github Workflows]: .github/workflows#github-workflows
 [Label Definitions]: .github/labels.yaml
+[Branch-Label Mappings]: .github/pr-branch-labeler.yml
+[PR Merge Verify]: .github/workflows/verify-merge.yaml
 [Git Hooks]: scripts/hooks#git-hook-scripts
 [Commit Message Template]: .gitmessage
 [Code of Conduct]: CODE_OF_CONDUCT.md

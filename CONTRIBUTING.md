@@ -90,18 +90,15 @@ To create a hook, you add a script file (or symbolic link to one) in the `.git/h
 There are a few examples of Git hooks in this project to enforce branch name conventions and commit message style, please review the documentation in the `scripts/hooks/` directory to understand how they work and use them in your project.
 
 #### Workflows
-[GitHub Workflows/Actions](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) are commands that can be run on GitHub servers, these are added in `.github/workflows` and defined with YAML files that express when the workflow should run and the steps it should take. 
+[GitHub Workflows/Actions](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) are commands that can be run on GitHub servers, these are added in `.github/workflows` and defined with YAML files that express when the workflow should run and the steps it should take. Github can enforce that these workflows are successful before Pull Requests are merged via the [Branch Settings Page](../../settings/branches), it can also trigger them after users perform certain actions or they can be manually triggered to run.
 
-Github can enforce that these workflows are successful before Pull Requests are merged via the [Branch Settings Page](../../settings/branches), it can also trigger them after users perform certain actions or they can be manually triggered to run.
-
-**[Label Manager](./.github/workflows/manage-labels.yml)**  
-This project defines the Github Labels in a [YAML file](./.github/labels.yaml) that is managed by the [Github Labeler Action](https://github.com/marketplace/actions/github-labeler). 
-Any labels that are not defined in this file will be removed every time this action is run. **This does not affect PRs**
+[Review Workflows in this Repo](./.github/workflows/)
 
 
-#### Shell scripts
-Shell scripts can be created to help with deployment/installation or running the software.  
+#### Scripts
+Shell scripts are short programs that are created to help with small tasks. They can be a part of a workflow or hook, or they can help with  deployment/installation and running the final software product.  
 
+[Review Scripts in this Repo](./scripts/)
 
 
 ### Branching and Pull Requests
