@@ -87,7 +87,7 @@ Git Hooks are scripts that can be run during certain parts of the Git process (a
 
 To create a hook, you add a script file (or symbolic link to one) in the `.git/hooks/` directory with the name of the hook from [this list](https://git-scm.com/docs/githooks#_hooks). (e.g. to run a script before a commit is saved -- to verify the contents of the commit, verify the app builds, etc -- you would create `./.git/hooks/pre-commit`).
 
-There are a few examples of Git hooks in this project to enforce branch name conventions and commit message style, please review the documentation in the `scripts/hooks/` directory to understand how they work and use them in your project.
+[Review Hooks in this Repo](./scripts/hooks/)
 
 #### Workflows
 [GitHub Workflows/Actions](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) are commands that can be run on GitHub servers, these are added in `.github/workflows` and defined with YAML files that express when the workflow should run and the steps it should take. Github can enforce that these workflows are successful before Pull Requests are merged via the [Branch Settings Page](../../settings/branches), it can also trigger them after users perform certain actions or they can be manually triggered to run.
