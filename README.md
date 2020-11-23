@@ -45,7 +45,7 @@ _This section should try to quickly explain how to setup the project and start u
  - [ ] (Optional) Update [Github Workflows]
     - [ ] Review and Update [Label Definitions] for Label Manager
     - [ ] Review Auto PR Labeler action [Branch-Label Mappings]
-    - [ ] Review [PR Merge Verify] and the [script](scripts/workflows/verify-merge.sh) it calls
+    - [ ] Review [PR Merge Verify] and the [script](scripts/workflows/verify-merge.sh) the workflow uses
  - [ ] (Optional) Enable [Git Hooks] and set [Commit Message Template]
  - [ ] Add Project Build and Configuration Files
  - Start Coding!

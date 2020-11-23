@@ -102,7 +102,7 @@ To create a hook, you add a script file (or symbolic link to one) in the `.git/h
 [Review Workflows in this Repo](./.github/workflows#github-workflows)
 
 
-#### Scripts
+#### Other Scripts
 Shell scripts are short programs that are created to help with small tasks. They can be a part of a workflow or hook, or they can help with  deployment/installation and running the final software product.  
 
 [Review Scripts in this Repo](./scripts/)
