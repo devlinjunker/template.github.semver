@@ -1,0 +1,21 @@
+# Name should reflect when action occurs
+name: Check if PR can Merge
+
+on: pull_request
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  verify-merge:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    - name: Prevent POC/WIP branches
+      run: |
+        /bin/bash scripts/workflows/verify-merge.sh
+        exit $?
+      env:
+        BRANCH: ${{ github.event.pull_request.head.ref }}
+

@@ -2,7 +2,7 @@
 
 Git Hooks are run by Git during specific actions. Follow the instructions below to enable:
 
-## To Add to Workflow
+## Add Git Hooks
 
 Git hooks need to be added to your local repo for each project,
 - Create Symbolic links in `.git/hooks/` for git hook scripts you want to use
@@ -29,5 +29,10 @@ Git hooks need to be added to your local repo for each project,
  - Run tests before commit
    - only if code files touched?
    - only run tests affected by code files modified?
+ - Prevent Commit based on Github Branch protections
+   - requires reading from github API
+     - https://docs.github.com/en/free-pro-team@latest/rest/reference/repos#get-branch-protection
+     - use curl and `-u` flag to retrieve branches protected
+     - add to config file that hook reads? `./.github/config.yml` `prevent_push: ["<branch_name>"]`
  - Server side hooks
    - on receive, deploy newest changes

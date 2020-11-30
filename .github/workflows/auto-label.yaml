@@ -1,12 +1,19 @@
 # Name should reflect when action occurs
 name: Auto Label PR
 
-on: pull_request
+on: 
+  pull_request:
+    types: 
+      - opened
+      - closed
+      - synchronize
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   auto-labels:
     runs-on: ubuntu-latest
+
+    ## Label PR on PR open based on branch name
 
     steps:
     - name: Label PR
@@ -14,4 +21,35 @@ jobs:
       uses: ffittschen/pr-branch-labeler@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+    ## Remove labels on PR close
+
+    - name: Remove Label
+      if: github.event.action == 'closed'
+      uses: actions-ecosystem/action-remove-labels@v1
+      with:
+          github_token: ${{ secrets.github_token }}
+          labels: |
+            "status: wip"
+            "status: blocked"
+
+    ## Actions to run when commit added to PR
+    # - Check if commit message has 'wip' and label if so
+
+    - uses: actions/checkout@v2 
+      if: github.event.action == 'synchronize'
+
+    - name: Get Commit Message
+      if: github.event.action == 'synchronize'
+      id: commit
+      run: |
+        git fetch
+        git checkout ${{ github.event.pull_request.head.ref }}
+        echo "::set-output name=msg::$(git log -1 --pretty=format:'%s')"
+
+    - if: startsWith(steps.commit.outputs.msg, 'wip') && github.event.action == 'synchronize'
+      uses: actions-ecosystem/action-add-labels@v1
+      with:
+        github_token: ${{ secrets.github_token }} 
+        labels: "status: wip"
 
