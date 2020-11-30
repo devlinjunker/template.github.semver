@@ -20,8 +20,8 @@ else
 fi
 
 
-FILE_LIMIT=10
-LINE_LIMIT=1000
+FILE_LIMIT=25
+LINE_LIMIT=400
 
 FILE_LIMIT_WARNING=" ! warning: more than $FILE_LIMIT files changed since $DIFF_COMMIT "
 LINE_LIMIT_WARNING=" ! warning: more than $LINE_LIMIT files changed since $DIFF_COMMIT "
