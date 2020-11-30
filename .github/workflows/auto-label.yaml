@@ -26,7 +26,7 @@ jobs:
 
     - name: Remove Label
       if: github.event.action == 'closed'
-      uses: actions-ecosystem/action-remove-labels@v1
+      uses: devlinjunker/action-remove-labels@v1
       with:
           github_token: ${{ secrets.github_token }}
           labels: |
