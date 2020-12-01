@@ -16,7 +16,7 @@ jobs:
     ## Label PR on PR open based on branch name
 
     steps:
-    - name: Label PR
+    - name: Label Initial PR
       if: github.event.action == 'opened' # Only run the action when the PR was first opened
       uses: ffittschen/pr-branch-labeler@v1
       with:
@@ -24,14 +24,21 @@ jobs:
 
     ## Remove labels on PR close
 
-    - name: Remove Label
+    - name: Remove WIP Status Label
       if: github.event.action == 'closed'
       uses: devlinjunker/action-remove-labels@v1
+      continue-on-error: true
       with:
           github_token: ${{ secrets.github_token }}
-          labels: |
-            "status: WIP"
-            "status: blocked"
+          labels: "status: WIP"
+
+    - name: Remove Blocked Status Label
+      if: github.event.action == 'closed'
+      uses: devlinjunker/action-remove-labels@v1
+      continue-on-error: true
+      with:
+          github_token: ${{ secrets.github_token }}
+          labels: "status: blocked"
 
     ## Actions to run when commit added to PR
     # - Check if commit message has 'wip' and label if so
@@ -47,7 +54,8 @@ jobs:
         git checkout ${{ github.event.pull_request.head.ref }}
         echo "::set-output name=msg::$(git log -1 --pretty=format:'%s')"
 
-    - if: startsWith(steps.commit.outputs.msg, 'wip') && github.event.action == 'synchronize'
+    - name: Add WIP Label if wip commit msg
+      if: startsWith(steps.commit.outputs.msg, 'wip') && github.event.action == 'synchronize'
       uses: actions-ecosystem/action-add-labels@v1
       with:
         github_token: ${{ secrets.github_token }} 
