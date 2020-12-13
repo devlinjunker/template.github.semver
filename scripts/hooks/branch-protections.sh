@@ -1,7 +1,7 @@
 #! /bin/bash
 # Script to check github branch protections and prevent commits to protected branches
 
-BLOCKED_BRANCH=( master )
+BLOCKED_BRANCH=( main, develop )
 BLOCKED_PREFIX=( release )
 
 BRANCH=`git rev-parse --abbrev-ref HEAD`

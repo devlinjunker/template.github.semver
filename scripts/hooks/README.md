@@ -11,7 +11,7 @@ Git hooks need to be added to your local repo for each project,
 
   2. `ln -s ../../scripts/hooks/pre-commit.sh pre-commit`
      - enforces that the branch name matches style: <prefix>/<feature_name>
-     - enforces that branch is not `master` or prefixed with `release`
+     - enforces that branch is not `main` or `develop` or prefixed with `release`
 
   3. `ln -s ../../scripts/hooks/commit-msg.sh commit-msg`
      - enforces that first line of commit message matches conventional commit (ish) style `<type>:<description>`

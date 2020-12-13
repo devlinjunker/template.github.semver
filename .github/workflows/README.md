@@ -28,5 +28,5 @@ This directory contains files related to Github configurations and actions:
 
 ## Ideas
   - [ ] pr mutation testing: https://github.com/tylermurry/github-pr-landmine
-  - [ ] build artifact/docs on merge to master
+  - [ ] build artifact/docs on merge to `main`
   - [ ] run build/compile in verify-merge to ensure PR is valid

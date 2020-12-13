@@ -7,14 +7,14 @@
 #   if none found, use DIFF_BRANCH
 # NOTE: This requires enforcing merge messages
 
-DIFF_BRANCH=master
+DIFF_BRANCH=develop
 
 # find last commit with "(#<number>)" in commit message
 LAST_MERGE=`git log $DIFF_BRANCH..HEAD --pretty=oneline | sed -n "/\(#[0-9]*\)/p" | head -1 | sed "s/ .*//"`
 
 # if not exists since $DIFF_BRANCH then just use $DIFF_BRANCH
 if [ -z "$LAST_MERGE" ]; then
-  DIFF_COMMIT=master
+  DIFF_COMMIT=develop
 else
   DIFF_COMMIT=$LAST_MERGE
 fi

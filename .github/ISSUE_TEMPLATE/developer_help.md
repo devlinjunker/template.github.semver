@@ -13,7 +13,7 @@ Provide Details of Goal and Issue faced
 Links or Branches
 
 **Steps Taken:**  
-- [ ] Reviewed [Contributing Help File](../blob/master/CONTRIBUTING.md)
+- [ ] Reviewed [Contributing Help File](../blob/main/CONTRIBUTING.md)
 
 **Results:**  
 - Additional Steps/Outcomes
