@@ -14,13 +14,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: "Verify Master PR are from 'release-*' or 'hotfix-*' branch"
+    - name: "Verify 'main' PR are from 'release-*' or 'hotfix-*' branch"
       run: ./scripts/release/branch-match.sh
       env: 
         BRANCH: ${{ github.head_ref }}
         REGEXP: (release-[0-9]+.[0-9]+|hotfix-[0-9]+.[0-9]+.[0-9]+)
 
-    - name: "Verify PR Title matches branch prefix (and conventional commit)"
+    - name: "Verify PR Title matches `release` or `hotfix` "
       uses: deepakputhraya/action-pr-title@master
       with:
         regex: '-[0-9]+.[0-9]+(.[0-9]+)?'
