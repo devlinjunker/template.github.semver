@@ -1,0 +1,27 @@
+name: "Main-Verify Merge PR"
+
+on: 
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches: 
+      - main
+
+jobs:
+  # Only allow `release-*` or `hotfix-*` branches to merge to `main`
+  verify-main:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: "Verify Master PR are from 'release-*' or 'hotfix-*' branch"
+      run: ./scripts/release/branch-match.sh
+      env: 
+        BRANCH: ${{ github.head_ref }}
+        REGEXP: (release-[0-9]+.[0-9]+|hotfix-[0-9]+.[0-9]+.[0-9]+)
+
+    - name: "Verify PR Title matches branch prefix (and conventional commit)"
+      uses: deepakputhraya/action-pr-title@master
+      with:
+        regex: '-[0-9]+.[0-9]+(.[0-9]+)?'
+        allowed_prefixes:  release,hotfix

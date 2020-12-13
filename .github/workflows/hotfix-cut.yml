@@ -1,0 +1,43 @@
+name: "Hotfix-Cut"
+
+# Workflow runs when manually triggered using the UI or API
+on: workflow_dispatch
+ 
+jobs:
+  cut-hotfix:
+    runs-on: ubuntu-latest
+
+    steps: 
+    - uses: actions/checkout@v2
+      with:
+        ## This is a Personal Access Token from Admin User that allows us to bypass branch protections on develop
+        token: ${{ secrets.PAT }}
+        fetch-depth: 0
+
+    - name: "Get Version Info"
+      id: version
+      run: |
+        git checkout main;
+        echo "##[set-output name=major;]$(./scripts/release/git-mkver-linux next --format '{Major}')";
+        echo "##[set-output name=minor;]$(./scripts/release/git-mkver-linux next --format '{Minor}')";
+        echo "##[set-output name=patch;]$(./scripts/release/git-mkver-linux next --format '{Patch}')";
+
+
+    - name: "Generate Next Version Number"
+      id: next_version
+      run: |
+        echo "##[set-output name=patch;]$(($PATCH_VERSION+1))"
+      env:
+        PATCH_VERSION: ${{ steps.version.outputs.patch }}
+
+    - name: "Create Hotfix Branch"
+      run: |
+        git config --global user.name 'Release Cut';
+        git config --global user.email 'release@cut.com';
+        git checkout -b $HOTFIX_BRANCH;
+        ./scripts/release/update-versions.sh $HOTFIX_VERSION;
+        git commit -a -m "update version for $HOTFIX_BRANCH";
+        git push --set-upstream origin $HOTFIX_BRANCH;
+      env:
+        HOTFIX_BRANCH: hotfix-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.next_version.outputs.patch }}
+        HOTFIX_VERSION: ${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.next_version.outputs.patch }}

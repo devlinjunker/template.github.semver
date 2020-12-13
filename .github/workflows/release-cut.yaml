@@ -1,0 +1,81 @@
+name: "Release-Cut"
+
+# Workflow runs when manually triggered using the UI or API
+on: workflow_dispatch
+ 
+# This Workflow should cut a `release-*` branch from `develop` and create a PR into `main`
+jobs:
+  cut-release:
+    runs-on: ubuntu-latest
+
+    # TODO: Should we create step that sets "variables" for action (main branch, release commit user)
+    steps: 
+    - uses: actions/checkout@v2
+      with:
+        ## This is a Personal Access Token from Admin User that allows us to bypass branch protections on develop
+        token: ${{ secrets.PAT }}
+        fetch-depth: 0
+
+    # NOTE: Update CHANGELOG_PREFIX_LIST to configure the lines you wan to include in the changelog (body of release PR)
+    - name: "Get Release Info"
+      id: version
+      run: |
+        git checkout main;
+        git checkout develop
+        echo "##[set-output name=major;]$(./scripts/release/git-mkver-linux next --format '{Major}')";
+        echo "##[set-output name=minor;]$(./scripts/release/git-mkver-linux next --format '{Minor}')";
+        echo "##[set-output name=patch;]$(./scripts/release/git-mkver-linux next --format '{Patch}')";
+        CHANGELOG=$(git log --format=%s main..HEAD | grep -i -E "^($CHANGELOG_PREFIX_LIST)" | sed "s/^/ - /") 
+        CHANGELOG="${CHANGELOG//'%'/'%25'}"
+        CHANGELOG="${CHANGELOG//$'\n'/'%0A'}"
+        CHANGELOG="${CHANGELOG//$'\r'/'%0D'}"
+        echo "##[set-output name=changelog;]$(echo $CHANGELOG)";
+      env:
+        CHANGELOG_PREFIX_LIST: "feature|feat|fix|bugfix|bug"
+
+    # Attempts to cut a release branch
+    #   fails if there are no `feat|feature` commits since last release
+    - name: "Cut Release Branch"
+      run: |
+        ./scripts/release/release-cut-check.sh
+        git config --global user.name 'Release Cut'
+        git config --global user.email 'release@cut.com'
+        git checkout -b $RELEASE_BRANCH;
+        ./scripts/release/update-versions.sh $RELEASE_VERSION;
+        git commit -a -m "update version for $RELEASE_BRANCH";
+        git push --set-upstream origin $RELEASE_BRANCH;
+      env:
+        RELEASE_BRANCH: release-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}
+        RELEASE_VERSION: ${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.version.outputs.patch }}
+
+    # Note: see https://github.com/repo-sync/pull-request#advanced-options for all options
+    - name: Create Pull Request
+      uses: repo-sync/pull-request@v2
+      with:
+        github_token: ${{ secrets.PAT }}
+        source_branch: release-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}
+        destination_branch: "main" 
+        pr_title: release-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}
+        pr_body: ${{ steps.version.outputs.changelog }}
+        # pr_label: release
+
+    # Note: This increments minor version only, for now major releases will be done manually
+    # until we figure out a better method
+    - name: "Generate Next Version Number"
+      id: next_version
+      run: |
+        echo "##[set-output name=minor;]$(($MINOR_VERSION+1))"
+      env:
+        MINOR_VERSION: ${{ steps.version.outputs.minor }}
+
+    - name: "Update File Versions" # in repo
+      run: |
+        git config --global user.name 'Release Cut'
+        git config --global user.email 'release@cut.com'
+        git checkout develop;
+        ./scripts/release/update-versions.sh $NEXT_VERSION;
+        git commit -a -m "update version after $RELEASE_BRANCH";
+        git push;
+      env:
+        NEXT_VERSION: ${{ steps.version.outputs.major }}.${{ steps.next_version.outputs.minor }}-SNAPSHOT
+        RELEASE_BRANCH: release-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}

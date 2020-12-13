@@ -1,0 +1,68 @@
+name: "Release-Tag"
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  create-release-tag:
+    strategy: 
+      max-parallel: 1
+    runs-on: ubuntu-latest
+
+    steps: 
+    - uses: actions/checkout@v2
+      with:
+        ## This is a Personal Access Token from Admin User that allows us to bypass branch protections on develop
+        token: ${{ secrets.PAT }}
+        fetch-depth: 0
+
+    # NOTE: Update CHANGELOG_PREFIX_LIST to configure the lines you wan to include in the changelog (body of release PR)
+    - name: "Get Release Info"
+      id: version
+      run: |
+        git fetch --all --tags;
+        git checkout main;
+        echo "##[set-output name=major;]$(./scripts/release/git-mkver-linux next --format '{Major}')";
+        echo "##[set-output name=minor;]$(./scripts/release/git-mkver-linux next --format '{Minor}')";
+        echo "##[set-output name=patch;]$(./scripts/release/git-mkver-linux next --format '{Patch}')";
+        CHANGELOG=$(git log --format=%s $(git describe --tags --abbrev=0)..HEAD | grep -i -E "^($CHANGELOG_PREFIX_LIST)" | sed "s/^/ - /") 
+        CHANGELOG="${CHANGELOG//'%'/'%25'}"
+        CHANGELOG="${CHANGELOG//$'\n'/'%0A'}"
+        CHANGELOG="${CHANGELOG//$'\r'/'%0D'}"
+        echo "##[set-output name=changelog;]$(echo $CHANGELOG)";
+      env:
+        CHANGELOG_PREFIX_LIST: "feature|feat|fix|bugfix|bug"
+
+    - name: Create Github Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.version.outputs.patch }}
+        release_name: release-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.version.outputs.patch }}
+        body: ${{ steps.version.outputs.changelog }}
+  
+  upmerge-after-release:      
+    strategy: 
+      max-parallel: 1
+    runs-on: ubuntu-latest
+
+    steps: 
+    - uses: actions/checkout@v2
+      with:
+        ## This is a Personal Access Token from Admin User that allows us to bypass branch protections on develop
+        token: ${{ secrets.PAT }}
+        fetch-depth: 0  
+        
+    - name: Upmerge develop After Release
+      run: |
+        git config --global user.name 'Release Cut';
+        git config --global user.email 'release@cut.com';
+        ./scripts/release/release-prep-upmerge.sh
+        git commit -m "upmerge after $RELEASE";
+        git push;
+      env:
+        RELEASE: v${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.version.outputs.patch }}

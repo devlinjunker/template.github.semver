@@ -1,0 +1,37 @@
+# Name should reflect when action occurs
+name: Develop-Verify Merge
+
+on: 
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+    branches:
+      - develop
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  verify-develop-merge:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    - name: Prevent POC/WIP branches
+      run: |
+        /bin/bash scripts/workflows/verify-merge.sh
+        exit $?
+      env:
+        BRANCH: ${{ github.event.pull_request.head.ref }}
+
+    - name: "Get Branch Prefix"
+      run: echo "##[set-output name=prefix;] $(echo $BRANCH_NAME | sed 's/\/.*//')"
+      id: extract_branch
+      env:
+        BRANCH_NAME: ${{ github.head_ref }}
+   
+    - name: "Verify PR Title matches branch prefix (and conventional commit)"
+      uses: deepakputhraya/action-pr-title@master
+      with:
+        regex: '(\([\w\s]*\)*\))?:[\w\s]*'
+        allowed_prefixes:  ${{ steps.extract_branch.outputs.prefix }}
+        prefix_case_sensitive: false
