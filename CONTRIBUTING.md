@@ -108,56 +108,12 @@ Shell scripts are short programs that are created to help with small tasks. They
 [Review Scripts in this Repo](./scripts/)
 
 
-### Branching and Pull Requests
+#### Auto-Merge with Bulldozer
+This repo has a `.bulldozer.yml` file that is used to customize how to automatically merge pull requests into the `develop` branch. This is done with the [Bulldozer Github App](https://github.com/palantir/bulldozer). 
 
-I'm going to talk about my own strategy in this document, this way my projects will _hopefully_ all use the same-ish workflow. Feel free to use/modify/change this for your project.
-
-It is good practice to create a Git commit on the current branch at the end of each night that you are coding. If you forget, the next best practice is to create a commit of the old changes as the first thing whenever you begin to code on the project again. This way you can easily revert or stash and be back to the beginning of your current coding session.
-
-> The best time to commit your changes was the night you were coding. The second best time is right before you make anymore
-
-Each feature that is created should be in it's own `feature/` branch in the git repo. Once the changes in the feature branch are completed and tested, you should create a Pull Request (PR) against the `develop` branch. This repo should use a Pull Request Template to fill out and help explain the feature and changes you are making. Once this PR is approved, you can merge to the `develop` branch.
-
-```
- --o--o--o`develop-HEAD`                                  --o--o------o`develop-HEAD`
-    \                         -> after merge to master      \       /
-     o--o--o`feature/XXX-HEAD`                               o--o--o
-```
-
-If this is a larger feature (> 1 week of real time) or you think it will be useful to document each step/get feedback on smaller pieces, then it is best to create a new branch (`branch-1`) off of the feature branch for the smaller pieces of code. After a section of the larger feature is completed, or if you think feedback would be useful, you can create a Pull Request (PR) on Github from the `branch-1` to the `feature/*` branch. 
-
-```
- --o--o--o`develop-HEAD`                                           --o--o--o`develop-HEAD`                                          --o--o--o-------o`develop-HEAD`
-    \                                                                \                                                               \           /
-     o--o--o`feature-XXX-HEAD`    -> after merge to feature           o--o------o`feature-XXX-HEAD`     -> after merge to develop      o--o------o`feature-XXX-HEAD`
-         \                                                                \    /                                                          \    /
-          o--o`branch-1-HEAD`                                              o--o                                                            o--o
-```
-
-**Note:** After you create the PR, any new changes that are unrelated to the code changes in the PR should be in a new branch (`branch-2`) that starts at the end of `branch-2`. 
-
-```
- --o--o--o`develop-HEAD`                                           --o--o--o`develop-HEAD`                                            --o--o--o`develop-HEAD`
-    \                                                                \                                                                 \           
-     o--o--o`feature-XXX-HEAD`    -> after 1st merge to feature       o--o------o`feature-XXX-HEAD`  -> after 2nd merge to feature      o--o------o----o`feature-XXX-HEAD`
-         \                                                                \    /                                                          \    /      /
-          o--o`branch-1-HEAD`                                              o--o                                                            o--o      /
-              \                                                                \                                                               \    /
-               o`branch-2-HEAD`                                                 o--o`branch-2-HEAD`                                             o--o
-```
-
-
-### Code Reviews
-
-Code Reviews are an important part of the software development process. They help to maintain quality and inform other developers of changes to the code. Make sure Pull Request descriptions are completely filled out, include thoughts, links, issues you faced or any other details relevant to the changes.
-
-**Tips:**
-
- - Make sure to ask any questions you can come up with to ensure you understand what the changes are doing. 
- - Review the logic of the code to be sure that it is doing what the author says it should
- - Try to think of any edge cases they may have missed.
- - Ensure formatting and style guide is followed
- - [5 antipractices of Code Reviews](https://blogs.oracle.com/javamagazine/five-code-review-antipatterns)
+The default requirements to auto-merge are:
+ 1. all required status checks passing
+ 2. a comment matching: `!merge` or `! merge`
 
 
 
