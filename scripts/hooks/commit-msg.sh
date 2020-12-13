@@ -23,7 +23,7 @@ main() {
   # create regexp for first line of commit message -- [square brackets] are optional:      <prefix>[(scope)][!]:<description>
     # scope provides more details
     # ! indicates BREAKING CHANGES
-  regexp="^($(echo "${MSG_PREFIXES[@]} ${OTHER_PREFIXES[@]}" | sed "s/ /|/g"))(\([a-zA-Z0-9 ]*\))?\!?\:[A-Za-z0-9\._\-\s]*"
+  regexp="^($(echo "${MSG_PREFIXES[@]} ${OTHER_PREFIXES[@]}" | sed "s/ /|/g"))(\([a-zA-Z0-9 \-]*\))?\!?\:[A-Za-z0-9\._\-\s]*"
 
   # check that first line of message matches regexp
   if [[ ! $FIRST_LINE =~ $regexp ]]; then
