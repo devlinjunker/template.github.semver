@@ -21,12 +21,14 @@ There are multiple ways to use this template as a starting point for your own pr
 The other way to start a new project are to either clone this repo using Git and point at your own remote:
 
 ```
-git clone https://github.com/devlinjunker/template.hapi.rest.git;
-mv template.hapi.rest <new_server_project_name>;
+git clone https://github.com/devlinjunker/template.github.git;
+mv template.github <new_server_project_name>;
 cd <new_server_project_name>;
 git remote remove origin;
-git remote add origin <remote_addr>;
-git push --set-upstream origin master;
+git remote add origin <new_remote_addr>;
+git push --set-upstream origin main;
+git checkout develop;
+git push --set-upstream origin develop;
 ```
 
 Or, **you can download an archive of the repository** contents using the Github "Download" link and extract this to access all of the files and create a new Git project with them:
@@ -35,14 +37,16 @@ Or, **you can download an archive of the repository** contents using the Github 
 
 After Downloading:
 ```
-unzip template.hapi.rest-master.zip;
-mv template.hapi.rest-master <new_server_project_name>;
+unzip template.githuhb-main.zip;
+mv template.github-main <new_server_project_name>;
 cd <new_server_project_name>;
 git init;
 git remote add origin <remote_addr>;
 git add *;
 git commit;
 git push;
+git checkout -b develop;
+git push --set-upstream origin develop
 ```
 
 Once you have a framework and development environment chosen for your project, you should update your repo with specifics about how to install the tools and dependencies needed to run/debug/develop the application.
@@ -51,13 +55,13 @@ Once you have a framework and development environment chosen for your project, y
 #### Update a Project or add to existing Project
 The steps **to update a Project that was created using this template**, or to **add these features to an existing project** are the same. In the projects root directory:
 ```
-git checkout master;
+git checkout main;
 git remote add template <repo_address>;
 git fetch template;
-git checkout template/master ./;
+git checkout template/main ./;
 git reset HEAD * ./;
 git status; # to see new files and changed files
-<compare diff with `origin/master` to see updates>
+<compare diff with `origin/main` to see updates>
 git add *;
 git commit;
 git push;
