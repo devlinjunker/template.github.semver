@@ -56,8 +56,10 @@ _This section should try to quickly explain how to setup the project and start u
 - [Code of Conduct]
 - [Contribute]
 - [Wiki]
-  - [Code Analysis Help]
   - [FAQ]
+  - [Semantic Versioning & Release]
+  - [Code Analysis]
+
 
 ## Contributors
 
@@ -80,6 +82,7 @@ _This section should try to quickly explain how to setup the project and start u
 [Commit Message Template]: .gitmessage
 [Code of Conduct]: CODE_OF_CONDUCT.md
 [Contribute]: CONTRIBUTING.md
-[Code Analysis Help]: https://github.com/devlinjunker/template.github/wiki/Code-Analysis
 [Wiki]: https://github.com/devlinjunker/template.github/wiki
 [FAQ]: https://github.com/devlinjunker/template.github/wiki/!-FAQ
+[Semantic Versioning & Release]: https://github.com/devlinjunker/template.github/wiki/Semantic-Versioning-&-Release
+[Code Analysis]: https://github.com/devlinjunker/template.github/wiki/Code-Analysis
