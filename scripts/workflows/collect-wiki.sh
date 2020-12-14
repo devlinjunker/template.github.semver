@@ -10,7 +10,9 @@ WIKI_FILES=();
 # 3. rename each `_README_<directory>` and place in `wiki/` directory 
 for f in $FILES
 do
-	echo "TODO: Copy to wiki/ with new file name: $f"
+    wiki_name=$(echo $f | sed "s/^\.\///" | sed "s/^\.//" | sed "s/^/_/" | sed "s/\//_/g")
+    WIKI_FILES+=("$wiki_name")
+    cp $f wiki/$wiki_name
 done
 
 # 4. create `.README` file with Table of Contents to link to each
@@ -21,8 +23,9 @@ echo "" >> wiki/.README.md
 echo "**Docs**" >> wiki/.README.md
 echo ""
 
-for f in $WIKIFILES
+for f in ${FILES[@]}
 do
-    ## TODO: create row with each wiki file copied
-	echo "- $f" >> wiki/.README.md
+## create row with each wiki file copied
+    link=$(echo $f | sed "s/^\.\///" | sed "s/^\.//" | sed "s/^/_/" | sed "s/\//_/g" | sed "s/\.md$//")
+	echo "- [$f]($link)" >> wiki/.README.md
 done
