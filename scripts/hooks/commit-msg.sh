@@ -20,6 +20,11 @@ main() {
   COMMIT_MSG=`cat $1 | sed -n "/^[^#]/p"`
   FIRST_LINE=`echo $COMMIT_MSG | sed -n "/[^\w]*$/p" | sed "s/^ *//" | sed "s/\n//" | head`
 
+  # COMMIT_WORD_COUNT=`cat $1 | sed -n "/^[^#]/p" | wc -w | sed "s/\w//"`
+  # COMMIT_LINE_COUNT=`cat $1 | sed -n "/^[^#]/p" | wc -l | sed "s/\w//"`
+  # echo $COMMIT_WORD_COUNT 
+  # echo $COMMIT_LINE_COUNT
+  
   # create regexp for first line of commit message -- [square brackets] are optional:      <prefix>[(scope)][!]:<description>
     # scope provides more details
     # ! indicates BREAKING CHANGES

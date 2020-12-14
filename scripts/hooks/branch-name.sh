@@ -11,6 +11,7 @@
 # NOTE: expect this to be called in this directory
 DIR=`dirname $0`
 
+
 main() {
 
   # get current branch name

@@ -18,12 +18,33 @@ This directory contains files related to Github configurations and actions:
   - Adds Labels to PRs based on branch name
   - `pr-branch-labeler.yml` and `workflows/auto-label.yaml`
 
-  ### Verify Merge Action
+  ### Verify `Develop` Merge Action
 
   - _This is a required action before PRs can be merged_
   - **NOTE:** If you commit to a PR with `wip` commit message, an email will be sent when this action fails
-  - Runs the verify-merge script in `scripts/` directory and fails the action if the script does not complete succesfully
+  - Runs the verify-merge.sh script in `scripts/` directory and fails the action if the script does not complete succesfully
     - Prevents mergin branches with name `poc` or where last commit contains `wip` 
+  - Verifies that Pull Request Title matches branch prefix
+
+  ### Cut Release Branch Action
+  - Verifies `feature` commits have been added to `develop` since last release cut
+  - Creates a `release-` branch with changes in `develop`
+  - Creates PR from `release-` branch into `main`
+
+  ### Verify `Main` Merge Action
+  - Verifies that Pull Request Title is correct format `release-*` or `hotfix-*`
+  - Verifies that Pull Request branch is `release-*` or `hotfix-*` branch
+
+  ### On Merge to `Main` Action
+  - Triggers after PR merges on `main` branch
+  - Creates new Release Tag and Github Release on `main` branch
+  - Upmerges `develop` from `main` so the tag is in `develop`s history
+
+  ### Cut Hotfix Branch Action
+  - Creates a new `hotfix-*` branch off of `main`, using the last tag to determine hotfix branch number and next version number
+
+
+
 
 
 ## Ideas
