@@ -8,6 +8,7 @@ version: 0.11-SNAPSHOT
 
 
 [![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github?color=blue)](https://github.com/devlinjunker/template.github/blob/main/LICENSE)  
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/releases)
 [![GitHub last commit](https://img.shields.io/github/last-commit/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/commits/main)  
 [![CII Best Practices Summary](https://img.shields.io/cii/summary/4287?label=core-infrastructure)](https://bestpractices.coreinfrastructure.org/en/projects/4287)  
 [![GitHub issues](https://img.shields.io/github/issues/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/issues)
