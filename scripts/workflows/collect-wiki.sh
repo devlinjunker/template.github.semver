@@ -16,9 +16,9 @@ do
 done
 
 # 4. create `.README` file with Table of Contents to link to each
-echo "These pages are copied from from .md files in the source code. These will be defined in a configuration file.\n" > wiki/.README.md
+echo "These pages are copied from from .md files in the source code. These will be defined in a configuration file." > wiki/.README.md
 echo "" >> wiki/.README.md
-echo "Each page name that is synced will have name: _README_<file_name> so it is not visible in the "Page List" and will instead be linked below. These files should not be modified because they will be overwritten on each merge to develop." >> wiki/.README.md
+echo "Each page name that is synced will have name: _README_<file_name> so it is not visible in the 'Page List' and will instead be linked below. These files **should not be modified** because they will be overwritten on each merge to develop." >> wiki/.README.md
 echo "" >> wiki/.README.md
 echo "**Docs**" >> wiki/.README.md
 echo ""
