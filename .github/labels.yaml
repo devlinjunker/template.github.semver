@@ -1,5 +1,8 @@
 ## Tags
 
+- name: "- release -"
+  color: "f91351";
+  description: "Tag for each Release PR"
 - name: "-priority"
   color: "d93f0b" # red
   description: "Take a look at this soon!"

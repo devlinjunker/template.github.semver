@@ -36,6 +36,7 @@ This directory contains files related to Github configurations and actions:
   - Verifies that Pull Request branch is `release-*` or `hotfix-*` branch
 
   ### On Merge to `Main` Action
+  - Syncs README.md files to wiki
   - Triggers after PR merges on `main` branch
   - Creates new Release Tag and Github Release on `main` branch
   - Upmerges `develop` from `main` so the tag is in `develop`s history
