@@ -1,5 +1,5 @@
 ---
-version: 0.10-SNAPSHOT
+version: 0.10.0
 ---
 
 <img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github/blob/main/img/logo-small.png">
