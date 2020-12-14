@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: "Verify 'main' PR are from 'release-*' or 'hotfix-*' branch"
-      run: ./scripts/release/branch-match.sh
+      run: ./scripts/workflows/branch-match.sh
       env: 
         BRANCH: ${{ github.head_ref }}
         REGEXP: (release-[0-9]+.[0-9]+|hotfix-[0-9]+.[0-9]+.[0-9]+)

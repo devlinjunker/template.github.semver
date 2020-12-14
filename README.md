@@ -41,6 +41,7 @@ _This section should try to quickly explain how to setup the project and start u
    - Update Contributing Info
    - Update Code of Conduct
  - [ ] Modify [Issue Templates] and [Template Configuration File]
+ - [ ] (Recommended) Review the [Wiki] for overview of the concepts that are used in this template
  - [ ] (Optional) Modify [Pull Request Template]
  - [ ] (Optional) Update [Github Workflows]
     - [ ] Review and Update [Label Definitions] for [Label Manager Action]
@@ -54,10 +55,9 @@ _This section should try to quickly explain how to setup the project and start u
 
 - [Code of Conduct]
 - [Contribute]
-- Wiki
+- [Wiki]
   - [Code Analysis Help]
-  - FAQ?
-  - Architecture Doc? -- How to understand the application from a developer point of view (webpage-> controllers -> services -> libraries)
+  - [FAQ]
 
 ## Contributors
 
@@ -81,3 +81,5 @@ _This section should try to quickly explain how to setup the project and start u
 [Code of Conduct]: CODE_OF_CONDUCT.md
 [Contribute]: CONTRIBUTING.md
 [Code Analysis Help]: https://github.com/devlinjunker/template.github/wiki/Code-Analysis
+[Wiki]: https://github.com/devlinjunker/template.github/wiki
+[FAQ]: https://github.com/devlinjunker/template.github/wiki/!-FAQ
