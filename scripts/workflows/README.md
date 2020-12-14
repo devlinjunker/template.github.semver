@@ -4,3 +4,6 @@ These scripts are run as a part of Github Workflows, these are custom scripts th
 ## Verify Merge
   - Prevents Branches with `poc` prefix from merging
   - Prevents Branches where last commit starts with `wip` from merging
+
+## Branch Match
+  - Ensures that a $BRANCH parameters matches the $REGEXP parameter

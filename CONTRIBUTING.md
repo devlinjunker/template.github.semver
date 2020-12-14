@@ -21,12 +21,14 @@ There are multiple ways to use this template as a starting point for your own pr
 The other way to start a new project are to either clone this repo using Git and point at your own remote:
 
 ```
-git clone https://github.com/devlinjunker/template.hapi.rest.git;
-mv template.hapi.rest <new_server_project_name>;
+git clone https://github.com/devlinjunker/template.github.git;
+mv template.github <new_server_project_name>;
 cd <new_server_project_name>;
 git remote remove origin;
-git remote add origin <remote_addr>;
-git push --set-upstream origin master;
+git remote add origin <new_remote_addr>;
+git push --set-upstream origin main;
+git checkout develop;
+git push --set-upstream origin develop;
 ```
 
 Or, **you can download an archive of the repository** contents using the Github "Download" link and extract this to access all of the files and create a new Git project with them:
@@ -35,14 +37,16 @@ Or, **you can download an archive of the repository** contents using the Github 
 
 After Downloading:
 ```
-unzip template.hapi.rest-master.zip;
-mv template.hapi.rest-master <new_server_project_name>;
+unzip template.githuhb-main.zip;
+mv template.github-main <new_server_project_name>;
 cd <new_server_project_name>;
 git init;
 git remote add origin <remote_addr>;
 git add *;
 git commit;
 git push;
+git checkout -b develop;
+git push --set-upstream origin develop
 ```
 
 Once you have a framework and development environment chosen for your project, you should update your repo with specifics about how to install the tools and dependencies needed to run/debug/develop the application.
@@ -51,13 +55,13 @@ Once you have a framework and development environment chosen for your project, y
 #### Update a Project or add to existing Project
 The steps **to update a Project that was created using this template**, or to **add these features to an existing project** are the same. In the projects root directory:
 ```
-git checkout master;
+git checkout main;
 git remote add template <repo_address>;
 git fetch template;
-git checkout template/master ./;
+git checkout template/main ./;
 git reset HEAD * ./;
 git status; # to see new files and changed files
-<compare diff with `origin/master` to see updates>
+<compare diff with `origin/main` to see updates>
 git add *;
 git commit;
 git push;
@@ -108,56 +112,12 @@ Shell scripts are short programs that are created to help with small tasks. They
 [Review Scripts in this Repo](./scripts/)
 
 
-### Branching and Pull Requests
+#### Auto-Merge with Bulldozer
+This repo has a `.bulldozer.yml` file that is used to customize how to automatically merge pull requests into the `develop` branch. This is done with the [Bulldozer Github App](https://github.com/palantir/bulldozer). 
 
-I'm going to talk about my own strategy in this document, this way my projects will _hopefully_ all use the same-ish workflow. Feel free to use/modify/change this for your project.
-
-It is good practice to create a Git commit on the current branch at the end of each night that you are coding. If you forget, the next best practice is to create a commit of the old changes as the first thing whenever you begin to code on the project again. This way you can easily revert or stash and be back to the beginning of your current coding session.
-
-> The best time to commit your changes was the night you were coding. The second best time is right before you make anymore
-
-Each feature that is created should be in it's own `feature/` branch in the git repo. Once the changes in the feature branch are completed and tested, you should create a Pull Request (PR) against the `develop` branch. This repo should use a Pull Request Template to fill out and help explain the feature and changes you are making. Once this PR is approved, you can merge to the `develop` branch.
-
-```
- --o--o--o`develop-HEAD`                                  --o--o------o`develop-HEAD`
-    \                         -> after merge to master      \       /
-     o--o--o`feature/XXX-HEAD`                               o--o--o
-```
-
-If this is a larger feature (> 1 week of real time) or you think it will be useful to document each step/get feedback on smaller pieces, then it is best to create a new branch (`branch-1`) off of the feature branch for the smaller pieces of code. After a section of the larger feature is completed, or if you think feedback would be useful, you can create a Pull Request (PR) on Github from the `branch-1` to the `feature/*` branch. 
-
-```
- --o--o--o`develop-HEAD`                                           --o--o--o`develop-HEAD`                                          --o--o--o-------o`develop-HEAD`
-    \                                                                \                                                               \           /
-     o--o--o`feature-XXX-HEAD`    -> after merge to feature           o--o------o`feature-XXX-HEAD`     -> after merge to develop      o--o------o`feature-XXX-HEAD`
-         \                                                                \    /                                                          \    /
-          o--o`branch-1-HEAD`                                              o--o                                                            o--o
-```
-
-**Note:** After you create the PR, any new changes that are unrelated to the code changes in the PR should be in a new branch (`branch-2`) that starts at the end of `branch-2`. 
-
-```
- --o--o--o`develop-HEAD`                                           --o--o--o`develop-HEAD`                                            --o--o--o`develop-HEAD`
-    \                                                                \                                                                 \           
-     o--o--o`feature-XXX-HEAD`    -> after 1st merge to feature       o--o------o`feature-XXX-HEAD`  -> after 2nd merge to feature      o--o------o----o`feature-XXX-HEAD`
-         \                                                                \    /                                                          \    /      /
-          o--o`branch-1-HEAD`                                              o--o                                                            o--o      /
-              \                                                                \                                                               \    /
-               o`branch-2-HEAD`                                                 o--o`branch-2-HEAD`                                             o--o
-```
-
-
-### Code Reviews
-
-Code Reviews are an important part of the software development process. They help to maintain quality and inform other developers of changes to the code. Make sure Pull Request descriptions are completely filled out, include thoughts, links, issues you faced or any other details relevant to the changes.
-
-**Tips:**
-
- - Make sure to ask any questions you can come up with to ensure you understand what the changes are doing. 
- - Review the logic of the code to be sure that it is doing what the author says it should
- - Try to think of any edge cases they may have missed.
- - Ensure formatting and style guide is followed
- - [5 antipractices of Code Reviews](https://blogs.oracle.com/javamagazine/five-code-review-antipatterns)
+The default requirements to auto-merge are:
+ 1. all required status checks passing
+ 2. a comment matching: `!merge` or `! merge`
 
 
 
