@@ -19,7 +19,6 @@ echo "" >> wiki/.README.md
 echo "Each page name that is synced will have name: _README_<file_name> so it is not visible in the 'Page List' and will instead be linked below. These files **should not be modified** because they will be overwritten on each merge to develop." >> wiki/.README.md
 echo "" >> wiki/.README.md
 echo "**Docs**" >> wiki/.README.md
-echo ""
 
 for f in ${FILES[@]}
 do
