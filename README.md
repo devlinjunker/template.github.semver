@@ -41,13 +41,10 @@ _This section should try to quickly explain how to setup the project and start u
    - Update Setup Instructions
    - Update Contributing Info
    - Update Code of Conduct
+ - [ ] Review the [Wiki] for overview of the concepts that are used in this template
+ - [ ] Review [Github Workflows]
  - [ ] Modify [Issue Templates] and [Template Configuration File]
- - [ ] (Recommended) Review the [Wiki] for overview of the concepts that are used in this template
  - [ ] (Optional) Modify [Pull Request Template]
- - [ ] (Optional) Update [Github Workflows]
-    - [ ] Review and Update [Label Definitions] for [Label Manager Action]
-    - [ ] Review [Auto PR Label Action] and [Branch-Label Mappings]
-    - [ ] Review [PR Verify Action] and the [script](scripts/workflows/verify-merge.sh) the workflow uses
  - [ ] (Optional) Enable [Git Hooks] and set [Commit Message Template]
  - [ ] Add Project Build and Configuration Files
  - Start Coding!

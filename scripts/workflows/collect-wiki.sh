@@ -9,8 +9,8 @@ echo "Each page name that is synced will have name: _README_<file_name> so it is
 echo "" >> wiki/.README.md
 echo "**Docs**" >> wiki/.README.md
 
-OTHER_FILES=("./CONTRIBUTING.md" "./SECURITY.md")
 
+OTHER_FILES=("./CONTRIBUTING.md" "./SECURITY.md")
 
 for f in "${OTHER_FILES[@]}"
 do
@@ -22,7 +22,7 @@ do
     echo "- [$f]($link)" >> wiki/.README.md
 done
 
-
+# find files in repo with README in name
 README_FILES=$( find . -name *README* );
 
 for f in ${README_FILES[@]}
