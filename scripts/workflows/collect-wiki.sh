@@ -16,7 +16,7 @@ for f in "${OTHER_FILES[@]}"
 do
     echo $f;
     # rename each to `_<directory>_README` and place in `wiki/` directory 
-    wiki_name=$(echo $f | sed "s/^\.\///" | sed "s/^\.//" | sed "s/^/_/" | sed "s/\//_/g")_README
+    wiki_name=$(echo $f | sed "s/^\.\///" | sed "s/^\.//" | sed "s/^/_/" | sed "s/\//_/g" | sed "s/\.md$//")_README.md
     cp $f wiki/$wiki_name
     link=$(echo $f | sed "s/^\.\///" | sed "s/^\.//" | sed "s/^/_/" | sed "s/\//_/g" | sed "s/\.md$//")_README
     echo "- [$f]($link)" >> wiki/.README.md
