@@ -4,7 +4,7 @@ Version: 0.12-SNAPSHOT
 
 <img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github/blob/main/img/logo-small.png">
 
-# Template Github :100: Repo
+# Template Github Semantic Versioning
 
 
 [![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github?color=blue)](https://github.com/devlinjunker/template.github/blob/main/LICENSE)  
@@ -18,7 +18,7 @@ _[Find More Badges Here!](https://shields.io/)_
 
 ## Intro
 
-This is a template project with all of the basic files and directory structure for a [Github Repo :100:%](../../community)
+This is a template project that uses Github Actions and Git Hooks to enforce Semantic Versioning. This project can be used as a jumping off point to easily start using Semantic Versioning and ensure that developers create readable commit messages and release logs.
 
 ## Dependencies/Frameworks
 _List the frameworks, libraries, and tools the project uses:_
