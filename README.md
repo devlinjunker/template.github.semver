@@ -18,7 +18,9 @@ _[Find More Badges Here!](https://shields.io/)_
 
 ## Intro
 
-This is a template project that uses Github Actions and Git Hooks to enforce Semantic Versioning. This project can be used as a jumping off point to easily start using Semantic Versioning and ensure that developers create readable commit messages and release logs.
+This is a template project that uses Github Actions and Git Hooks to enforce [Semantic Versioning].
+
+This template can be used as a jumping off point to start a programming project that uses Semantic Versioning and provides automation to ensure that developers create readable commit messages with meaningful releases and changelogs.
 
 ## Dependencies/Frameworks
 _List the frameworks, libraries, and tools the project uses:_
@@ -55,7 +57,7 @@ _This section should try to quickly explain how to setup the project and start u
 - [Contribute]
 - [Wiki]
   - [FAQ]
-  - [Semantic Versioning & Release]
+  - [Semantic Versioning]
   - [Code Analysis]
 
 
@@ -82,5 +84,5 @@ _This section should try to quickly explain how to setup the project and start u
 [Contribute]: CONTRIBUTING.md
 [Wiki]: https://github.com/devlinjunker/template.github/wiki
 [FAQ]: https://github.com/devlinjunker/template.github/wiki/!-FAQ
-[Semantic Versioning & Release]: https://github.com/devlinjunker/template.github/wiki/Semantic-Versioning-&-Release
+[Semantic Versioning]: https://github.com/devlinjunker/template.github/wiki/Semantic-Versioning-&-Release
 [Code Analysis]: https://github.com/devlinjunker/template.github/wiki/Code-Analysis
