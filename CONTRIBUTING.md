@@ -83,6 +83,8 @@ Break down how each folder is used in the repo and how different code file types
 - scripts/
 |-- hooks/
 |---- (Git Hooks Scripts)
+|-- release/
+|---- (Script files that help with creating releases)
 |-- workflows/
 |---- (Github workflow Scripts)
 - (project config files and READMEs)
@@ -121,10 +123,42 @@ The default requirements to auto-merge are:
 
 
 
-### Security
-Review our [Security Policy](SECURITY.md) for how to submit bug reports and design principles to follow when contributing. 
+### Best Practices
+
+#### Branching and Pull Requests
+View the strategies outlined in our Wiki for [best practices for branching and merging new features](https://github.com/devlinjunker/template.github/wiki/Branching-and-Pull-Requests), as well as steps to take when reviewing other submissions. The Git Hooks and Actions in this template are designed to encourage following these best strategies.
 
 
-### Style Guide
-Make sure to only include basic documentation and Github setup files in this Template!
+#### Security
+Review the [Security Policy](SECURITY.md) for an idea of how to submit bug reports and a review of security design principles to follow when contributing. 
 
+
+#### Style Guide
+Make sure to only include basic documentation and Github setup files in this Template! Once you start your project, you should detail your style guide here or link to a Wiki page from here.
+
+Some ideas of things to include in your styleguide include:
+ - Code Formating and (linting) tools used to ensure the style is met
+ - Organization of Files
+ - Best practices for designing new features
+
+
+#### Testing
+This template doesn't include any tests yet (although we could add them...). Once you start using this for your own project though, you should include any testing details and requirements here.
+
+Ideas to consider for testing:
+ - unit tests
+ - integration tess
+ - e2e tests
+ - automation tests
+ - contract tests
+ - mutation tests
+
+
+#### Release 
+This template uses [Semantic Versioning](https://github.com/devlinjunker/template.github/wiki/Semantic-Versioning-&-Release) to label each iteration of the final project. This ensures a consitent and meaningful format for numbering releases. 
+
+Release branches are cut from the `develop` branch and merged into `main` after review. They are then tagged and marked as a release with a changelog (generated from the commit messages) of the changes made since the last release. 
+
+This process can be improved upon in projects that use this template by:
+ - Building and Adding code Artifacts to releases
+ - Including Github Milestones
