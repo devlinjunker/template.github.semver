@@ -2,17 +2,17 @@
 Version: 0.12-SNAPSHOT
 ---
 
-<img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github/raw/main/img/logo-small.png">
+<img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/main/img/logo-small.png">
 
 # Template - Semantic Versioning with Github Workflows
 
 
-[![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github?color=blue)](https://github.com/devlinjunker/template.github/blob/main/LICENSE)  
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/releases)
-[![GitHub last commit](https://img.shields.io/github/last-commit/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/commits/main)  
+[![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github.semver?color=blue)](https://github.com/devlinjunker/template.github.semver/blob/main/LICENSE)  
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/devlinjunker/template.github.semver)](https://github.com/devlinjunker/template.github.semver/releases)
+[![GitHub last commit](https://img.shields.io/github/last-commit/devlinjunker/template.github.semver)](https://github.com/devlinjunker/template.github.semver/commits/main)  
 [![CII Best Practices Summary](https://img.shields.io/cii/summary/4287?label=core-infrastructure)](https://bestpractices.coreinfrastructure.org/en/projects/4287)  
-[![GitHub issues](https://img.shields.io/github/issues/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/issues)
-[![GitHub priority issues](https://img.shields.io/github/issues/devlinjunker/template.github/-priority?color=red&label=priority%20issues)](https://github.com/devlinjunker/template.github/issues?q=is%3Aopen+is%3Aissue+label%3A-priority)
+[![GitHub issues](https://img.shields.io/github/issues/devlinjunker/template.github.semver)](https://github.com/devlinjunker/template.github.semver/issues)
+[![GitHub priority issues](https://img.shields.io/github/issues/devlinjunker/template.github.semver/-priority?color=red&label=priority%20issues)](https://github.com/devlinjunker/template.github.semver/issues?q=is%3Aopen+is%3Aissue+label%3A-priority)
 
 _[Find More Badges Here!](https://shields.io/)_
 

@@ -3,7 +3,7 @@
 Thanks for helping out!
 
 ## Reporting Issues
-The best way to [report an issue is through Github](../../issues/choose). The owners of the repo should get an email notification whenever a new issue is created.
+The best way to [report an issue is through Github](https://github.com/devlinjunker/template.github.semver/issues/choose). The owners of the repo should get an email notification whenever a new issue is created.
 
 
 ## Development 
@@ -21,7 +21,7 @@ There are multiple ways to use this template as a starting point for your own pr
 The other way to start a new project are to either clone this repo using Git and point at your own remote:
 
 ```
-git clone https://github.com/devlinjunker/template.github.git;
+git clone https://github.com/devlinjunker/template.github.semver.git;
 mv template.github <new_server_project_name>;
 cd <new_server_project_name>;
 git remote remove origin;
@@ -37,7 +37,7 @@ Or, **you can download an archive of the repository** contents using the Github 
 
 After Downloading:
 ```
-unzip template.githuhb-main.zip;
+unzip template.githuh.semver-main.zip;
 mv template.github-main <new_server_project_name>;
 cd <new_server_project_name>;
 git init;
@@ -100,18 +100,18 @@ Git Hooks are scripts that can be run during certain parts of the Git process (a
 
 To create a hook, you add a script file (or symbolic link to one) in the `.git/hooks/` directory with the name of the hook from [this list](https://git-scm.com/docs/githooks#_hooks). (e.g. to run a script before a commit is saved -- to verify the contents of the commit, verify the app builds, etc -- you would create `./.git/hooks/pre-commit`).
 
-[Review Hooks in this Repo](./scripts/hooks#git-hook-scripts)
+[Review Hooks in this Repo](https://github.com/devlinjunker/template.github.semver/blob/main/scripts/hooks#git-hook-scripts)
 
 #### Workflows
-[GitHub Workflows/Actions](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) are commands that can be run on GitHub servers, these are added in `.github/workflows` and defined with YAML files that express when the workflow should run and the steps it should take. Github can enforce that these workflows are successful before Pull Requests are merged via the [Branch Settings Page](../../settings/branches), it can also trigger them after users perform certain actions or they can be manually triggered to run.
+[GitHub Workflows/Actions](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) are commands that can be run on GitHub servers, these are added in `.github/workflows` and defined with YAML files that express when the workflow should run and the steps it should take. Github can enforce that these workflows are successful before Pull Requests are merged via the [Branch Settings Page](https://github.com/devlinjunker/template.github.semver/settings/branches), it can also trigger them after users perform certain actions or they can be manually triggered to run.
 
-[Review Workflows in this Repo](./.github/workflows#github-workflows)
+[Review Workflows in this Repo](https://github.com/devlinjunker/template.github.semver/blob/main/.github/workflows#github-workflows)
 
 
 #### Other Scripts
 Shell scripts are short programs that are created to help with small tasks. They can be a part of a workflow or hook, or they can help with  deployment/installation and running the final software product.  
 
-[Review Scripts in this Repo](./scripts/)
+[Review Scripts in this Repo](https://github.com/devlinjunker/template.github.semver/scripts/)
 
 
 #### Auto-Merge with Bulldozer
@@ -126,11 +126,11 @@ The default requirements to auto-merge are:
 ### Best Practices
 
 #### Branching and Pull Requests
-View the strategies outlined in our Wiki for [best practices for branching and merging new features](https://github.com/devlinjunker/template.github/wiki/Branching-and-Pull-Requests), as well as steps to take when reviewing other submissions. The Git Hooks and Actions in this template are designed to encourage following these best strategies.
+View the strategies outlined in our Wiki for [best practices for branching and merging new features](https://github.com/devlinjunker/template.github.semver/wiki/Branching-and-Pull-Requests), as well as steps to take when reviewing other submissions. The Git Hooks and Actions in this template are designed to encourage following these best strategies.
 
 
 #### Security
-Review the [Security Policy](SECURITY.md) for an idea of how to submit bug reports and a review of security design principles to follow when contributing. 
+Review the [Security Policy](https://github.com/devlinjunker/template.github.semver/blob/main/SECURITY.md) for an idea of how to submit bug reports and a review of security design principles to follow when contributing. 
 
 
 #### Style Guide
@@ -155,7 +155,7 @@ Ideas to consider for testing:
 
 
 #### Release 
-This template uses [Semantic Versioning](https://github.com/devlinjunker/template.github/wiki/Semantic-Versioning-&-Release) to label each iteration of the final project. This ensures a consitent and meaningful format for numbering releases. 
+This template uses [Semantic Versioning](https://github.com/devlinjunker/template.github.semver/wiki/Semantic-Versioning-&-Release) to label each iteration of the final project. This ensures a consitent and meaningful format for numbering releases. 
 
 Release branches are cut from the `develop` branch and merged into `main` after review. They are then tagged and marked as a release with a changelog (generated from the commit messages) of the changes made since the last release. 
 
