@@ -2,7 +2,7 @@
 Version: 0.12-SNAPSHOT
 ---
 
-<img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github/raw/doc/update-wiki-notes/img/logo-small.png">
+<img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/doc/main/img/logo-small.png">
 
 # Template - Semantic Versioning with Github Workflows
 
@@ -21,6 +21,8 @@ _[Find More Badges Here!](https://shields.io/)_
 This is a template project that uses Github Actions and Git Hooks to enforce [Semantic Versioning].
 
 This template can be used as a jumping off point to start a programming project that uses Semantic Versioning and provides automation to ensure that developers create readable commit messages with meaningful releases and changelogs.
+
+The template is based on the [Github :100: Doc Template](https://github.com/devlinjunker/template.github.docs) for the basic documentation files used in this project
 
 ## Dependencies/Frameworks
 _List the frameworks, libraries, and tools the project uses:_
