@@ -41,11 +41,11 @@ _This section should try to quickly explain how to setup the project and start u
    - Update Setup Instructions
    - Update Contributing Info
    - Update Code of Conduct
- - [ ] Review the [Wiki] for overview of the concepts that are used in this template
- - [ ] Review [Github Workflows]
+ - [ ] Review the [Wiki] - overview of the concepts
+ - [ ] Review [Github Workflows] in Template (and improve foryour process)
+ - [ ] Enable [Git Hooks] and set (Optional)  [Commit Message Template]
  - [ ] Modify [Issue Templates] and [Template Configuration File]
  - [ ] (Optional) Modify [Pull Request Template]
- - [ ] (Optional) Enable [Git Hooks] and set [Commit Message Template]
  - [ ] Add Project Build and Configuration Files
  - Start Coding!
 
