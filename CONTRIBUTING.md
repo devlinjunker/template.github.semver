@@ -7,11 +7,9 @@ The best way to [report an issue is through Github](https://github.com/devlinjun
 
 
 ## Development 
-This section details the steps to setup the project for development.
-
-
+<!--This section details the steps to setup the project for development.-->
 ### Environment Setup and Tools
-You will need to install Git and create an account on Github to take advantage of all of the features of this template.
+You will need to install Git and create an account on Github to take advantage of all of the features of this template. This template also uses scripts that expect Bash to be installed at `/bin/bash`.
 
 #### Create your own Project from this Template
 There are multiple ways to use this template as a starting point for your own project. The **best way to use this is with the template feature provided by Github**:
@@ -22,7 +20,7 @@ The other way to start a new project are to either clone this repo using Git and
 
 ```
 git clone https://github.com/devlinjunker/template.github.semver.git;
-mv template.github <new_server_project_name>;
+mv template.github.semver <new_server_project_name>;
 cd <new_server_project_name>;
 git remote remove origin;
 git remote add origin <new_remote_addr>;
@@ -37,8 +35,8 @@ Or, **you can download an archive of the repository** contents using the Github 
 
 After Downloading:
 ```
-unzip template.githuh.semver-main.zip;
-mv template.github-main <new_server_project_name>;
+unzip template.github.semver-main.zip;
+mv template.github.semver-main <new_server_project_name>;
 cd <new_server_project_name>;
 git init;
 git remote add origin <remote_addr>;
@@ -56,7 +54,7 @@ Once you have a framework and development environment chosen for your project, y
 The steps **to update a Project that was created using this template**, or to **add these features to an existing project** are the same. In the projects root directory:
 ```
 git checkout main;
-git remote add template <repo_address>;
+git remote add template https://github.com/devlinjunker/template.github.semver.git;
 git fetch template;
 git checkout template/main ./;
 git reset HEAD * ./;
@@ -155,7 +153,7 @@ Ideas to consider for testing:
 
 
 #### Release 
-This template uses [Semantic Versioning](https://github.com/devlinjunker/template.github.semver/wiki/Semantic-Versioning-&-Release) to label each iteration of the final project. This ensures a consitent and meaningful format for numbering releases. 
+This template uses [Semantic Versioning](https://github.com/devlinjunker/template.github.semver/wiki/Release) to label each iteration of the final project. This ensures a consitent and meaningful format for numbering releases. 
 
 Release branches are cut from the `develop` branch and merged into `main` after review. They are then tagged and marked as a release with a changelog (generated from the commit messages) of the changes made since the last release. 
 
