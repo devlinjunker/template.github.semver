@@ -4,7 +4,7 @@ Version: 0.12-SNAPSHOT
 
 <img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/doc/main/img/logo-small.png">
 
-# Template - Semantic Versioning with Github Workflows
+# Template - Semantic Versioning with Github
 
 
 [![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github.semver?color=blue)](https://github.com/devlinjunker/template.github.semver/blob/main/LICENSE)  
