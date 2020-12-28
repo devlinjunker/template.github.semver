@@ -27,8 +27,10 @@ The template is based on the [Github :100: Doc Template](https://github.com/devl
 ## Dependencies/Frameworks
 _List the frameworks, libraries, and tools the project uses:_
 
-- Git - to clone and use Githooks for process enforcement
-- GitHub - this template is based on the GitHub completion stats and has a `.github/` directory
+- Git - to clone and trigger Githooks 
+- Bash - to run scripts during Githooks (for process enforcement)
+- GitHub - this template uses Github Actions for process enforcement
+- [Bulldozer] - Github Application to Auto Merge PRs
 
 ## Quick Setup/Run
 
@@ -92,3 +94,4 @@ _This section should try to quickly explain how to setup the project and start u
 [Release]: https://github.com/devlinjunker/template.github.semver/wiki/Release
 [Code Analysis]: https://github.com/devlinjunker/template.github.semver/wiki/Code-Analysis
 [Semantic Versioning]: https://semver.org/
+[Bulldozer]: https://github.com/palantir/bulldozer
