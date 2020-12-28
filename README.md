@@ -46,10 +46,11 @@ _This section should try to quickly explain how to setup the project and start u
    - Update Contributing Info
    - Update Code of Conduct
  - [ ] Review the [Wiki] - overview of the concepts
- - [ ] Review [Github Workflows] in Template (and improve foryour process)
+ - [ ] Review [Github Workflows] in Template (and improve for your process)
  - [ ] Enable [Git Hooks] and set (Optional)  [Commit Message Template]
  - [ ] Modify [Issue Templates] and [Template Configuration File]
  - [ ] (Optional) Modify [Pull Request Template]
+ - [ ] (Optional) Enable [Dependabot] to keep Github Actions up to date
  - [ ] Add Project Build and Configuration Files
  - Start Coding!
 
@@ -59,8 +60,9 @@ _This section should try to quickly explain how to setup the project and start u
 - [Contribute]
 - [Wiki]
   - [FAQ]
-  - [Semantic Versioning]
+  - [Release]
   - [Code Analysis]
+- [Semantic Versioning Overview]
 
 
 ## Contributors
@@ -82,9 +84,11 @@ _This section should try to quickly explain how to setup the project and start u
 [PR Verify Action]: .github/workflows/verify-merge.yaml
 [Git Hooks]: scripts/hooks#git-hook-scripts
 [Commit Message Template]: .gitmessage
+[Dependabot]: security/dependabot
 [Code of Conduct]: CODE_OF_CONDUCT.md
 [Contribute]: CONTRIBUTING.md
-[Wiki]: https://github.com/devlinjunker/template.github/wiki
-[FAQ]: https://github.com/devlinjunker/template.github/wiki/!-FAQ
-[Semantic Versioning]: https://github.com/devlinjunker/template.github/wiki/Semantic-Versioning-&-Release
-[Code Analysis]: https://github.com/devlinjunker/template.github/wiki/Code-Analysis
+[Wiki]: https://github.com/devlinjunker/template.github.semver/wiki
+[FAQ]: https://github.com/devlinjunker/template.github.semver/wiki/!-FAQ
+[Release]: https://github.com/devlinjunker/template.github.semver/wiki/Release
+[Code Analysis]: https://github.com/devlinjunker/template.github.semver/wiki/Code-Analysis
+[Semantic Versioning Overview]: https://semver.org/
