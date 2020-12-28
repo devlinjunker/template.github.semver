@@ -94,7 +94,7 @@ _This section should try to quickly explain how to setup the project and start u
 [Release]: https://github.com/devlinjunker/template.github.semver/wiki/Release
 [Code Analysis]: https://github.com/devlinjunker/template.github.semver/wiki/Code-Analysis
 [Semantic Versioning]: https://semver.org/
-[Git Hooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+[Githooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
 [Bash]: https://tldp.org/LDP/abs/html/
 [Github Actions]: https://docs.github.com/en/free-pro-team@latest/actions
 [Bulldozer]: https://github.com/palantir/bulldozer
