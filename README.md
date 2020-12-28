@@ -20,16 +20,16 @@ _[Find More Badges Here!](https://shields.io/)_
 
 This is a template project that uses Github Actions and Git Hooks to enforce [Semantic Versioning].
 
-This template can be used as a jumping off point to start a programming project that uses Semantic Versioning and provides automation to ensure that developers create readable commit messages with meaningful releases and changelogs.
+This template can be used as a jumping off point to start a programming project that uses Semantic Versioning and provides automation (with Githooks and Github Actions) to ensure that developers create readable commit messages with meaningful releases and changelogs.
 
 The template is based on the [Github :100: Doc Template](https://github.com/devlinjunker/template.github.docs) for the basic documentation files used in this project
 
 ## Dependencies/Frameworks
 _List the frameworks, libraries, and tools the project uses:_
 
-- Git - to clone and trigger Githooks 
-- Bash - to run scripts during Githooks (for process enforcement)
-- GitHub - this template uses Github Actions for process enforcement
+- Git - to clone and trigger [Githooks]
+- [Bash] - to run scripts during Githooks (for process enforcement)
+- GitHub - this template uses [Github Actions] for process enforcement
 - [Bulldozer] - Github Application to Auto Merge PRs
 
 ## Quick Setup/Run
@@ -94,4 +94,7 @@ _This section should try to quickly explain how to setup the project and start u
 [Release]: https://github.com/devlinjunker/template.github.semver/wiki/Release
 [Code Analysis]: https://github.com/devlinjunker/template.github.semver/wiki/Code-Analysis
 [Semantic Versioning]: https://semver.org/
+[Git Hooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+[Bash]: https://tldp.org/LDP/abs/html/
+[Github Actions]: https://docs.github.com/en/free-pro-team@latest/actions
 [Bulldozer]: https://github.com/palantir/bulldozer
