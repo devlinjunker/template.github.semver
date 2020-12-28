@@ -91,4 +91,4 @@ _This section should try to quickly explain how to setup the project and start u
 [FAQ]: https://github.com/devlinjunker/template.github.semver/wiki/!-FAQ
 [Release]: https://github.com/devlinjunker/template.github.semver/wiki/Release
 [Code Analysis]: https://github.com/devlinjunker/template.github.semver/wiki/Code-Analysis
-[Semantic Versioning Overview]: https://semver.org/
+[Semantic Versioning]: https://semver.org/
