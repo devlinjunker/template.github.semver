@@ -1,5 +1,5 @@
 ---
-Version: 0.11.2
+Version: 0.11.3
 ---
 
 <img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github/blob/main/img/logo-small.png">
