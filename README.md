@@ -62,7 +62,7 @@ _This section should try to quickly explain how to setup the project and start u
   - [FAQ]
   - [Release]
   - [Code Analysis]
-- [Semantic Versioning Overview]
+- [Semantic Versioning]
 
 
 ## Contributors
