@@ -49,6 +49,7 @@ _This section should try to quickly explain how to setup the project and start u
     - [ ] Review [Auto PR Label Action] and [Branch-Label Mappings]
     - [ ] Review [PR Verify Action] and the [script](scripts/workflows/verify-merge.sh) the workflow uses
  - [ ] (Optional) Enable [Git Hooks] and set [Commit Message Template]
+ - [ ] (Optional) Enable Dependabot to keep actions up to date
  - [ ] Add Project Build and Configuration Files
  - Start Coding!
 
