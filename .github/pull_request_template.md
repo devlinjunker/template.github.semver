@@ -8,5 +8,5 @@ _Links to any Github issues or documentation used for this change_
 _Add a screenshot!_
 
 # TODO:
+ - [ ] Updated README documents
  - [ ] Complete PR Body
- - [ ] Updated Architecture/README documents

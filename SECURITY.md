@@ -7,8 +7,8 @@ currently being supported with security updates._
 
 | Version | Supported          |
 | ------- | ------------------ |
-| > 0.1.x | :white_check_mark: |
-| < 0.0   | :x:                |
+| > 0.11.x | :white_check_mark: |
+| < 0.10   | :x:                |
 
 ## Reporting a Vulnerability
 
@@ -52,5 +52,5 @@ _the attack surface - the set of the different points where an attacker can try 
 - **Input validation with allowlists**  
 _inputs should typically be checked to determine if they are valid before they are accepted; this validation should use allowlists (which only accept known-good values), not denylists (which attempt to list known-bad values))_
 
-[submit an issue]: ../../issues/new?template=bug_report.md&labels=bug,-priority,security&title=[SECURITY]
+[submit an issue]: https://github.com/devlinjunker/template.github.semver/issues/new?template=bug_report.md&labels=bug,-priority,security&title=[SECURITY]
 [Saltzher & Schroeder]: https://web.mit.edu/Saltzer/www/publications/protection/
