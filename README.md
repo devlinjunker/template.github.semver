@@ -1,5 +1,5 @@
 ---
-Version: 0.12-SNAPSHOT
+Version: 0.13-SNAPSHOT
 ---
 
 <img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/develop/img/logo-small.png">
