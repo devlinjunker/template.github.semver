@@ -33,7 +33,7 @@ The template is based on the [Github :100: Doc Template](https://github.com/devl
 - [Bulldozer] - Github Application to Auto Merge PRs
 
 ## Quick Setup/Run
-<!--This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format -->
+<!-- This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format -->
  - [ ] Review [License] File
  - [ ] Review and Update [Security Policy]
    - Provide private way of reporting vulnerabilities?
