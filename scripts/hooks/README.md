@@ -9,20 +9,23 @@ Git hooks need to be added to your local repo for each project,
 
   1. `cd .git/hooks/`
 
-  2. `ln -s ../../scripts/hooks/pre-commit.sh pre-commit`
-     - enforces that the branch name matches style: <prefix>/<feature_name>
-     - enforces that branch is not `main` or `develop` or prefixed with `release`
+  2. `ln -s ../../scripts/hooks/<HOOK_NAME>.sh <HOOK_NAME>`
 
-  3. `ln -s ../../scripts/hooks/commit-msg.sh commit-msg`
-     - enforces that first line of commit message matches conventional commit (ish) style `<type>:<description>`
 
-  4. `ln -s ../../scripts/hooks/pre-push.sh pre-push`
-     - enforces that the branch name matches style: <prefix>/<feature_name>
+   ### pre-commit
+      - enforces that the branch name matches style: <prefix>/<feature_name>
+      - enforces that branch is not `main` or `develop` or prefixed with `release`
 
-  5. `ln -s ../../scripts/hooks/post-commit.sh post-commit`
-     - warns when changes are getting large since "last merge"
-        - 25 files
-        - 400 lines
+   ### commit-msg
+      - enforces that first line of commit message matches conventional commit (ish) style `<type>:<description>`
+
+   ### pre-push
+      - enforces that the branch name matches style: <prefix>/<feature_name>
+
+   ### post-commit
+      - warns when changes are getting large since "last merge"
+         - 25 files
+         - 400 lines
 
 
 ## Ideas for Hooks

@@ -1,34 +1,37 @@
 ---
-Version: 0.11.4
+Version: 0.12.0
 ---
 
-<img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github/blob/main/img/logo-small.png">
+<img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/develop/img/logo-small.png">
 
-# Template Github :100: Repo
-
-
-[![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github?color=blue)](https://github.com/devlinjunker/template.github/blob/main/LICENSE)  
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/releases)
-[![GitHub last commit](https://img.shields.io/github/last-commit/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/commits/main)  
+# Template - Semantic Versioning with Github
+<!-- Find More Badges Here: https://shields.io/ -->
+[![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github.semver?color=blue)](https://github.com/devlinjunker/template.github.semver/blob/main/LICENSE)  
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/devlinjunker/template.github.semver)](https://github.com/devlinjunker/template.github.semver/releases)
+[![GitHub last commit](https://img.shields.io/github/last-commit/devlinjunker/template.github.semver)](https://github.com/devlinjunker/template.github.semver/commits/main)  
 [![CII Best Practices Summary](https://img.shields.io/cii/summary/4287?label=core-infrastructure)](https://bestpractices.coreinfrastructure.org/en/projects/4287)  
-[![GitHub issues](https://img.shields.io/github/issues/devlinjunker/template.github)](https://github.com/devlinjunker/template.github/issues)
-[![GitHub priority issues](https://img.shields.io/github/issues/devlinjunker/template.github/-priority?color=red&label=priority%20issues)](https://github.com/devlinjunker/template.github/issues?q=is%3Aopen+is%3Aissue+label%3A-priority)
+[![GitHub issues](https://img.shields.io/github/issues/devlinjunker/template.github.semver)](https://github.com/devlinjunker/template.github.semver/issues)
+[![GitHub priority issues](https://img.shields.io/github/issues/devlinjunker/template.github.semver/-priority?color=red&label=priority%20issues)](https://github.com/devlinjunker/template.github.semver/issues?q=is%3Aopen+is%3Aissue+label%3A-priority)
 
-_[Find More Badges Here!](https://shields.io/)_
 
 ## Intro
+<!-- Quick Description, could match Github repo description or have a little more info-->
+This is a template project that uses Github Actions and Git Hooks to enforce [Semantic Versioning].
 
-This is a template project with all of the basic files and directory structure for a [Github Repo :100:%](../../community)
+This template can be used as a jumping off point to start a programming project that uses Semantic Versioning and provides automation (with Githooks and Github Actions) to ensure that developers create readable commit messages with meaningful releases and changelogs.
+
+The template is based on the [Github :100: Doc Template](https://github.com/devlinjunker/template.github.docs) for the basic documentation files used in this project
 
 ## Dependencies/Frameworks
-_List the frameworks, libraries, and tools the project uses:_
+<!-- List the frameworks, libraries, and tools the project uses: -->
 
-- Git - to clone and use Githooks for process enforcement
-- GitHub - this template is based on the GitHub completion stats and has a `.github/` directory
+- Git - to clone and trigger [Githooks]
+- [Bash] - to run scripts during Githooks (for process enforcement)
+- GitHub - this template uses [Github Actions] for process enforcement
+- [Bulldozer] - Github Application to Auto Merge PRs
 
 ## Quick Setup/Run
-
-_This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format_
+<!-- This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format -->
  - [ ] Review [License] File
  - [ ] Review and Update [Security Policy]
    - Provide private way of reporting vulnerabilities?
@@ -41,14 +44,12 @@ _This section should try to quickly explain how to setup the project and start u
    - Update Setup Instructions
    - Update Contributing Info
    - Update Code of Conduct
+ - [ ] Review the [Wiki] - overview of the concepts
+ - [ ] Review [Github Workflows] in Template (and improve for your process)
+ - [ ] Enable [Git Hooks] and set (Optional)  [Commit Message Template]
  - [ ] Modify [Issue Templates] and [Template Configuration File]
- - [ ] (Recommended) Review the [Wiki] for overview of the concepts that are used in this template
  - [ ] (Optional) Modify [Pull Request Template]
- - [ ] (Optional) Update [Github Workflows]
-    - [ ] Review and Update [Label Definitions] for [Label Manager Action]
-    - [ ] Review [Auto PR Label Action] and [Branch-Label Mappings]
-    - [ ] Review [PR Verify Action] and the [script](scripts/workflows/verify-merge.sh) the workflow uses
- - [ ] (Optional) Enable [Git Hooks] and set [Commit Message Template]
+ - [ ] (Optional) Enable [Dependabot] to keep Github Actions up to date
  - [ ] Add Project Build and Configuration Files
  - Start Coding!
 
@@ -58,8 +59,9 @@ _This section should try to quickly explain how to setup the project and start u
 - [Contribute]
 - [Wiki]
   - [FAQ]
-  - [Semantic Versioning & Release]
+  - [Release]
   - [Code Analysis]
+- [Semantic Versioning]
 
 
 ## Contributors
@@ -81,9 +83,15 @@ _This section should try to quickly explain how to setup the project and start u
 [PR Verify Action]: .github/workflows/verify-merge.yaml
 [Git Hooks]: scripts/hooks#git-hook-scripts
 [Commit Message Template]: .gitmessage
+[Dependabot]: security/dependabot
 [Code of Conduct]: CODE_OF_CONDUCT.md
 [Contribute]: CONTRIBUTING.md
-[Wiki]: https://github.com/devlinjunker/template.github/wiki
-[FAQ]: https://github.com/devlinjunker/template.github/wiki/!-FAQ
-[Semantic Versioning & Release]: https://github.com/devlinjunker/template.github/wiki/Semantic-Versioning-&-Release
-[Code Analysis]: https://github.com/devlinjunker/template.github/wiki/Code-Analysis
+[Wiki]: https://github.com/devlinjunker/template.github.semver/wiki
+[FAQ]: https://github.com/devlinjunker/template.github.semver/wiki/!-FAQ
+[Release]: https://github.com/devlinjunker/template.github.semver/wiki/Release
+[Code Analysis]: https://github.com/devlinjunker/template.github.semver/wiki/Code-Analysis
+[Semantic Versioning]: https://semver.org/
+[Githooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+[Bash]: https://tldp.org/LDP/abs/html/
+[Github Actions]: https://docs.github.com/en/free-pro-team@latest/actions
+[Bulldozer]: https://github.com/palantir/bulldozer
