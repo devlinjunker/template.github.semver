@@ -7,21 +7,21 @@ on:
       - main
 
 jobs:
-  # Only allow `release-*` or `hotfix-*` branches to merge to `main`
+  # Only allow `release-*` or `patch-*` branches to merge to `main`
   verify-main:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: "Verify 'main' PR are from 'release-*' or 'hotfix-*' branch"
+    - name: "Verify 'main' PR are from 'release-*' or 'patch-*' branch"
       run: ./scripts/workflows/branch-match.sh
       env: 
         BRANCH: ${{ github.head_ref }}
-        REGEXP: (release-[0-9]+.[0-9]+|hotfix-[0-9]+.[0-9]+.[0-9]+)
+        REGEXP: (release-[0-9]+.[0-9]+|patch-[0-9]+.[0-9]+.[0-9]+)
 
-    - name: "Verify PR Title matches `release` or `hotfix` "
+    - name: "Verify PR Title matches `release` or `patch` "
       uses: deepakputhraya/action-pr-title@master
       with:
         regex: '-[0-9]+.[0-9]+(.[0-9]+)?'
-        allowed_prefixes:  release,hotfix
+        allowed_prefixes:  release,patch
