@@ -34,4 +34,4 @@ jobs:
       with:
         regex: '(\([\w\s]*\)*\))?:[\w\s]*'
         allowed_prefixes:  ${{ steps.extract_branch.outputs.prefix }}
-        prefix_case_sensitive: false
+        prefix_case_sensitive: true
