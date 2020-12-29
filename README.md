@@ -2,7 +2,7 @@
 Version: 0.12-SNAPSHOT
 ---
 
-<img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/doc/main/img/logo-small.png">
+<img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/develop/img/logo-small.png">
 
 # Template - Semantic Versioning with Github
 
