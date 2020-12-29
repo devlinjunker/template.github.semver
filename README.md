@@ -70,7 +70,7 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 - [Security Policy]
 - [Wiki]
   - [FAQ]
-  - [Release]
+  - [Release Process]
 
 
 ## Contributors
@@ -98,7 +98,7 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 [Security Policy]: SECURITY.md
 [Wiki]: https://github.com/devlinjunker/template.github.semver/wiki
 [FAQ]: https://github.com/devlinjunker/template.github.semver/wiki/!-FAQ
-[Release]: https://github.com/devlinjunker/template.github.semver/wiki/Release
+[Release Process]: https://github.com/devlinjunker/template.github.semver/wiki/Release
 [Semantic Versioning]: https://semver.org/
 [Git Hooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
 [Bash]: https://tldp.org/LDP/abs/html/
