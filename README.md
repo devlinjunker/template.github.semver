@@ -21,6 +21,7 @@ Version: 0.13-SNAPSHOT
 This is a template project that uses GitHub Actions and Git Hooks to enforce [Semantic Versioning]. It can be used as a jumping off point to start a programming project with:
 
 - Basic Documentation File Templates (from [Github :100:% Docs Template](https://github.com/devlinjunker/template.github.docs) )
+- [Core Infrastructure Initiative Criteria] Badge
 - Issue and Pull Request Templates
 - Git Hooks to enforce readable and meaningful commit messages
 - Automated merges and verification for `develop` and `main` branches
@@ -40,9 +41,10 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 
 ## Quick Setup/Run
 <!-- This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format -->
-
- - [ ] Review [License] File
- - [ ] Review and Update [Security Policy]
+ - [ ] Review the [Wiki] - overview of the concepts
+ - [ ] [Clone or Template to New Project][Contributing Guide]
+ - [ ] Review/Update [License] File
+ - [ ] Review/Update [Security Policy]
    - Provide private way of reporting vulnerabilities?
  - [ ] Remove/Replace Logo files in `img/` directory
    - If replacing, change logo location in README
@@ -51,11 +53,13 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
    - Update/Remove Badges
      - Project URL
      - CII Project Rank
+   - Update Intro
    - Define Dependencies
    - Update Setup Instructions
-   - Update Contributing Info
-   - Update Code of Conduct
- - [ ] Review the [Wiki] - overview of the concepts
+   - Review/Remove Links
+     - Review [Security Policy]
+     - Update [Contributing Guide]
+     - Review/Update [Code of Conduct]
  - [ ] Review [Github Workflows] in Template (and improve for your process)
  - [ ] Enable [Git Hooks] and set (Optional)  [Commit Message Template]
  - [ ] Modify [Issue Templates] and [Template Configuration File]
@@ -66,7 +70,6 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 
 ## Links
 
-- [Semantic Versioning Overview][Semantic Versioning]
 - [Code of Conduct]
 - [Contributing Guide]
 - [Security Policy]
@@ -74,7 +77,9 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
   - [FAQ]
   - [Release Process]
   - [Styleguide]
-
+- External
+  - [Semantic Versioning]
+  - [Core Infrastructure Initiative Criteria]
 
 ## Contributors
 
@@ -104,6 +109,7 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 [Release Process]: https://github.com/devlinjunker/template.github.semver/wiki/Release
 [Styleguide]: https://github.com/devlinjunker/template.github.semver/wiki/Styleguide
 [Semantic Versioning]: https://semver.org/
+[Core Infrastructure Initiative Criteria]: https://bestpractices.coreinfrastructure.org/en/criteria/0
 [Git Hooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
 [Bash]: https://tldp.org/LDP/abs/html/
 [Github Actions]: https://docs.github.com/en/free-pro-team@latest/actions
