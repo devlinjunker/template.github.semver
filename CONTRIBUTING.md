@@ -18,7 +18,7 @@ There are multiple ways to use this template as a starting point for your own pr
 
 <img width="1130" alt="template" src="https://user-images.githubusercontent.com/1504590/95393957-55b31c80-08b0-11eb-9126-55d8105881f4.png">
 
-The other way to start a new project are to either clone this repo using Git and point at your own remote:
+The **second best way to start a new project** is to either clone this repo using Git and point at your own remote:
 
 ```
 git clone --depth 1 -b main https://github.com/devlinjunker/template.github.semver.git;
