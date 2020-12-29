@@ -71,7 +71,6 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 - [Wiki]
   - [FAQ]
   - [Release]
-  - [Code Analysis]
 
 
 ## Contributors
@@ -100,7 +99,6 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 [Wiki]: https://github.com/devlinjunker/template.github.semver/wiki
 [FAQ]: https://github.com/devlinjunker/template.github.semver/wiki/!-FAQ
 [Release]: https://github.com/devlinjunker/template.github.semver/wiki/Release
-[Code Analysis]: https://github.com/devlinjunker/template.github.semver/wiki/Code-Analysis
 [Semantic Versioning]: https://semver.org/
 [Git Hooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
 [Bash]: https://tldp.org/LDP/abs/html/
