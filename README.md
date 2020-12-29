@@ -36,7 +36,7 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 - Git - to clone and trigger [Git Hooks]
 - [Bash] - to run scripts during Git Hooks (for process enforcement)
 - GitHub - this template uses [Github Actions] for process enforcement
-- [Bulldozer] - Github Application to Auto Merge PRs
+- [Bulldozer] - Github Application to Auto Squash and Merge feature PRs
 
 ## Quick Setup/Run
 <!-- This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format -->
