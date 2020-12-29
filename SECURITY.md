@@ -4,16 +4,16 @@
 <!-- Use this section to tell people about which versions of your project are
 currently being supported with security updates -->
 
+:white_check_mark: Currently Supported  
+:heavy_minus_sign: Still Supported with Planned Deprecation  
+:x: Not Supported  
+
 | Version | Supported          |
 | ------- | ------------------ |
 | > 1.0.x | :white_check_mark: |
 | > 0.12.x | :white_check_mark: |
 |  0.11.x  | :heavy_minus_sign: |
 | < 0.10   | :x:                |
-
-:white_check_mark: Currently Supported  
-:heavy_minus_sign: Still Supported with Planned Deprecation  
-:x: Not Supported  
 
 ## Reporting a Vulnerability
 

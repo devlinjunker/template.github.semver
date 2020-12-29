@@ -2,10 +2,11 @@
 Version: 0.13-SNAPSHOT
 ---
 
-<img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/develop/img/logo-small.png">
+<img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/develop/img/logo-small.png" alt="semver template logo">
 
 # Template - Semantic Versioning with Github
 <!-- Find More Badges Here: https://shields.io/ -->
+
 [![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github.semver?color=blue)](https://github.com/devlinjunker/template.github.semver/blob/main/LICENSE)  
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/devlinjunker/template.github.semver)](https://github.com/devlinjunker/template.github.semver/releases)
 [![GitHub last commit](https://img.shields.io/github/last-commit/devlinjunker/template.github.semver)](https://github.com/devlinjunker/template.github.semver/commits/main)  
@@ -16,10 +17,10 @@ Version: 0.13-SNAPSHOT
 
 ## Intro
 <!-- Quick Description, could match Github repo description or have a little more info-->
-This is a template project that uses GitHub Actions and Git Hooks to enforce [Semantic Versioning].
 
-This template can be used as a jumping off point to start a programming project with:
-- Basic Documentation File Templates
+This is a template project that uses GitHub Actions and Git Hooks to enforce [Semantic Versioning]. It can be used as a jumping off point to start a programming project with:
+
+- Basic Documentation File Templates (from [Github :100:% Docs Template](https://github.com/devlinjunker/template.github.docs) )
 - Issue and Pull Request Templates
 - Git Hooks to enforce readable and meaningful commit messages
 - Automated merges and verification for `develop` and `main` branches
@@ -27,7 +28,7 @@ This template can be used as a jumping off point to start a programming project 
 - Semi-Automated Patch process using Github Actions
 - Standardized Labels and Automatic Labeling of Pull Requests
 
-The template is based on the [Github :100: Doc Template](https://github.com/devlinjunker/template.github.docs) for the basic documentation files used in this project
+
 
 ## Dependencies/Frameworks
 <!-- List the frameworks, libraries, and tools the project uses: -->
@@ -39,6 +40,7 @@ The template is based on the [Github :100: Doc Template](https://github.com/devl
 
 ## Quick Setup/Run
 <!-- This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format -->
+
  - [ ] Review [License] File
  - [ ] Review and Update [Security Policy]
    - Provide private way of reporting vulnerabilities?
@@ -62,7 +64,7 @@ The template is based on the [Github :100: Doc Template](https://github.com/devl
 
 ## Links
 
-- [Semantic Versioning]
+- [Semantic Versioning Overview][Semantic Versioning]
 - [Code of Conduct]
 - [Contributing Guide]
 - [Security Policy]
