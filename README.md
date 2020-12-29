@@ -6,6 +6,7 @@ Version: 0.12-SNAPSHOT
 
 # Template - Semantic Versioning with Github
 
+<!-- Find More Badges Here: https://shields.io/ -->
 
 [![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github.semver?color=blue)](https://github.com/devlinjunker/template.github.semver/blob/main/LICENSE)  
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/devlinjunker/template.github.semver)](https://github.com/devlinjunker/template.github.semver/releases)
@@ -14,10 +15,9 @@ Version: 0.12-SNAPSHOT
 [![GitHub issues](https://img.shields.io/github/issues/devlinjunker/template.github.semver)](https://github.com/devlinjunker/template.github.semver/issues)
 [![GitHub priority issues](https://img.shields.io/github/issues/devlinjunker/template.github.semver/-priority?color=red&label=priority%20issues)](https://github.com/devlinjunker/template.github.semver/issues?q=is%3Aopen+is%3Aissue+label%3A-priority)
 
-_[Find More Badges Here!](https://shields.io/)_
 
 ## Intro
-
+<!-- Quick Description, could match Github repo description or have a little more info-->
 This is a template project that uses Github Actions and Git Hooks to enforce [Semantic Versioning].
 
 This template can be used as a jumping off point to start a programming project that uses Semantic Versioning and provides automation (with Githooks and Github Actions) to ensure that developers create readable commit messages with meaningful releases and changelogs.
@@ -25,7 +25,7 @@ This template can be used as a jumping off point to start a programming project 
 The template is based on the [Github :100: Doc Template](https://github.com/devlinjunker/template.github.docs) for the basic documentation files used in this project
 
 ## Dependencies/Frameworks
-_List the frameworks, libraries, and tools the project uses:_
+<!-- List the frameworks, libraries, and tools the project uses: -->
 
 - Git - to clone and trigger [Githooks]
 - [Bash] - to run scripts during Githooks (for process enforcement)
@@ -33,8 +33,7 @@ _List the frameworks, libraries, and tools the project uses:_
 - [Bulldozer] - Github Application to Auto Merge PRs
 
 ## Quick Setup/Run
-
-_This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format_
+<!--This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format -->
  - [ ] Review [License] File
  - [ ] Review and Update [Security Policy]
    - Provide private way of reporting vulnerabilities?
