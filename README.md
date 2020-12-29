@@ -49,6 +49,8 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
  - [ ] Update this README and Links with project specific details
    - Reset Version Information
    - Update/Remove Badges
+     - Project URL
+     - CII Project Rank
    - Define Dependencies
    - Update Setup Instructions
    - Update Contributing Info
