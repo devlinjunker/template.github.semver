@@ -2,12 +2,14 @@
 
 Thanks for helping out!
 
+
 ## Reporting Issues
 The best way to [report an issue is through Github](https://github.com/devlinjunker/template.github.semver/issues/choose). The owners of the repo should get an email notification whenever a new issue is created.
 
 
 ## Development 
-<!--This section details the steps to setup the project for development.-->
+<!-- This section details the steps to setup the project for development -->
+
 ### Environment Setup and Tools
 You will need to install Git and create an account on Github to take advantage of all of the features of this template. This template also uses scripts that expect Bash to be installed at `/bin/bash`.
 
