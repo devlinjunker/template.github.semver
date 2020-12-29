@@ -16,17 +16,24 @@ Version: 0.13-SNAPSHOT
 
 ## Intro
 <!-- Quick Description, could match Github repo description or have a little more info-->
-This is a template project that uses Github Actions and Git Hooks to enforce [Semantic Versioning].
+This is a template project that uses GitHub Actions and Git Hooks to enforce [Semantic Versioning].
 
-This template can be used as a jumping off point to start a programming project that uses Semantic Versioning and provides automation (with Githooks and Github Actions) to ensure that developers create readable commit messages with meaningful releases and changelogs.
+This template can be used as a jumping off point to start a programming project with:
+- Basic Documentation File Templates
+- Issue and Pull Request Templates
+- Git Hooks to enforce readable and meaningful commit messages
+- Automated merges and verification for `develop` and `main` branches
+- Semi-Automated Semantic Versioned releases based on commit messages using GitHub Actions
+- Semi-Automated Patch process using Github Actions
+- Standardized Labels and Automatic Labeling of Pull Requests
 
 The template is based on the [Github :100: Doc Template](https://github.com/devlinjunker/template.github.docs) for the basic documentation files used in this project
 
 ## Dependencies/Frameworks
 <!-- List the frameworks, libraries, and tools the project uses: -->
 
-- Git - to clone and trigger [Githooks]
-- [Bash] - to run scripts during Githooks (for process enforcement)
+- Git - to clone and trigger [Git Hooks]
+- [Bash] - to run scripts during Git Hooks (for process enforcement)
 - GitHub - this template uses [Github Actions] for process enforcement
 - [Bulldozer] - Github Application to Auto Merge PRs
 
@@ -55,13 +62,14 @@ The template is based on the [Github :100: Doc Template](https://github.com/devl
 
 ## Links
 
+- [Semantic Versioning]
 - [Code of Conduct]
-- [Contribute]
+- [Contributing Guide]
+- [Security Policy]
 - [Wiki]
   - [FAQ]
   - [Release]
   - [Code Analysis]
-- [Semantic Versioning]
 
 
 ## Contributors
@@ -85,13 +93,14 @@ The template is based on the [Github :100: Doc Template](https://github.com/devl
 [Commit Message Template]: .gitmessage
 [Dependabot]: security/dependabot
 [Code of Conduct]: CODE_OF_CONDUCT.md
-[Contribute]: CONTRIBUTING.md
+[Contributing Guide]: CONTRIBUTING.md
+[Security Policy]: SECURITY.md
 [Wiki]: https://github.com/devlinjunker/template.github.semver/wiki
 [FAQ]: https://github.com/devlinjunker/template.github.semver/wiki/!-FAQ
 [Release]: https://github.com/devlinjunker/template.github.semver/wiki/Release
 [Code Analysis]: https://github.com/devlinjunker/template.github.semver/wiki/Code-Analysis
 [Semantic Versioning]: https://semver.org/
-[Githooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+[Git Hooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
 [Bash]: https://tldp.org/LDP/abs/html/
 [Github Actions]: https://docs.github.com/en/free-pro-team@latest/actions
 [Bulldozer]: https://github.com/palantir/bulldozer
