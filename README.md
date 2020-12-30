@@ -1,5 +1,5 @@
 ---
-Version: 0.13-SNAPSHOT
+Version: 1.0.0
 ---
 
 <img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/develop/img/logo-small.png" alt="semver template logo">
