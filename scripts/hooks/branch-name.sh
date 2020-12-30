@@ -17,8 +17,8 @@ main() {
   # get current branch name
   local branch="$(git rev-parse --abbrev-ref HEAD)"
 
-  # ignore `hotfix-*` branches
-  if [[ $branch =~ hotfix-[0-9]+.[0-9]+.[0-9]+ ]]; then
+  # ignore `patch-*` branches
+  if [[ $branch =~ patch-[0-9]+.[0-9]+.[0-9]+ ]]; then
     return 0;
   fi 
 
