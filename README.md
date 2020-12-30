@@ -1,11 +1,12 @@
 ---
-Version: 0.12.1
+Version: 1.0.0
 ---
 
-<img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/develop/img/logo-small.png">
+<img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/develop/img/logo-small.png" alt="semver template logo">
 
 # Template - Semantic Versioning with Github
 <!-- Find More Badges Here: https://shields.io/ -->
+
 [![GitHub License](https://img.shields.io/github/license/devlinjunker/template.github.semver?color=blue)](https://github.com/devlinjunker/template.github.semver/blob/main/LICENSE)  
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/devlinjunker/template.github.semver)](https://github.com/devlinjunker/template.github.semver/releases)
 [![GitHub last commit](https://img.shields.io/github/last-commit/devlinjunker/template.github.semver)](https://github.com/devlinjunker/template.github.semver/commits/main)  
@@ -16,35 +17,49 @@ Version: 0.12.1
 
 ## Intro
 <!-- Quick Description, could match Github repo description or have a little more info-->
-This is a template project that uses Github Actions and Git Hooks to enforce [Semantic Versioning].
 
-This template can be used as a jumping off point to start a programming project that uses Semantic Versioning and provides automation (with Githooks and Github Actions) to ensure that developers create readable commit messages with meaningful releases and changelogs.
+This is a template project that uses GitHub Actions and Git Hooks to enforce [Semantic Versioning]. It can be used as a jumping off point to start a programming project with:
 
-The template is based on the [Github :100: Doc Template](https://github.com/devlinjunker/template.github.docs) for the basic documentation files used in this project
+- Basic Documentation File Templates (from [Github :100:% Docs Template](https://github.com/devlinjunker/template.github.docs) )
+- [Core Infrastructure Initiative Criteria] Badge
+- Issue and Pull Request Templates
+- Git Hooks to enforce readable and meaningful commit messages
+- Automated merges and verification for `develop` and `main` branches
+- Semi-Automated Semantic Versioned releases based on commit messages using GitHub Actions
+- Semi-Automated Patch process using Github Actions
+- Standardized Labels and Automatic Labeling of Pull Requests
+
+
 
 ## Dependencies/Frameworks
 <!-- List the frameworks, libraries, and tools the project uses: -->
 
-- Git - to clone and trigger [Githooks]
-- [Bash] - to run scripts during Githooks (for process enforcement)
+- Git - to clone and trigger [Git Hooks]
+- [Bash] - to run scripts during Git Hooks (for process enforcement)
 - GitHub - this template uses [Github Actions] for process enforcement
-- [Bulldozer] - Github Application to Auto Merge PRs
+- [Bulldozer] - Github Application to Auto Squash and Merge feature PRs
 
 ## Quick Setup/Run
 <!-- This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format -->
- - [ ] Review [License] File
- - [ ] Review and Update [Security Policy]
+ - [ ] Review the [Wiki] - overview of the concepts
+ - [ ] [Clone or Template to New Project][Contributing Guide]
+ - [ ] Review/Update [License] File
+ - [ ] Review/Update [Security Policy]
    - Provide private way of reporting vulnerabilities?
  - [ ] Remove/Replace Logo files in `img/` directory
    - If replacing, change logo location in README
  - [ ] Update this README and Links with project specific details
    - Reset Version Information
    - Update/Remove Badges
+     - Project URL
+     - CII Project Rank
+   - Update Intro
    - Define Dependencies
    - Update Setup Instructions
-   - Update Contributing Info
-   - Update Code of Conduct
- - [ ] Review the [Wiki] - overview of the concepts
+   - Review/Remove Links
+     - Review [Security Policy]
+     - Update [Contributing Guide]
+     - Review/Update [Code of Conduct]
  - [ ] Review [Github Workflows] in Template (and improve for your process)
  - [ ] Enable [Git Hooks] and set (Optional)  [Commit Message Template]
  - [ ] Modify [Issue Templates] and [Template Configuration File]
@@ -56,13 +71,15 @@ The template is based on the [Github :100: Doc Template](https://github.com/devl
 ## Links
 
 - [Code of Conduct]
-- [Contribute]
+- [Contributing Guide]
+- [Security Policy]
 - [Wiki]
   - [FAQ]
-  - [Release]
-  - [Code Analysis]
-- [Semantic Versioning]
-
+  - [Release Process]
+  - [Styleguide]
+- External
+  - [Semantic Versioning]
+  - [Core Infrastructure Initiative Criteria]
 
 ## Contributors
 
@@ -85,13 +102,15 @@ The template is based on the [Github :100: Doc Template](https://github.com/devl
 [Commit Message Template]: .gitmessage
 [Dependabot]: security/dependabot
 [Code of Conduct]: CODE_OF_CONDUCT.md
-[Contribute]: CONTRIBUTING.md
+[Contributing Guide]: CONTRIBUTING.md
+[Security Policy]: SECURITY.md
 [Wiki]: https://github.com/devlinjunker/template.github.semver/wiki
 [FAQ]: https://github.com/devlinjunker/template.github.semver/wiki/!-FAQ
-[Release]: https://github.com/devlinjunker/template.github.semver/wiki/Release
-[Code Analysis]: https://github.com/devlinjunker/template.github.semver/wiki/Code-Analysis
+[Release Process]: https://github.com/devlinjunker/template.github.semver/wiki/Release
+[Styleguide]: https://github.com/devlinjunker/template.github.semver/wiki/Styleguide
 [Semantic Versioning]: https://semver.org/
-[Githooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+[Core Infrastructure Initiative Criteria]: https://bestpractices.coreinfrastructure.org/en/criteria/0
+[Git Hooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
 [Bash]: https://tldp.org/LDP/abs/html/
 [Github Actions]: https://docs.github.com/en/free-pro-team@latest/actions
 [Bulldozer]: https://github.com/palantir/bulldozer
