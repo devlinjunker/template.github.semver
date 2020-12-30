@@ -16,8 +16,13 @@ performance:
 qa:
   head: ["qa/*", "test/*"]
 
+refactor:
+  head: "refactor/*"
+
 feature:
   head: ["feature/*", "feat/*"]
 
 subtask:
   base: ["feature/*", "feat/*"]
+
+
