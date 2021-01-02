@@ -22,9 +22,9 @@ jobs:
       if: success()
       uses: crazy-max/ghaction-github-labeler@v3.1.1
       with:
-        yaml_file: .github/labels.yaml
-        skip_delete: false
-        dry_run: false
+        yaml-file: .github/labels.yaml
+        skip-delete: false
+        dry-run: false
         exclude: |
           :*
 #           help*
