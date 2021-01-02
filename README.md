@@ -20,7 +20,8 @@ Version: 1.0.1
 
 This is a template project that uses GitHub Actions and Git Hooks to enforce [Semantic Versioning]. It can be used as a jumping off point to start a programming project with:
 
-- Basic Documentation File Templates (from [Github :100:% Docs Template](https://github.com/devlinjunker/template.github.docs) )
+- Basic Documentation File Templates 
+  - from [Github :100:% Docs Template]
 - [Core Infrastructure Initiative Criteria] Badge
 - Issue and Pull Request Templates
 - Git Hooks to enforce readable and meaningful commit messages
@@ -38,6 +39,7 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 - [Bash] - to run scripts during Git Hooks (for process enforcement)
 - GitHub - this template uses [Github Actions] for process enforcement
 - [Bulldozer] - Github Application to Auto Squash and Merge feature PRs
+- [Git-mkver] - Binary that uses Git tags to determine the next version number
 
 ## Quick Setup/Run
 <!-- This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format -->
@@ -80,6 +82,7 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 - External
   - [Semantic Versioning]
   - [Core Infrastructure Initiative Criteria]
+  - [Github :100:% Docs Template]
 
 ## Contributors
 
@@ -100,7 +103,7 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 [PR Verify Action]: .github/workflows/verify-merge.yaml
 [Git Hooks]: scripts/hooks#git-hook-scripts
 [Commit Message Template]: .gitmessage
-[Dependabot]: security/dependabot
+[Dependabot]: https://github.com/devlinjunker/template.github.semver/security/dependabot
 [Code of Conduct]: CODE_OF_CONDUCT.md
 [Contributing Guide]: CONTRIBUTING.md
 [Security Policy]: SECURITY.md
@@ -108,9 +111,10 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 [FAQ]: https://github.com/devlinjunker/template.github.semver/wiki/!-FAQ
 [Release Process]: https://github.com/devlinjunker/template.github.semver/wiki/Release
 [Styleguide]: https://github.com/devlinjunker/template.github.semver/wiki/Styleguide
+[Github :100:% Docs Template]: https://github.com/devlinjunker/template.github.docs
 [Semantic Versioning]: https://semver.org/
 [Core Infrastructure Initiative Criteria]: https://bestpractices.coreinfrastructure.org/en/criteria/0
-[Git Hooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+[Git-mkver]: https://github.com/idc101/git-mkver
 [Bash]: https://tldp.org/LDP/abs/html/
 [Github Actions]: https://docs.github.com/en/free-pro-team@latest/actions
 [Bulldozer]: https://github.com/palantir/bulldozer

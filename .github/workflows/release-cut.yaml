@@ -21,7 +21,10 @@ jobs:
       id: version
       run: |
         git checkout main;
-        git checkout develop
+        git checkout develop;
+        cd scripts/release;
+        unzip git-mkver-linux.zip;
+        cd ../..;
         echo "##[set-output name=major;]$(./scripts/release/git-mkver-linux next --format '{Major}')";
         echo "##[set-output name=minor;]$(./scripts/release/git-mkver-linux next --format '{Minor}')";
         echo "##[set-output name=patch;]$(./scripts/release/git-mkver-linux next --format '{Patch}')";
