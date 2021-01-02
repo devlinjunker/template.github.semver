@@ -13,19 +13,19 @@ Git hooks need to be added to your local repo for each project,
 
 
    ### pre-commit
-      - enforces that the branch name matches style: <prefix>/<feature_name>
-      - enforces that branch is not `main` or `develop` or prefixed with `release`
+   - enforces that the branch name matches style: <prefix>/<feature_name>
+   - enforces that branch is not `main` or `develop` or prefixed with `release`
 
    ### commit-msg
-      - enforces that first line of commit message matches conventional commit (ish) style `<type>:<description>`
+   - enforces that first line of commit message matches conventional commit (ish) style `<type>:<description>`
 
    ### pre-push
-      - enforces that the branch name matches style: <prefix>/<feature_name>
+   - enforces that the branch name matches style: <prefix>/<feature_name>
 
    ### post-commit
-      - warns when changes are getting large since "last merge"
-         - 25 files
-         - 400 lines
+   - warns when changes are getting large since "last merge"
+      - 25 files
+      - 400 lines
 
 
 ## Ideas for Hooks

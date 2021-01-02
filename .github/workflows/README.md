@@ -41,8 +41,8 @@ This directory contains files related to Github configurations and actions:
   - Creates new Release Tag and Github Release on `main` branch
   - Upmerges `develop` from `main` so the tag is in `develop`s history
 
-  ### Cut `hotfix-*` Branch Action (patch-cut.yaml)
-  - Creates a new `hotfix-*` branch off of `main`, using the last tag to determine hotfix branch number and next version number
+  ### Cut `patch-*` Branch Action (patch-cut.yaml)
+  - Creates a new `patch-*` branch off of `main`, using the last tag to determine hotfix branch number and next version number
 
 
 

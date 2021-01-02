@@ -4,7 +4,7 @@ Thanks for helping out!
 
 
 ## Reporting Issues
-The best way to [report an issue is through Github](https://github.com/devlinjunker/template.github.semver/issues/choose). The owners of the repo should get an email notification whenever a new issue is created.
+The best way to [report an issue is through Github](https://github.com/devlinjunker/template.github.semver/issues/new/choose). The owners of the repo should get an email notification whenever a new issue is created.
 
 
 ## Development 
@@ -14,7 +14,7 @@ The best way to [report an issue is through Github](https://github.com/devlinjun
 You will need to install Git and create an account on Github to take advantage of all of the features of this template. This template also uses scripts that expect Bash to be installed at `/bin/bash`.
 
 #### Create your own Project from this Template
-There are multiple ways to use this template as a starting point for your own project. The **best way to use this is with the template feature provided by Github**:
+There are multiple ways to use this template as a starting point for your own project. The **best way to use this is by cloning the repo to your GitHub account and creating your project with the template feature provided by Github**:
 
 <img width="1130" alt="template" src="https://user-images.githubusercontent.com/1504590/95393957-55b31c80-08b0-11eb-9126-55d8105881f4.png">
 
@@ -126,7 +126,7 @@ The default requirements to auto-merge are:
 ### Best Practices
 
 #### Branching and Pull Requests
-View the strategies outlined in our Wiki for [best practices for branching and merging new features](https://github.com/devlinjunker/template.github.semver/wiki/Branching-and-Pull-Requests), as well as steps to take when reviewing other submissions. The Git Hooks and Actions in this template are designed to encourage following these best strategies.
+View the strategies outlined in our Wiki for [best practices for branching and merging new features](https://github.com/devlinjunker/template.github.semver/wiki/Branching-&-Code-Reviews), as well as steps to take when reviewing other submissions. The Git Hooks and Actions in this template are designed to encourage following these best strategies.
 
 
 #### Security
@@ -134,7 +134,7 @@ Review the [Security Policy](https://github.com/devlinjunker/template.github.sem
 
 
 #### Style Guide
-Make sure to only include basic documentation and Github setup files in this Template! Once you start your project, you should detail your style guide here or link to a Wiki page from here.
+Once you start your project, you should update the style guide here or [link to a Wiki page](https://github.com/devlinjunker/template.github.semver/wiki/Styleguide) from here.
 
 Some ideas of things to include in your styleguide include:
  - Code Formating and (linting) tools used to ensure the style is met
