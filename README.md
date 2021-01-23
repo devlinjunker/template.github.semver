@@ -83,7 +83,7 @@ Once you have completed reviewing the docs above, follow the instructions below 
     - [ ] Define Dependencies
     - [ ] Update Setup Instructions
     - [ ] Review/Remove Links
-  - [Update [Security Policy]
+  - Update [Security Policy]
   - Update [Contributing Guide]
   - Review/Update [Code of Conduct]
   - [ ] Enable [Git Hooks]
@@ -91,10 +91,13 @@ Once you have completed reviewing the docs above, follow the instructions below 
     - Add a PAT to the forked repo
     - Point wiki sync action at new repo
       - Initialize Wiki to start Syncing README files
-  - [ ] (Optional) Enable [Dependabot] to keep Github Actions up to date
-  - [ ] Run manage-labels action
-  - [ ] Enable Bulldozer (not working immediately?)
-  - [ ] (Optional) Setup Branch Protections
+  - [ ] Create Labels with the [manage-labels](https://github.com/devlinjunker/template.github.semver/tree/doc/template-steps/.github/workflows#manage-label-action-manage-labelsyaml) GitHub Action in your new repo 
+  - [ ] [Enable Bulldozer](https://github.com/apps/prylabs-bulldozer)
+  - [ ] Optional Steps
+    - [ ] Setup Branch Protections
+    - [ ] Enable [Dependabot] to keep Github Actions up to date
+
+**Project Specific**
   - [ ] Add Project Build and Configuration Files
   - Start Coding!
 
