@@ -24,7 +24,7 @@ FILE_LIMIT=25
 LINE_LIMIT=400
 
 FILE_LIMIT_WARNING=" ! warning: more than $FILE_LIMIT files changed since $DIFF_COMMIT "
-LINE_LIMIT_WARNING=" ! warning: more than $LINE_LIMIT files changed since $DIFF_COMMIT "
+LINE_LIMIT_WARNING=" ! warning: more than $LINE_LIMIT lines changed since $DIFF_COMMIT "
 
 NEW_BRANCH_CMDS="Remove warning: Create new branch with 'git checkout -b <branch_name>' then push to remote with 'git push --set-upstream <remote_name> <branch_name>'"
 
