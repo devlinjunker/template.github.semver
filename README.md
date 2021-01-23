@@ -68,14 +68,30 @@ This is a template repository, it contains documentation on how to use the repo 
 ### Steps For New Project
 Once you have completed reviewing the docs above, follow the instructions below Clone and Use as Template
 
-  - [ ] [Clone or Template to New Project][Contributing Guide]
+  - [ ] [Clone or Fork to New Project][Contributing Guide]
+    - Delete Tags and Rename Git "remote" if Cloning
+  - [ ] Create `main` branch off of `develop`
+    - Update version in README to 0.0.0 in `main` branch
+  - [ ] Enable [Git Hooks] with symbolic links
+  - [ ] Enable [Github Actions]
+    - Add a PAT to the forked repo
+    - Point wiki sync action at new repo
+      - Initialize Wiki to start Syncing README files
+  - [ ] Create Labels with the [manage-labels](https://github.com/devlinjunker/template.github.semver/tree/doc/template-steps/.github/workflows#manage-label-action-manage-labelsyaml) GitHub Action in your new repo 
+  - [ ] [Enable Bulldozer](https://github.com/apps/prylabs-bulldozer)
+    - For Auto `Squash and Merge` PRs
+  - [ ] Optional Steps
+    - [ ] Setup Branch Protections
+    - [ ] Enable [Dependabot] to keep Github Actions up to date
+
+**Project Specific**
   - [ ] Review/Update [License] File
-  - [ ] Review/Update [Security Policy]
+  - [ ] Update/Restart [Security Policy]
     - Provide private way of reporting vulnerabilities?
   - [ ] Remove/Replace Logo files in `img/` directory
     - If replacing, change logo location in README
-  - [ ] Update this README and Links with project specific details
-    - [ ] Reset Version Information
+  - [ ] Update README
+    - [ ] Reset Version to `0.1-SNAPSHOT`
     - [ ] Update/Remove Badges
       - Project URL
       - CII Project Rank
@@ -83,21 +99,8 @@ Once you have completed reviewing the docs above, follow the instructions below 
     - [ ] Define Dependencies
     - [ ] Update Setup Instructions
     - [ ] Review/Remove Links
-  - Update [Security Policy]
-  - Update [Contributing Guide]
-  - Review/Update [Code of Conduct]
-  - [ ] Enable [Git Hooks]
-  - [ ] Enable [Github Actions]
-    - Add a PAT to the forked repo
-    - Point wiki sync action at new repo
-      - Initialize Wiki to start Syncing README files
-  - [ ] Create Labels with the [manage-labels](https://github.com/devlinjunker/template.github.semver/tree/doc/template-steps/.github/workflows#manage-label-action-manage-labelsyaml) GitHub Action in your new repo 
-  - [ ] [Enable Bulldozer](https://github.com/apps/prylabs-bulldozer)
-  - [ ] Optional Steps
-    - [ ] Setup Branch Protections
-    - [ ] Enable [Dependabot] to keep Github Actions up to date
-
-**Project Specific**
+  - [ ] Review/Update [Contributing Guide]
+  - [ ] Review/Update [Code of Conduct]
   - [ ] Add Project Build and Configuration Files
   - Start Coding!
 
