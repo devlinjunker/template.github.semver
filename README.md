@@ -70,8 +70,6 @@ Once you have completed reviewing the docs above, follow the instructions below 
 
   - [ ] [Clone or Fork to New Project][Contributing Guide]
     - Delete Tags and Rename Git "remote" if Cloning
-  - [ ] Create `main` branch off of `develop`
-    - Update version in README to 0.0.0 in `main` branch
   - [ ] Enable [Git Hooks] with symbolic links
   - [ ] Enable [Github Actions]
     - Add a PAT to the forked repo
@@ -84,12 +82,7 @@ Once you have completed reviewing the docs above, follow the instructions below 
     - [ ] Setup Branch Protections
     - [ ] Enable [Dependabot] to keep Github Actions up to date
 
-**Project Specific**
-  - [ ] Review/Update [License] File
-  - [ ] Update/Restart [Security Policy]
-    - Provide private way of reporting vulnerabilities?
-  - [ ] Remove/Replace Logo files in `img/` directory
-    - If replacing, change logo location in README
+#### Update the Docs
   - [ ] Update README
     - [ ] Reset Version to `0.1-SNAPSHOT`
     - [ ] Update/Remove Badges
@@ -99,10 +92,20 @@ Once you have completed reviewing the docs above, follow the instructions below 
     - [ ] Define Dependencies
     - [ ] Update Setup Instructions
     - [ ] Review/Remove Links
+  - [ ] Review/Update [License] File
+  - [ ] Update/Restart [Security Policy]
+    - Provide private way of reporting vulnerabilities?
+  - [ ] Remove/Replace Logo files in `img/` directory
+    - If replacing, change logo location in README
   - [ ] Review/Update [Contributing Guide]
   - [ ] Review/Update [Code of Conduct]
+
+#### Before you Code
+  - [ ] Create `main` branch off of `develop`
+    - Update version in README to 0.0.0 in `main` branch
+  - [ ] Create new `feature/*` Branch!
   - [ ] Add Project Build and Configuration Files
-  - Start Coding!
+  - [ ] Add Code and Push!
 
 
 ## Contributors
