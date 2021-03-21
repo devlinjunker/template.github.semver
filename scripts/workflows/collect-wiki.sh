@@ -21,7 +21,7 @@ do
     
     wiki_title=$(less $f | awk '{ if (NR == 1) print }' | sed "s/# //") 
     link=$(echo $f | sed "s/^\.\///" | sed "s/^\.//" | sed "s/^/_/" | sed "s/\//_/g" | sed "s/\.md$/_README/")
-    echo "- [$wiki_title - $f]($link)" >> wiki/.README-\(synced\).md
+    echo "- [$wiki_title ($f)]($link)" >> wiki/.README-\(synced\).md
 done
 
 # find files in repo with README in name
@@ -38,5 +38,5 @@ do
     
     wiki_title=$(less $f | awk '{ if (NR == 1) print }' | sed "s/# //") 
     link=$(echo $f | sed "s/^\.\///" | sed "s/^\.//" | sed "s/^/_/" | sed "s/\//_/g" | sed "s/\.md$//")
-    echo "- [$wiki_title - $f]($link)" >> wiki/.README-\(synced\).md
+    echo "- [$wiki_title ($f)]($link)" >> wiki/.README-\(synced\).md
 done
