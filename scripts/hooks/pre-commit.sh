@@ -3,7 +3,7 @@
 #   1. Check that branch name matches conventions (branch-name.sh)
 
 # set directory for calling other scripts
-DIR=`dirname "$0"`
+DIR=$(dirname "${BASH_SOURCE[0]}")
 
 # if in hook, then prep PATH to find in repo `scripts/hooks/` dir 
 if [[ $DIR =~ ".git" ]]; then
