@@ -14,12 +14,14 @@ OTHER_FILES=("./CONTRIBUTING.md" "./SECURITY.md")
 
 for f in "${OTHER_FILES[@]}"
 do
-    echo $f;
+    echo $f; # print file name so we can see the files being copied in workflow logs
     # rename each to `_<directory>_README` and place in `wiki/` directory 
     wiki_name=$(echo $f | sed "s/^\.\///" | sed "s/^\.//" | sed "s/^/_/" | sed "s/\//_/g" | sed "s/\.md$/_README.md/")
     cp $f wiki/$wiki_name
+    
+    wiki_title=$(less $f | awk '{ if (NR == 1) print }' | sed "s/# //") 
     link=$(echo $f | sed "s/^\.\///" | sed "s/^\.//" | sed "s/^/_/" | sed "s/\//_/g" | sed "s/\.md$/_README/")
-    echo "- [$f]($link)" >> wiki/.README-\(synced\).md
+    echo "- [$wiki_title - $f]($link)" >> wiki/.README-\(synced\).md
 done
 
 # find files in repo with README in name
@@ -27,12 +29,14 @@ README_FILES=$( find . -name *README* );
 
 for f in ${README_FILES[@]}
 do
+    echo $f; # print file name so we can see the files being copied in workflow logs
     if [ "$f" = "./README.md" ]; then continue; fi
-    echo $f;
+    
     # rename each to `_<directory>_README` and place in `wiki/` directory 
     wiki_name=$(echo $f | sed "s/^\.\///" | sed "s/^\.//" | sed "s/^/_/" | sed "s/\//_/g")
     cp $f wiki/$wiki_name
-
+    
+    wiki_title=$(less $f | awk '{ if (NR == 1) print }' | sed "s/# //") 
     link=$(echo $f | sed "s/^\.\///" | sed "s/^\.//" | sed "s/^/_/" | sed "s/\//_/g" | sed "s/\.md$//")
-    echo "- [$f]($link)" >> wiki/.README-\(synced\).md
+    echo "- [$wiki_title - $f]($link)" >> wiki/.README-\(synced\).md
 done
