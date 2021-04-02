@@ -4,8 +4,7 @@ OTHER_TYPES=( 'feat' 'fix' 'bugfix' 'perf' 'test' )
 
 # set directory for calling other scripts
 # NOTE: expect this to be called in this directory
-DIR=`dirname $0`
-
+DIR=$(dirname "${BASH_SOURCE[0]}")
 
 main() {
 
