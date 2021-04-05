@@ -105,4 +105,4 @@ jobs:
         git push;
       env:
         RELEASE: v${{ needs.create-release-tag.outputs.major }}.${{ needs.create-release-tag.outputs.minor }}.${{ needs.create-release-tag.outputs.patch }}
-        RELEASE_BRANCH: release-${{ needs.create-release-tag.outputs.major }}.${{ needs.create-release-tag.outputs.minor }}.${{ needs.create-release-tag.outputs.patch }}
+        RELEASE_BRANCH: release-${{ needs.create-release-tag.outputs.major }}.${{ needs.create-release-tag.outputs.minor }}
