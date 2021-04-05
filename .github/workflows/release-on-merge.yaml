@@ -20,6 +20,7 @@ jobs:
       major: ${{ steps.version.outputs.major }}
       minor: ${{ steps.version.outputs.minor }}
       patch: ${{ steps.version.outputs.patch }}
+      found: ${{ steps.check_release.outputs.found }}
 
     steps: 
     - uses: actions/checkout@v2
