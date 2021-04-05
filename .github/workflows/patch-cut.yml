@@ -1,3 +1,8 @@
+## This Action creates a new 'patch-*' branch with the next semantic version number
+##  - Manually run by developer wiht input of branch to patch off of
+##  - must be created off of `main` or `release-*` branch
+##  - creates a PR against the branch it was cut off of
+
 name: "Patch-Cut"
 
 # Workflow runs when manually triggered using the UI or API

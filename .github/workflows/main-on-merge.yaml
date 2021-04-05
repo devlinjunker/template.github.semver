@@ -1,3 +1,9 @@
+## This Action is run when a commit is made to the main branch (ideally a PR merge)
+##  - Collects READMEs for Github Wiki
+##  - Creates Github Release (with codebase after commit) and Git Tag
+##  - Creates Changelog for Release
+##  - Upmerges branch to develop (so any changes that were made in release branch are in develop)
+
 name: "Release-Tag"
 
 on: 

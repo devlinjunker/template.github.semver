@@ -1,4 +1,8 @@
-# Name should reflect when action occurs
+## This action automatically handles PR labels with:
+##  - On PR opened, label based on pr-branch-labeler.yml
+##  - On PR closed, remove WIP or blocked labels
+##  - On commit added, if message contains 'wip' then add WIP label
+
 name: Auto Label PR
 
 on: 
