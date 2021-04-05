@@ -1,5 +1,5 @@
 ---
-Version: 1.4.0
+Version: 1.5.0
 ---
 
 <img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/develop/img/logo-small.png" alt="semver template logo">
@@ -111,6 +111,7 @@ Once you have completed reviewing the docs above, follow the instructions below 
 ## Contributors
 
 - [Devlin Junker (Me!)](mailto:devlinjunker@gmail.com)
+
 
 
 [License]: LICENSE
