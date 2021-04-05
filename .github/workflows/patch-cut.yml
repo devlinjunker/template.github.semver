@@ -62,7 +62,7 @@ jobs:
       with:
         github_token: ${{ secrets.PAT }}
         source_branch: patch-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.next_version.outputs.patch }}
-        destination_branch: ${{ steps.branch.release }}
+        destination_branch: ${{ steps.branch.outputs.release }}
         pr_title: patch-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.next_version.outputs.patch }}
         pr_body: ${{ steps.version.outputs.changelog }}
         pr_label: "- release -"
