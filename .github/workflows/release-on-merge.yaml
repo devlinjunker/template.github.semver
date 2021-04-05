@@ -59,7 +59,7 @@ jobs:
     - name: Create Github Release
       id: create_release
       uses: actions/create-release@v1
-      if: steps.check_release.outputs.found == '' 
+      if: steps.check_release.outputs.found != '' 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -81,7 +81,7 @@ jobs:
         fetch-depth: 0  
 
     - name: Upmerge develop After Release
-      if: needs.create-release-tag.outputs.found == '' 
+      if: needs.create-release-tag.outputs.found != '' 
       run: |
         git config --global user.name 'Release Cut';
         git config --global user.email 'release@cut.com';
