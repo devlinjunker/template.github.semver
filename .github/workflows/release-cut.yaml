@@ -23,6 +23,7 @@ jobs:
     - name: "Get Release Info"
       id: version
       run: |
+        git fetch --all --tags;
         git checkout main;
         git checkout develop;
         cd scripts/release;
