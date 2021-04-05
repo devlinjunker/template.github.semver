@@ -56,7 +56,7 @@ jobs:
     - name: Create Github Release
       id: create_release
       uses: actions/create-release@v1
-      if: ${{ steps.check_release.outputs.found == "" }}
+      if: steps.check_release.outputs.found == '' 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
