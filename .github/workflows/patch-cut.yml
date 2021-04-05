@@ -26,7 +26,7 @@ jobs:
     - name: "Get Version Info"
       id: version
       run: |
-        # git checkout main;
+        git fetch --all --tags;
         cd scripts/release;
         unzip git-mkver-linux.zip;
         cd ../..;
