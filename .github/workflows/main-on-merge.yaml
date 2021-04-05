@@ -99,5 +99,10 @@ jobs:
         ./scripts/release/release-prep-upmerge.sh main
         git commit -m "upmerge after $RELEASE";
         git push;
+        git checkout $RELEASE_BRANCH;
+        git pull;
+        git merge main;
+        git push;
       env:
         RELEASE: v${{ needs.create-release-tag.outputs.major }}.${{ needs.create-release-tag.outputs.minor }}.${{ needs.create-release-tag.outputs.patch }}
+        RELEASE_BRANCH: release-${{ needs.create-release-tag.outputs.major }}.${{ needs.create-release-tag.outputs.minor }}.${{ needs.create-release-tag.outputs.patch }}
