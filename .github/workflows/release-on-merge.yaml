@@ -51,7 +51,9 @@ jobs:
     - name: Check Create Release
       id: check_release
       run: |
+        git checkout main; 
         echo "##[set-output name=found;]$(git log | grep ${GITHUB_REF##*/})";
+        git checkout ${GITHUB_REF}
 
     - name: Create Github Release
       id: create_release
@@ -78,6 +80,7 @@ jobs:
         fetch-depth: 0  
 
     - name: Upmerge develop After Release
+      if: needs.create-release-tag.outputs.found == '' 
       run: |
         git config --global user.name 'Release Cut';
         git config --global user.email 'release@cut.com';
