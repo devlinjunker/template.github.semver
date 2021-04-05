@@ -56,8 +56,8 @@ jobs:
       run: |
         git checkout main; 
         echo "##[set-output name=found;]$(git log | grep ${GITHUB_REF##*/})";
-        echo "##[set-output name=main-commit']$(git log --oneline main | awk '{if (NR == 1) commit=$1 } END { print commit }')";
-        echo "##[set-output name=release-commit']$(git log --oneline ${GITHUB_REF##*/} | awk '{if (NR == 1) commit=$1 } END { print commit }')";
+        echo "##[set-output name=main-commit;]$(git log --oneline main | awk '{if (NR == 1) commit=$1 } END { print commit }')";
+        echo "##[set-output name=release-commit;]$(git log --oneline ${GITHUB_REF##*/} | awk '{if (NR == 1) commit=$1 } END { print commit }')";
         git checkout ${GITHUB_REF}
 
     - name: Create Github Release
