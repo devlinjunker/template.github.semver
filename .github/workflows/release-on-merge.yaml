@@ -51,7 +51,9 @@ jobs:
     - name: Check Create Release
       id: check_release
       run: |
+        git checkout main; 
         echo "##[set-output name=found;]$(git log | grep ${GITHUB_REF##*/})";
+        git checkout ${GITHUB_REF}
 
     - name: Create Github Release
       id: create_release
