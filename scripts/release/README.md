@@ -17,3 +17,6 @@ These script files are used during the release actions to perform certain steps 
 
 ## Update Versions (update-versions.sh)
 - Updates the version information in all files in the repo (for now this is just README.md)
+
+## Patch Cut Check (patch-cut-check.sh)
+- Verifies that we are cutting patch branch from `release-*` or `main`
