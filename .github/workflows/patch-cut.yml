@@ -20,8 +20,10 @@ jobs:
         fetch-depth: 0
 
     - name: "Error if not in main or release branch"
+      id: branch
       run: |
-        ./scripts/release/patch-cut-check.sh
+        ./scripts/release/patch-cut-check.sh;
+        echo "##[set-output name=release;]${GITHUB_REF##*/}";
 
     - name: "Get Version Info"
       id: version
@@ -60,7 +62,7 @@ jobs:
       with:
         github_token: ${{ secrets.PAT }}
         source_branch: patch-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.next_version.outputs.patch }}
-        destination_branch: ${GITHUB_REF##*/}
+        destination_branch: ${{ steps.branch.release }}
         pr_title: patch-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.next_version.outputs.patch }}
         pr_body: ${{ steps.version.outputs.changelog }}
         pr_label: "- release -"
