@@ -19,10 +19,14 @@ jobs:
         token: ${{ secrets.PAT }}
         fetch-depth: 0
 
+    - name: "Error if not in main or release branch"
+      run: |
+        ./scripts/release/patch-cut-check.sh
+
     - name: "Get Version Info"
       id: version
       run: |
-        git checkout main;
+        # git checkout main;
         cd scripts/release;
         unzip git-mkver-linux.zip;
         cd ../..;
@@ -49,3 +53,14 @@ jobs:
       env:
         PATCH_BRANCH: patch-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.next_version.outputs.patch }}
         PATCH_VERSION: ${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.next_version.outputs.patch }}
+
+       # Note: see https://github.com/repo-sync/pull-request#advanced-options for all options
+    - name: Create Patch Pull Request
+      uses: repo-sync/pull-request@v2
+      with:
+        github_token: ${{ secrets.PAT }}
+        source_branch: patch-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.next_version.outputs.patch }}
+        destination_branch: ${GITHUB_REF##*/}
+        pr_title: patch-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.next_version.outputs.patch }}
+        pr_body: ${{ steps.version.outputs.changelog }}
+        pr_label: "- release -"
