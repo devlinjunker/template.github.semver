@@ -22,7 +22,7 @@ jobs:
     - name: "Error if not in main or release branch"
       id: branch
       run: |
-        ./scripts/release/patch-cut-check.sh;
+        ./scripts/release/patch-cut-check.sh ${GITHUB_REF##*/};
         echo "##[set-output name=release;]${GITHUB_REF##*/}";
 
     - name: "Get Version Info"
