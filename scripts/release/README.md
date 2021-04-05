@@ -13,7 +13,7 @@ These script files are used during the release actions to perform certain steps 
     - if so, this means `develop` has no `feature` commits since the last release version
 
 ## Release Prep Upmerge (release-prep-upmerge.sh)
-- Performs upmerge from `main` into `develop` after release tag is created
+- Performs upmerge from branch passed in ($1) into `develop` after release tag is created
 
 ## Update Versions (update-versions.sh)
 - Updates the version information in all files in the repo (for now this is just README.md)
