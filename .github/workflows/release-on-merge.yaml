@@ -21,6 +21,8 @@ jobs:
       minor: ${{ steps.version.outputs.minor }}
       patch: ${{ steps.version.outputs.patch }}
       found: ${{ steps.check_release.outputs.found }}
+      release-commit: ${{ steps.check_release.outputs.release-commit }}
+      main-commit: ${{ steps.check_release.outputs.main-commit }}
 
     steps: 
     - uses: actions/checkout@v2
@@ -54,12 +56,14 @@ jobs:
       run: |
         git checkout main; 
         echo "##[set-output name=found;]$(git log | grep ${GITHUB_REF##*/})";
+        echo "##[set-output name=main-commit']$(git log --oneline main | awk '{if (NR == 1) commit=$1 } END { print commit }')";
+        echo "##[set-output name=release-commit']$(git log --oneline ${GITHUB_REF##*/} | awk '{if (NR == 1) commit=$1 } END { print commit }')";
         git checkout ${GITHUB_REF}
 
     - name: Create Github Release
       id: create_release
       uses: actions/create-release@v1
-      if: steps.check_release.outputs.found != '' 
+      if: steps.check_release.outputs.found != '' && steps.check_release.outputs.release-commit != steps.check_release.outputs.main-commit
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -81,7 +85,7 @@ jobs:
         fetch-depth: 0  
 
     - name: Upmerge develop After Release
-      if: needs.create-release-tag.outputs.found != '' 
+      if: needs.create-release-tag.outputs.found != '' && needs.create-release-tag.outputs.release-commit != needs.create-release-tag.outputs.main-commit
       run: |
         git config --global user.name 'Release Cut';
         git config --global user.email 'release@cut.com';
