@@ -1,4 +1,5 @@
-# Name should reflect when action occurs
+## This Action is run to ensure that the only labels in the Github Repo are the ones defined in .github/labels.yaml 
+
 name: Manage Labels
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI

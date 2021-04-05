@@ -105,13 +105,13 @@ To create a hook, you add a script file (or symbolic link to one) in the `.git/h
 #### Workflows
 [GitHub Workflows/Actions](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) are commands that can be run on GitHub servers, these are added in `.github/workflows` and defined with YAML files that express when the workflow should run and the steps it should take. Github can enforce that these workflows are successful before Pull Requests are merged via the [Branch Settings Page](https://github.com/devlinjunker/template.github.semver/settings/branches), it can also trigger them after users perform certain actions or they can be manually triggered to run.
 
-[Review Workflows in this Repo](https://github.com/devlinjunker/template.github.semver/blob/main/.github/workflows#github-workflows)
+[Review Workflows in this Repo](https://github.com/devlinjunker/template.github.semver/blob/develop/.github/workflows#github-workflows)
 
 
 #### Other Scripts
 Shell scripts are short programs that are created to help with small tasks. They can be a part of a workflow or hook, or they can help with  deployment/installation and running the final software product.  
 
-[Review Scripts in this Repo](https://github.com/devlinjunker/template.github.semver/scripts/)
+[Review Scripts in this Repo](https://github.com/devlinjunker/template.github.semver/blob/develop/scripts/)
 
 
 #### Auto-Merge with Bulldozer

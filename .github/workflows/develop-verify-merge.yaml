@@ -1,4 +1,7 @@
-# Name should reflect when action occurs
+## This Action verifieds that PRs against 'develop' branch can be merged
+##  - Do not allow branches with `poc/` or `wip/` to be merged
+##  - Ensure PR title matches the branch prefix
+
 name: Develop-Verify Merge
 
 on: 

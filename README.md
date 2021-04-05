@@ -1,5 +1,5 @@
 ---
-Version: 1.0.5
+Version: 1.1.0
 ---
 
 <img align="right" width="100" height="140" src="https://github.com/devlinjunker/template.github.semver/raw/develop/img/logo-small.png" alt="semver template logo">
@@ -21,7 +21,7 @@ Version: 1.0.5
 This is a template project that uses GitHub Actions and Git Hooks to enforce [Semantic Versioning]. It can be used as a jumping off point to start a programming project with:
 
 - Basic Documentation File Templates 
-  - from [Github :100:% Docs Template]
+  - From [Github :100:% Docs Template](https://github.com/devlinjunker/template.github.docs)
 - [Core Infrastructure Initiative Criteria] Badge
 - Issue and Pull Request Templates
 - Git Hooks to enforce readable and meaningful commit messages
@@ -39,39 +39,21 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 - [Bash] - to run scripts during Git Hooks (for process enforcement)
 - GitHub - this template uses [Github Actions] for process enforcement
 - [Bulldozer] - Github Application to Auto Squash and Merge feature PRs
-- [Git-mkver] - Binary that uses Git tags to determine the next version number
+- [Git-mkver] - Github Application to Auto Squash and Merge feature PRs
 
 ## Quick Setup/Run
 <!-- This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format -->
- - [ ] Review the [Wiki] - overview of the concepts
- - [ ] [Clone or Template to New Project][Contributing Guide]
- - [ ] Review/Update [License] File
- - [ ] Review/Update [Security Policy]
-   - Provide private way of reporting vulnerabilities?
- - [ ] Remove/Replace Logo files in `img/` directory
-   - If replacing, change logo location in README
- - [ ] Update this README and Links with project specific details
-   - Reset Version Information
-   - Update/Remove Badges
-     - Project URL
-     - CII Project Rank
-   - Update Intro
-   - Define Dependencies
-   - Update Setup Instructions
-   - Review/Remove Links
-     - Review [Security Policy]
-     - Update [Contributing Guide]
-     - Review/Update [Code of Conduct]
- - [ ] Review [Github Workflows] in Template (and improve for your process)
- - [ ] Enable [Git Hooks] and set (Optional)  [Commit Message Template]
- - [ ] Modify [Issue Templates] and [Template Configuration File]
- - [ ] (Optional) Modify [Pull Request Template]
- - [ ] (Optional) Enable [Dependabot] to keep Github Actions up to date
- - [ ] Add Project Build and Configuration Files
- - Start Coding!
+
+This is a template repository, it contains documentation on how to use the repo that should be reviewed first. 
+
+### Review Documentation
+  - [ ] Review the [Wiki] for an overview of concepts
+  - [ ] Review [Github Workflows] in Template (and improve for your process)
+  - [ ] Review [Issue Templates] and [Template Configuration File]
+  - [ ] Review [Pull Request Template]
+  - [ ] Review [Commit Message Template]
 
 ## Links
-
 - [Code of Conduct]
 - [Contributing Guide]
 - [Security Policy]
@@ -82,7 +64,49 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 - External
   - [Semantic Versioning]
   - [Core Infrastructure Initiative Criteria]
-  - [Github :100:% Docs Template]
+
+### Steps For New Project
+Once you have completed reviewing the docs above, follow the instructions below Clone and Use as Template
+
+  - [ ] [Clone or Fork to New Project][Contributing Guide]
+    - Delete Tags and Rename Git "remote" if Cloning
+  - [ ] Enable [Git Hooks] with symbolic links
+  - [ ] Enable [Github Actions]
+    - Add a PAT to the forked repo
+    - Point wiki sync action at new repo
+      - Initialize Wiki to start Syncing README files
+  - [ ] Create Labels with the [manage-labels](https://github.com/devlinjunker/template.github.semver/tree/doc/template-steps/.github/workflows#manage-label-action-manage-labelsyaml) GitHub Action in your new repo 
+  - [ ] [Enable Bulldozer](https://github.com/apps/prylabs-bulldozer)
+    - For Auto `Squash and Merge` PRs
+  - [ ] Optional Steps
+    - [ ] Setup Branch Protections
+    - [ ] Enable [Dependabot] to keep Github Actions up to date
+
+#### Update the Docs
+  - [ ] Update README
+    - [ ] Reset Version to `0.1-SNAPSHOT`
+    - [ ] Update/Remove Badges
+      - Project URL
+      - CII Project Rank
+    - [ ] Update Intro/Purpose
+    - [ ] Define Dependencies
+    - [ ] Update Setup Instructions
+    - [ ] Review/Remove Links
+  - [ ] Review/Update [License] File
+  - [ ] Update/Restart [Security Policy]
+    - Provide private way of reporting vulnerabilities?
+  - [ ] Remove/Replace Logo files in `img/` directory
+    - If replacing, change logo location in README
+  - [ ] Review/Update [Contributing Guide]
+  - [ ] Review/Update [Code of Conduct]
+
+#### Before you Code
+  - [ ] Create `main` branch off of `develop`
+    - Update version in README to 0.0.0 in `main` branch
+  - [ ] Create new `feature/*` Branch!
+  - [ ] Add Project Build and Configuration Files
+  - [ ] Add Code and Push!
+
 
 ## Contributors
 
@@ -111,10 +135,10 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 [FAQ]: https://github.com/devlinjunker/template.github.semver/wiki/!-FAQ
 [Release Process]: https://github.com/devlinjunker/template.github.semver/wiki/Release
 [Styleguide]: https://github.com/devlinjunker/template.github.semver/wiki/Styleguide
-[Github :100:% Docs Template]: https://github.com/devlinjunker/template.github.docs
 [Semantic Versioning]: https://semver.org/
 [Core Infrastructure Initiative Criteria]: https://bestpractices.coreinfrastructure.org/en/criteria/0
-[Git-mkver]: https://github.com/idc101/git-mkver
+[Git Hooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+[Git-mkver]: https://idc101.github.io/git-mkver/
 [Bash]: https://tldp.org/LDP/abs/html/
 [Github Actions]: https://docs.github.com/en/free-pro-team@latest/actions
 [Bulldozer]: https://github.com/palantir/bulldozer

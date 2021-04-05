@@ -44,11 +44,13 @@ This directory contains files related to Github configurations and actions:
   ### Cut `patch-*` Branch Action (patch-cut.yaml)
   - Creates a new `patch-*` branch off of `main`, using the last tag to determine hotfix branch number and next version number
 
-
+  ### On Merge to `release-*` action (release-on-merge.yaml)
+  - Creates new Release Tag and Github Release on `relesae-*` branch
 
 
 ## Ideas
-  - [ ] pr mutation testing: https://github.com/tylermurry/github-pr-landmine
+  - [x] pr mutation testing: https://github.com/tylermurry/github-pr-landmine
+    - This is a Github App that is enabled in each repo
   - [x] build docs on merge to `main`
   - [ ] build artifacts on release (merge to `main`)
   - [ ] run build/compile in `develop-verify-merge.yaml` to ensure PR is valid

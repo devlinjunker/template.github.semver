@@ -1,3 +1,7 @@
+## This Action verifieds that PRs against 'main' branch can be merged
+##  - Only can be merged from `patch-*` or `release-*` branch
+##  - PR title should either be `patch-*` or `release-*`
+
 name: "Main-Verify Merge PR"
 
 on: 

@@ -1,3 +1,6 @@
+## This Action creates a `release-*` branch off of the `main` branch
+##  - The new `release-*` branch will match the next semantic version (based on git tags)
+
 name: "Release-Cut"
 
 # Workflow runs when manually triggered using the UI or API
@@ -20,6 +23,7 @@ jobs:
     - name: "Get Release Info"
       id: version
       run: |
+        git fetch --all --tags;
         git checkout main;
         git checkout develop;
         cd scripts/release;
