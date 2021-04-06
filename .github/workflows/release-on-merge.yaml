@@ -113,7 +113,6 @@ jobs:
         git checkout main;
         git pull;
         git merge ${GITHUB_REF##*/};
-        git commit -m "upmerge after $RELEASE";
         git push;
       env:
         RELEASE: v${{ needs.create-release-tag.outputs.major }}.${{ needs.create-release-tag.outputs.minor }}.${{ needs.create-release-tag.outputs.patch }}
