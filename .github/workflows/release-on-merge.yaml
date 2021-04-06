@@ -57,9 +57,11 @@ jobs:
     - name: Check Create Release
       id: check_release
       run: |
-        echo "##[set-output name=merged;]$(git log main | grep ${GITHUB_REF##*/})";
+        echo "##[set-output name=merged;]$(git log main | grep -E $RELEASE_PATCH
         echo "##[set-output name=main-commit;]$(git log --oneline main | awk '{if (NR == 1) commit=$1 } END { print commit }')";
         echo "##[set-output name=release-commit;]$(git log --oneline ${GITHUB_REF##*/} | awk '{if (NR == 1) commit=$1 } END { print commit }')";
+      env:
+        RELEASE_PATCH: (release-${{ steps.version.outputs.major }}\.${{ steps.version.outputs.minor }}\.${{ steps.version.outputs.patch }}|patch-${{ steps.version.outputs.major }}\.${{ steps.version.outputs.minor }})
 
     # Create Github Release:
     # if it has been merged to `main` before (not first cut)
