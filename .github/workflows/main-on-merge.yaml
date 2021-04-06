@@ -73,7 +73,7 @@ jobs:
     - name: "Check Release Exists"
       id: check_exists
       run: |
-        echo "##[set-output name=found;]$(git tag | grep $RELEASE)
+        echo "##[set-output name=found;]$(git tag | grep $RELEASE)";
       env:
         RELEASE: v${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}.${{ steps.version.outputs.patch }}
 
