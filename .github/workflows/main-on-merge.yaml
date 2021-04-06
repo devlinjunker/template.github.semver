@@ -102,7 +102,7 @@ jobs:
         fetch-depth: 0  
 
     - name: Upmerge develop After Release
-    if: needs.create-release-tag.outputs.found == ''
+      if: needs.create-release-tag.outputs.found == ''
       run: |
         git config --global user.name 'Release Cut';
         git config --global user.email 'release@cut.com';
