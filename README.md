@@ -113,7 +113,6 @@ Once you have completed reviewing the docs above, follow the instructions below 
 - [Devlin Junker (Me!)](mailto:devlinjunker@gmail.com)
 
 
-
 [License]: LICENSE
 [Security Policy]: SECURITY.md
 [Issue Templates]: .github/ISSUE_TEMPLATE/
