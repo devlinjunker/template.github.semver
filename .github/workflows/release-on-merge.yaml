@@ -57,11 +57,9 @@ jobs:
     - name: Check Create Release
       id: check_release
       run: |
-        echo "##[set-output name=merged;]$(git log main | grep -E "$RELEASE_PATCH")
+        echo "##[set-output name=merged;]$(git log main | grep ${GITHUB_REF##*/})";
         echo "##[set-output name=main-commit;]$(git log --oneline main | awk '{if (NR == 1) commit=$1 } END { print commit }')";
         echo "##[set-output name=release-commit;]$(git log --oneline ${GITHUB_REF##*/} | awk '{if (NR == 1) commit=$1 } END { print commit }')";
-      env:
-        RELEASE_PATCH: '(patch-${{ steps.version.outputs.major }}\.${{ steps.version.outputs.minor }}\.${{ steps.version.outputs.patch }}|release-${{ steps.version.outputs.major }}\.${{ steps.version.outputs.minor }})'
 
     # Create Github Release:
     # if it has been merged to `main` before (not first cut)
@@ -69,7 +67,7 @@ jobs:
     - name: Create Github Release
       id: create_release
       uses: actions/create-release@v1
-      if: steps.check_release.outputs.merged != '' && steps.check_release.outputs.release-commit != steps.check_release.outputs.main-commit
+      if: steps.version.outputs.patch != 0 && steps.check_release.outputs.release-commit != steps.check_release.outputs.main-commit
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -94,7 +92,7 @@ jobs:
     # it has been merged to `main` before (not first cut)
     # AND `release-*` branch is not same commit as `main` (not a fast forward)
     - name: Upmerge develop After Release
-      if: needs.create-release-tag.outputs.merged != '' && needs.create-release-tag.outputs.release-commit != needs.create-release-tag.outputs.main-commit
+      if: needs.create-release-tag.outputs.patch != 0 && needs.create-release-tag.outputs.release-commit != needs.create-release-tag.outputs.main-commit
       run: |
         git config --global user.name 'Release Cut';
         git config --global user.email 'release@cut.com';
@@ -108,7 +106,7 @@ jobs:
     # it has been merged to `main` before (not first cut)
     # AND `release-*` branch is not same commit as `main` (not a fast forward)
     - name: Upmerge main After Release
-      if: needs.create-release-tag.outputs.merged != '' && needs.create-release-tag.outputs.release-commit != needs.create-release-tag.outputs.main-commit
+      if: needs.create-release-tag.outputs.patch != 0 && needs.create-release-tag.outputs.release-commit != needs.create-release-tag.outputs.main-commit
       run: |
         git config --global user.name 'Release Cut';
         git config --global user.email 'release@cut.com';
