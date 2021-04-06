@@ -79,8 +79,8 @@ jobs:
 
     - name: Create Github Release
       id: create_release
+      if: steps.check_exists.outputs.found == ''
       uses: actions/create-release@v1
-      if: steps.version.check_exists.found == ''
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
