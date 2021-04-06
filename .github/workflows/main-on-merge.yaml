@@ -41,7 +41,7 @@ jobs:
       major: ${{ steps.version.outputs.major }}
       minor: ${{ steps.version.outputs.minor }}
       patch: ${{ steps.version.outputs.patch }}
-      found: ${{ steps.version.check_exists.found }}
+      found: ${{ steps.check_exists.outputs.found }}
 
     steps: 
     - uses: actions/checkout@v2
