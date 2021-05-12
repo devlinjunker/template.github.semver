@@ -60,7 +60,7 @@ jobs:
 
     - name: Add WIP Label if wip commit msg
       if: startsWith(steps.commit.outputs.msg, 'wip') && github.event.action == 'synchronize'
-      uses: actions-ecosystem/action-add-labels@v1
+      uses: actions-ecosystem/action-add-labels@v1.1.2
       with:
         github_token: ${{ secrets.github_token }} 
         labels: "status: wip"
