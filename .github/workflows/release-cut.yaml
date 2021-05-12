@@ -57,7 +57,7 @@ jobs:
 
     # Note: see https://github.com/repo-sync/pull-request#advanced-options for all options
     - name: Create Pull Request
-      uses: repo-sync/pull-request@v2
+      uses: repo-sync/pull-request@v2.6
       with:
         github_token: ${{ secrets.PAT }}
         source_branch: release-${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}
