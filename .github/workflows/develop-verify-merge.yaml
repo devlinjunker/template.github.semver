@@ -36,5 +36,5 @@ jobs:
       uses: deepakputhraya/action-pr-title@master
       with:
         regex: '(\([\w\s]*\)*\))?:[\w\s]*'
-        allowed_prefixes:  ${{ steps.extract_branch.outputs.prefix }},build
+        allowed_prefixes:  ${{ steps.extract_branch.outputs.prefix }},build # add build to not fail dependabot PRs
         prefix_case_sensitive: true
