@@ -11,7 +11,7 @@ currently being supported with security updates -->
 | Version | Supported          |
 | ------- | ------------------ |
 | > 1.0.x | :white_check_mark: |
-| > 0.12.x | :white_check_mark: |
+|  0.12.x | :heavy_minus_sign: |
 |  0.11.x  | :heavy_minus_sign: |
 | < 0.10   | :x:                |
 
