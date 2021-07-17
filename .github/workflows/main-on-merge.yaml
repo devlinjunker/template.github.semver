@@ -70,6 +70,7 @@ jobs:
       env:
         CHANGELOG_PREFIX_LIST: "feature|feat|fix|bugfix|bug"
 
+    # Determine if the tag already exists (created by patch merge)
     - name: "Check Release Exists"
       id: check_exists
       run: |
