@@ -30,7 +30,7 @@ jobs:
 
     - name: Remove WIP Status Label
       if: github.event.action == 'closed'
-      uses: actions-ecosystem/action-remove-labels@v1
+      uses: actions-ecosystem/action-remove-labels@v1.1.0
       continue-on-error: true
       with:
           github_token: ${{ secrets.github_token }}
@@ -38,7 +38,7 @@ jobs:
 
     - name: Remove Blocked Status Label
       if: github.event.action == 'closed'
-      uses: actions-ecosystem/action-remove-labels@v1
+      uses: actions-ecosystem/action-remove-labels@v1.1.0
       continue-on-error: true
       with:
           github_token: ${{ secrets.github_token }}
