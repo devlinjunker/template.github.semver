@@ -39,7 +39,7 @@ This is a template project that uses GitHub Actions and Git Hooks to enforce [Se
 - [Bash] - to run scripts during Git Hooks (for process enforcement)
 - GitHub - this template uses [Github Actions] for process enforcement
 - [Bulldozer] - Github Application to Auto Squash and Merge feature PRs
-- [Git-mkver] - Github Application to Auto Squash and Merge feature PRs
+- [Git-mkver] - Small program to determine next tag/release number based on git tags
 
 ## Quick Setup/Run
 <!-- This section should try to quickly explain how to setup the project and start using it (server/app/demo/template) - ideally in list format -->
