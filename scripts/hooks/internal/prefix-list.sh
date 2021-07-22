@@ -9,12 +9,13 @@ DIR=$(dirname "${BASH_SOURCE[0]}")
 main() {
 
   # get allowed names from labels.yaml
-  LABEL_TYPES=( `less $DIR/../../.github/labels.yaml | sed -n "/name/p" | sed "s/- name: \"//" | sed "s/\"//" | sed -n "/^[a-z]*$/p"` )
+  # shellcheck disable=SC2207
+  LABEL_TYPES=( $(less "$DIR"/../../../.github/labels.yaml | sed -n "/name/p" | sed "s/- name: \"//" | sed "s/\"//" | sed -n "/^[a-z]*$/p") )
 
   # merge labels.yaml with hardcoded
-  local PREFIXES=( "${LABEL_TYPES[@]}" "${OTHER_TYPES[@]}" )
+  local PREFIXES=( "${LABEL_TYPES[*]}" "${OTHER_TYPES[*]}" )
 
-  echo "${PREFIXES[@]}"
+  echo "${PREFIXES[*]}"
 
 }
 
