@@ -47,7 +47,7 @@ jobs:
     ## Actions to run when commit added to PR
     # - Check if commit message has 'wip' and label if so
 
-    - uses: actions/checkout@v2.3.4 
+    - uses: actions/checkout@v2.3.5 
       if: github.event.action == 'synchronize'
 
     - name: Get Commit Message
