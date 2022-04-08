@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2.3.4
+    - uses: actions/checkout@v3.0.0
 
     - name: "Verify 'main' PR are from 'release-*' or 'patch-*' branch"
       run: ./scripts/workflows/branch-match.sh
