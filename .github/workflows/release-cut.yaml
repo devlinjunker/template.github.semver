@@ -13,7 +13,7 @@ jobs:
 
     # TODO: Should we create step that sets "variables" for action (main branch, release commit user)
     steps: 
-    - uses: actions/checkout@v2.3.4
+    - uses: actions/checkout@v3.0.2
       with:
         ## This is a Personal Access Token from Admin User that allows us to bypass branch protections on develop
         token: ${{ secrets.PAT }}
