@@ -21,7 +21,7 @@ jobs:
     # Runs a label manager from https://github.com/marketplace/actions/github-labeler
     - name: Run Labeler
       if: success()
-      uses: crazy-max/ghaction-github-labeler@v3.1.1
+      uses: crazy-max/ghaction-github-labeler@v4.0.0
       with:
         yaml-file: .github/labels.yaml
         skip-delete: false
