@@ -1,0 +1,129 @@
+## This Action runs when a commit is made to a `release-*` branch
+##  - Detects if the current release branch is older than the most recent release
+##  - Creates PRs to upmerge the patch to the most recent release branch and main
+##  - Addresses issue #141: Merge older release patch to main
+
+name: "Patch-Upmerge"
+
+on: 
+  push:
+    branches:
+      - release-*
+
+jobs:
+  check-and-create-upmerge-prs:
+    runs-on: ubuntu-latest
+
+    steps: 
+    - uses: actions/checkout@v2.3.4
+      with:
+        ## This is a Personal Access Token from Admin User that allows us to bypass branch protections
+        token: ${{ secrets.PAT }}
+        fetch-depth: 0
+
+    - name: "Get Current Release Version"
+      id: current_version
+      run: |
+        git fetch --all --tags;
+        CURRENT_BRANCH=${GITHUB_REF##*/}
+        echo "Current branch: $CURRENT_BRANCH"
+        
+        # Extract major.minor from release-X.Y branch name
+        if [[ $CURRENT_BRANCH =~ ^release-([0-9]+)\.([0-9]+)$ ]]; then
+          CURRENT_MAJOR="${BASH_REMATCH[1]}"
+          CURRENT_MINOR="${BASH_REMATCH[2]}"
+          echo "##[set-output name=major;]$CURRENT_MAJOR"
+          echo "##[set-output name=minor;]$CURRENT_MINOR"
+          echo "##[set-output name=version;]$CURRENT_MAJOR.$CURRENT_MINOR"
+          echo "##[set-output name=branch;]$CURRENT_BRANCH"
+        else
+          echo "::error::Invalid release branch format: $CURRENT_BRANCH"
+          exit 1
+        fi
+
+    - name: "Find Most Recent Release Branch"
+      id: latest_release
+      run: |
+        git fetch --all --tags;
+        
+        # Get the latest tag
+        LATEST_TAG=$(git tag --sort=-version:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | head -1)
+        echo "Latest tag: $LATEST_TAG"
+        
+        if [ -z "$LATEST_TAG" ]; then
+          echo "No tags found"
+          echo "##[set-output name=is_latest;]true"
+          exit 0
+        fi
+        
+        # Extract major.minor from tag (format: vX.Y.Z)
+        if [[ $LATEST_TAG =~ ^v([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+          LATEST_MAJOR="${BASH_REMATCH[1]}"
+          LATEST_MINOR="${BASH_REMATCH[2]}"
+          LATEST_PATCH="${BASH_REMATCH[3]}"
+          LATEST_RELEASE_BRANCH="release-$LATEST_MAJOR.$LATEST_MINOR"
+          
+          echo "##[set-output name=major;]$LATEST_MAJOR"
+          echo "##[set-output name=minor;]$LATEST_MINOR"
+          echo "##[set-output name=patch;]$LATEST_PATCH"
+          echo "##[set-output name=branch;]$LATEST_RELEASE_BRANCH"
+          echo "##[set-output name=version;]$LATEST_MAJOR.$LATEST_MINOR"
+          
+          # Compare versions
+          CURRENT_MAJOR="${{ steps.current_version.outputs.major }}"
+          CURRENT_MINOR="${{ steps.current_version.outputs.minor }}"
+          
+          # Compare major.minor versions
+          if [ "$CURRENT_MAJOR" -gt "$LATEST_MAJOR" ]; then
+            echo "Current release ($CURRENT_MAJOR.$CURRENT_MINOR) is newer than latest ($LATEST_MAJOR.$LATEST_MINOR)"
+            echo "##[set-output name=is_latest;]true"
+          elif [ "$CURRENT_MAJOR" -eq "$LATEST_MAJOR" ] && [ "$CURRENT_MINOR" -ge "$LATEST_MINOR" ]; then
+            echo "Current release ($CURRENT_MAJOR.$CURRENT_MINOR) is the latest or newer"
+            echo "##[set-output name=is_latest;]true"
+          else
+            echo "Current release ($CURRENT_MAJOR.$CURRENT_MINOR) is older than latest ($LATEST_MAJOR.$LATEST_MINOR)"
+            echo "##[set-output name=is_latest;]false"
+          fi
+        fi
+
+    - name: "Create PR to Latest Release Branch"
+      if: steps.latest_release.outputs.is_latest == 'false'
+      uses: repo-sync/pull-request@v2.6
+      with:
+        github_token: ${{ secrets.PAT }}
+        source_branch: ${{ steps.current_version.outputs.branch }}
+        destination_branch: ${{ steps.latest_release.outputs.branch }}
+        pr_title: "Upmerge patch from ${{ steps.current_version.outputs.branch }} to ${{ steps.latest_release.outputs.branch }}"
+        pr_body: |
+          Automated upmerge of patch from older release branch.
+          
+          **Source:** `${{ steps.current_version.outputs.branch }}`
+          **Target:** `${{ steps.latest_release.outputs.branch }}`
+          
+          This PR ensures that patches to older releases are also applied to the most recent release.
+          
+          Please review for conflicts and merge manually.
+          
+          Related to issue #141
+        pr_label: "- release -"
+
+    - name: "Create PR to Main Branch"
+      if: steps.latest_release.outputs.is_latest == 'false'
+      uses: repo-sync/pull-request@v2.6
+      with:
+        github_token: ${{ secrets.PAT }}
+        source_branch: ${{ steps.current_version.outputs.branch }}
+        destination_branch: "main"
+        pr_title: "Upmerge patch from ${{ steps.current_version.outputs.branch }} to main"
+        pr_body: |
+          Automated upmerge of patch from older release branch.
+          
+          **Source:** `${{ steps.current_version.outputs.branch }}`
+          **Target:** `main`
+          
+          This PR ensures that patches to older releases are also applied to main.
+          
+          Please review for conflicts and merge manually.
+          
+          Related to issue #141
+        pr_label: "- release -"
