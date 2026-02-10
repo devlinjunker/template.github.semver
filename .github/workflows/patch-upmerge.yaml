@@ -1,0 +1,143 @@
+## This Action runs when a commit is made to a `release-*` branch
+##  - Detects if the current release branch is older than the most recent release
+##  - Creates PRs to upmerge the patch to the most recent release branch and main
+##  - Addresses issue #141: Merge older release patch to main
+
+name: "Patch-Upmerge"
+
+on: 
+  push:
+    branches:
+      - release-*
+
+jobs:
+  check-and-create-upmerge-prs:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps: 
+    - uses: actions/checkout@v4
+      with:
+        ## This is a Personal Access Token from Admin User that allows us to bypass branch protections
+        token: ${{ secrets.PAT }}
+        fetch-depth: 0
+
+    - name: "Get Current Release Version"
+      id: current_version
+      run: |
+        git fetch --all --tags;
+        CURRENT_BRANCH=${GITHUB_REF##*/}
+        echo "Current branch: $CURRENT_BRANCH"
+        
+        # Extract major.minor from release-X.Y branch name
+        if [[ $CURRENT_BRANCH =~ ^release-([0-9]+)\.([0-9]+)$ ]]; then
+          CURRENT_MAJOR="${BASH_REMATCH[1]}"
+          CURRENT_MINOR="${BASH_REMATCH[2]}"
+          echo "major=$CURRENT_MAJOR" >> $GITHUB_OUTPUT
+          echo "minor=$CURRENT_MINOR" >> $GITHUB_OUTPUT
+          echo "version=$CURRENT_MAJOR.$CURRENT_MINOR" >> $GITHUB_OUTPUT
+          echo "branch=$CURRENT_BRANCH" >> $GITHUB_OUTPUT
+        else
+          echo "::error::Invalid release branch format: $CURRENT_BRANCH"
+          exit 1
+        fi
+
+    - name: "Find Most Recent Release Branch"
+      id: latest_release
+      run: |
+        # Get the latest tag
+        LATEST_TAG=$(git tag --sort=-version:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | head -1)
+        echo "Latest tag: $LATEST_TAG"
+        
+        if [ -z "$LATEST_TAG" ]; then
+          echo "No tags found"
+          echo "is_latest=true" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+        
+        # Extract major.minor from tag (format: vX.Y.Z)
+        if [[ $LATEST_TAG =~ ^v([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+          LATEST_MAJOR="${BASH_REMATCH[1]}"
+          LATEST_MINOR="${BASH_REMATCH[2]}"
+          LATEST_PATCH="${BASH_REMATCH[3]}"
+          LATEST_RELEASE_BRANCH="release-$LATEST_MAJOR.$LATEST_MINOR"
+          
+          echo "major=$LATEST_MAJOR" >> $GITHUB_OUTPUT
+          echo "minor=$LATEST_MINOR" >> $GITHUB_OUTPUT
+          echo "patch=$LATEST_PATCH" >> $GITHUB_OUTPUT
+          echo "branch=$LATEST_RELEASE_BRANCH" >> $GITHUB_OUTPUT
+          echo "version=$LATEST_MAJOR.$LATEST_MINOR" >> $GITHUB_OUTPUT
+          
+          # Compare versions
+          CURRENT_MAJOR="${{ steps.current_version.outputs.major }}"
+          CURRENT_MINOR="${{ steps.current_version.outputs.minor }}"
+          
+          # Compare major.minor versions
+          if [ "$CURRENT_MAJOR" -gt "$LATEST_MAJOR" ]; then
+            echo "Current release ($CURRENT_MAJOR.$CURRENT_MINOR) is newer than latest ($LATEST_MAJOR.$LATEST_MINOR)"
+            echo "is_latest=true" >> $GITHUB_OUTPUT
+          elif [ "$CURRENT_MAJOR" -eq "$LATEST_MAJOR" ] && [ "$CURRENT_MINOR" -gt "$LATEST_MINOR" ]; then
+            echo "Current release ($CURRENT_MAJOR.$CURRENT_MINOR) is newer than latest ($LATEST_MAJOR.$LATEST_MINOR)"
+            echo "is_latest=true" >> $GITHUB_OUTPUT
+          elif [ "$CURRENT_MAJOR" -eq "$LATEST_MAJOR" ] && [ "$CURRENT_MINOR" -eq "$LATEST_MINOR" ]; then
+            echo "Current release ($CURRENT_MAJOR.$CURRENT_MINOR) is the same as latest ($LATEST_MAJOR.$LATEST_MINOR)"
+            echo "is_latest=true" >> $GITHUB_OUTPUT
+          else
+            echo "Current release ($CURRENT_MAJOR.$CURRENT_MINOR) is older than latest ($LATEST_MAJOR.$LATEST_MINOR)"
+            echo "is_latest=false" >> $GITHUB_OUTPUT
+            
+            # Check if latest release branch exists
+            if git show-ref --verify --quiet "refs/remotes/origin/$LATEST_RELEASE_BRANCH"; then
+              echo "branch_exists=true" >> $GITHUB_OUTPUT
+              echo "Latest release branch $LATEST_RELEASE_BRANCH exists"
+            else
+              echo "branch_exists=false" >> $GITHUB_OUTPUT
+              echo "::warning::Latest release branch $LATEST_RELEASE_BRANCH does not exist"
+            fi
+          fi
+        fi
+
+    - name: "Create PR to Latest Release Branch"
+      if: steps.latest_release.outputs.is_latest == 'false' && steps.latest_release.outputs.branch_exists == 'true'
+      uses: repo-sync/pull-request@v2.6
+      with:
+        github_token: ${{ secrets.PAT }}
+        source_branch: ${{ steps.current_version.outputs.branch }}
+        destination_branch: ${{ steps.latest_release.outputs.branch }}
+        pr_title: "Upmerge patch from ${{ steps.current_version.outputs.branch }} to ${{ steps.latest_release.outputs.branch }}"
+        pr_body: |
+          Automated upmerge of patch from older release branch.
+          
+          **Source:** `${{ steps.current_version.outputs.branch }}`
+          **Target:** `${{ steps.latest_release.outputs.branch }}`
+          
+          This PR ensures that patches to older releases are also applied to the most recent release.
+          
+          Please review for conflicts and merge manually.
+          
+          Related to issue #141
+        pr_label: "- release -"
+
+    - name: "Create PR to Main Branch"
+      if: steps.latest_release.outputs.is_latest == 'false'
+      uses: repo-sync/pull-request@v2.6
+      with:
+        github_token: ${{ secrets.PAT }}
+        source_branch: ${{ steps.current_version.outputs.branch }}
+        destination_branch: "main"
+        pr_title: "Upmerge patch from ${{ steps.current_version.outputs.branch }} to main"
+        pr_body: |
+          Automated upmerge of patch from older release branch.
+          
+          **Source:** `${{ steps.current_version.outputs.branch }}`
+          **Target:** `main`
+          
+          This PR ensures that patches to older releases are also applied to main.
+          
+          Please review for conflicts and merge manually.
+          
+          Related to issue #141
+        pr_label: "- release -"
